@@ -1,215 +1,476 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0081)https://uio.edd.ca.gov/UIO/Pages/Public/NewClaim/UIOnlineNewClaimLandingPage.aspx -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7;IE=edge"><title>
-UI Online
-</title><link rel="stylesheet" href="./resources/UionlineHomePageStyleSheet.css"><link rel="stylesheet" href="./resources/styles.min.css" type="text/css"><link rel="stylesheet" href="./resources/ClaimantUionline.css"><link rel="stylesheet" href="./resources/UionlineStyleAddition.css"><link rel="stylesheet" href="./resources/ProgressBar.css"><link type="text/css" href="./resources/jquery-ui-1.8.16.custom.css" rel="Stylesheet">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7;IE=edge" />
+    <title>
+      UI Online
+    </title>
+    <link rel="stylesheet" href="./resources/UionlineHomePageStyleSheet.css" />
+    <link rel="stylesheet" href="./resources/styles.min.css" type="text/css" />
+    <link rel="stylesheet" href="./resources/ClaimantUionline.css" />
+    <link rel="stylesheet" href="./resources/UionlineStyleAddition.css" />
+    <link rel="stylesheet" href="./resources/ProgressBar.css" />
+    <link
+      type="text/css"
+      href="./resources/jquery-ui-1.8.16.custom.css"
+      rel="Stylesheet"
+    />
 
-<script type="text/javascript" async="" src="./resources/analytics.js.download"></script><script async="" src="./resources/js"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'UA-3419582-31', { 'anonymize_ip': true });
-</script>
-<script type="text/javascript" language="javascript">
-if (self === top) {
-var antiClickjack = document.getElementById("antiClickjack");
-antiClickjack.parentNode.removeChild(antiClickjack);
-}
-else {
-top.location = self.location;
-}
-</script>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link href="./css/cagov.core.css" type="text/css" rel="stylesheet">
-<meta name="format-detection" content="telephone=no"><link href="./resources/Default.css" type="text/css" rel="stylesheet"></head>
-<body>
-<form method="post" action="https://uio.edd.ca.gov/UIO/Pages/Public/NewClaim/UIOnlineNewClaimLandingPage.aspx" id="frmClaimantMainNoMenu">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzkxOTAzMTQxDxQrAARkBSRiY2QwZTE5OC00YWI2LTQzM2MtODA1Yi0zYmZmMzE1YzhjOTAFJGE4YjQxZjQwLWNlZjYtNDAzMC1iYzdmLTEyMzAyZWZkMzc0ZAUkNDBhYWE3MTQtODYzYy00MWFmLTk5ZTMtMmQ2MDE1ZTQ4MzEyFgJmD2QWBGYPZBYCAgEPZBYCZg9kFgICAQ8WBB4VUmVzb3VyY2VDb250YWluZXJOYW1lBQdEZWZhdWx0HgRUZXh0BQlVSSBPbmxpbmVkAgEPZBYYZg8PFgofAAUHRGVmYXVsdB8BBQ9Ta2lwIHRvIENvbnRlbnQeB1Rvb2xUaXAFD1NraXAgdG8gQ29udGVudB4TRW5hYmxlQXV0aG9yaXphdGlvbmceGkFzc29jaWF0ZWRTZWN1cml0eVJlc291cmNlBVhFREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuUHVibGljLk5ld0NsYWltLlVJT25saW5lTmV3Q2xhaW1MYW5kaW5nUGFnZS5jbWRTa2lwdG9Db250ZW50ZGQCAQ8PFgYeCVRvcGljTmFtZQU1ZW4tVVMvUHVibGljL05ld0NsYWltL1VJT25saW5lTmV3Q2xhaW1MYW5kaW5nUGFnZS5odG0fAAUHRGVmYXVsdB4NUmVzb3VyY2VHcm91cGVkFgJmD2QWAgIBDw8WCB8DaB8ABQdEZWZhdWx0HwEFBEhlbHAfAgUESGVscGRkAgMPDxYKHwEFGnwgQmVuZWZpdCBQcm9ncmFtcyBPbmxpbmUgHwAFB0RlZmF1bHQfBmUfA2cfBAVfRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLlB1YmxpYy5OZXdDbGFpbS5VSU9ubGluZU5ld0NsYWltTGFuZGluZ1BhZ2UuY21kQmVuZWZpdFByb2dyYW1PbmxpbmVkZAIFDw8WBB4LTmF2aWdhdGVVcmwFL2h0dHA6Ly93d3cuZWRkLmNhLmdvdi9BYm91dF9FREQvQ29udGFjdF9FREQuaHRtHgZUYXJnZXQFBl9ibGFua2RkAgYPDxYGHwNoHwAFB0RlZmF1bHQfBmVkZAIHDw8WDB8BBQdMb2cgT3V0HwAFB0RlZmF1bHQfBmUfA2cfBAVWRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLlB1YmxpYy5OZXdDbGFpbS5VSU9ubGluZU5ld0NsYWltTGFuZGluZ1BhZ2UuY21kTG9naW5Mb2dvdXQeB1Zpc2libGVnZGQCCA9kFgICAw9kFgYCAw8PFggfA2gfAAUHRGVmYXVsdB8BBQlVSSBPbmxpbmUfAmVkZAIJDw8WCh4KSHRtbEVuY29kZWgfAQUmVG8gZ2V0IHN0YXJ0ZWQgc2VsZWN0IGFuIG9wdGlvbiBiZWxvdy4fA2gfAAUHRGVmYXVsdB8GZWRkAgsPZBYKZg8UKwAFZGdnZ2dkAgIPDxYCHwNoFgIeBXN0eWxlBQ1oZWlnaHQ6MzMwcHg7FgYCAQ8PFggfA2gfAAUHRGVmYXVsdB8BBRFGaWxlIGEgTmV3ICBDbGFpbR8CZWRkAgUPDxYEHwNoHwlnZBYGAgEPDxYIHwEFdFNlbGVjdCBGaWxlIE5ldyBDbGFpbSB0byBjb21wbGV0ZSB0aGUgYXBwbGljYXRpb24uIE5vIGFkZGl0aW9uYWwgVUkgT25saW5lIHJlZ2lzdHJhdGlvbiBpcyByZXF1aXJlZCB0byBmaWxlIGEgY2xhaW0uHwNoHwAFB0RlZmF1bHQfBmVkZAIDDw8WCh8BBQ5GaWxlIE5ldyBDbGFpbR8CBQ5GaWxlIE5ldyBDbGFpbR8DZx8EBYEBRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLlB1YmxpYy5OZXdDbGFpbS5VSU9ubGluZU5ld0NsYWltTGFuZGluZ1BhZ2UuY29udGVudE1haW5fdWNFeHRlcm5hbFVzZXJMb2dpblVzZXJOYW1lVGVtcGxhdGVfYnRuU3VibWl0HwAFB0RlZmF1bHRkZAIFDw8WCB8BBa4DVGhlIEZpbGUgYSBOZXcgQ2xhaW0gZmVhdHVyZXMgd2lsbCBiZSBhdmFpbGFibGUgZHVyaW5nIHRoZSB0aW1lcyBsaXN0ZWQgYmVsb3cuIChBbGwgdGltZXMgYXJlIFBhY2lmaWMgdGltZSk8YnIvPiA8YnIvPjx0YWJsZT48dGJvZHk+PHRyPjx0ZD48Yj5EYXkgb2YgdGhlIFdlZWs8L2I+PC90ZD48dGQ+PGI+QXZhaWxhYmxlIFRpbWU8L2I+PC90ZD48L3RyPjx0cj48dGQ+U3VuZGF5PC90ZD48dGQ+NTowMCBhLm0uIC0gODozMCBwLm0uPC90ZD48L3RyPjx0cj48dGQ+TW9uZGF5PC90ZD48dGQ+NCBhLm0uIC0gMTAgcC5tLjwvdGQ+PC90cj48dHI+PHRkPlR1ZXNkYXkgLSBGcmlkYXk8L3RkPjx0ZD4yIGEubS4gLSAxMCBwLm0uPC90ZD48L3RyPjx0cj48dGQ+U2F0dXJkYXk8L3RkPjx0ZD4yIGEubS4gLSA4IHAubS48L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPh8DaB8ABQdEZWZhdWx0HwZlZGQCBw9kFgYCAQ8PFgIfAQVQU2VsZWN0IENvbnRpbnVlIHdpdGggU2F2ZWQgRHJhZnQgdG8gZmlsZSBhIG5ldyBjbGFpbSB1c2luZyBleGlzdGluZyBpbmZvcm1hdGlvbi5kZAIFDw8WAh8BBU9TZWxlY3QgRmlsZSBOZXcgQ2xhaW0gdG8gZGVsZXRlIHRoZSBkcmFmdCBhbmQgcmVzdGFydCB0aGUgY2xhaW0gZmlsaW5nIHByb2Nlc3MuZGQCCQ8PFgIfAQWuA1RoZSBGaWxlIGEgTmV3IENsYWltIGZlYXR1cmVzIHdpbGwgYmUgYXZhaWxhYmxlIGR1cmluZyB0aGUgdGltZXMgbGlzdGVkIGJlbG93LiAoQWxsIHRpbWVzIGFyZSBQYWNpZmljIHRpbWUpPGJyLz4gPGJyLz48dGFibGU+PHRib2R5Pjx0cj48dGQ+PGI+RGF5IG9mIHRoZSBXZWVrPC9iPjwvdGQ+PHRkPjxiPkF2YWlsYWJsZSBUaW1lPC9iPjwvdGQ+PC90cj48dHI+PHRkPlN1bmRheTwvdGQ+PHRkPjU6MDAgYS5tLiAtIDg6MzAgcC5tLjwvdGQ+PC90cj48dHI+PHRkPk1vbmRheTwvdGQ+PHRkPjQgYS5tLiAtIDEwIHAubS48L3RkPjwvdHI+PHRyPjx0ZD5UdWVzZGF5IC0gRnJpZGF5PC90ZD48dGQ+MiBhLm0uIC0gMTAgcC5tLjwvdGQ+PC90cj48dHI+PHRkPlNhdHVyZGF5PC90ZD48dGQ+MiBhLm0uIC0gOCBwLm0uPC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT5kZAIEDw8WCB8DaB8ABQdEZWZhdWx0HwEFIVJlZ2lzdGVyIG9yIE1hbmFnZSBFeGlzdGluZyBDbGFpbR8CZWRkAgYPDxYIHwEFoQFTZWxlY3QgUmVnaXN0ZXIgb3IgTWFuYWdlIGlmIHlvdSB3b3VsZCBsaWtlIHRvOjx1bD48bGk+UmVnaXN0ZXIgZm9yIFVJIE9ubGluZSB3aXRoIHlvdXIgZXhpc3RpbmcgY2xhaW0uPC9saT48bGk+TWFuYWdlIHlvdXIgZXhpc3RpbmcgVUkgT25saW5lIGFjY291bnQuPC9saT48L3VsPh8DaB8ABQdEZWZhdWx0HwZlZGQCCA8PFgofA2cfBAWGAUVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5QdWJsaWMuTmV3Q2xhaW0uVUlPbmxpbmVOZXdDbGFpbUxhbmRpbmdQYWdlLmNvbnRlbnRNYWluX3VjRXh0ZXJuYWxVc2VyTG9naW5Vc2VyTmFtZVRlbXBsYXRlX2J0bk1hbmFnZUNsYWltHwAFB0RlZmF1bHQfAQUSUmVnaXN0ZXIgb3IgTWFuYWdlHwIFElJlZ2lzdGVyIG9yIE1hbmFnZWRkAgkPDxYIHwNoHwAFB0RlZmF1bHQfAQULQmFjayB0byBUb3AfAmVkZAIKDxYCHgRocmVmBS9odHRwOi8vd3d3LmVkZC5jYS5nb3YvQWJvdXRfRUREL0NvbnRhY3RfRURELmh0bRYCAgEPDxYIHwNoHwAFB0RlZmF1bHQfAQULQ29udGFjdCBFREQfAmVkZAILDxYCHwwFNWh0dHA6Ly93d3cuZWRkLmNhLmdvdi9BYm91dF9FREQvQ29uZGl0aW9uc19PZl9Vc2UuaHRtFgICAQ8PFggfA2gfAAUHRGVmYXVsdB8BBRFDb25kaXRpb25zIG9mIFVzZR8CZWRkAgwPFgIfDAUyaHR0cDovL3d3dy5lZGQuY2EuZ292L0Fib3V0X0VERC9Qcml2YWN5X1BvbGljeS5odG0WAgIBDw8WCB8DaB8ABQdEZWZhdWx0HwEFDlByaXZhY3kgUG9saWN5HwJlZGQCDQ8WAh8MBTFodHRwOi8vd3d3LmVkZC5jYS5nb3YvQWJvdXRfRUREL0FjY2Vzc2liaWxpdHkuaHRtFgICAQ8PFggfA2gfAAUHRGVmYXVsdB8BBQ1BY2Nlc3NpYmlsaXR5HwJlZGRkZiufqqujKBj8cZXz15Bh3lcKNjY=">
-</div>
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['frmClaimantMainNoMenu'];
-if (!theForm) {
-theForm = document.frmClaimantMainNoMenu;
-}
-function __doPostBack(eventTarget, eventArgument) {
-if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-theForm.__EVENTTARGET.value = eventTarget;
-theForm.__EVENTARGUMENT.value = eventArgument;
-theForm.submit();
-}
-}
-//]]>
-</script>
-<script src="./resources/UI%20Online_files/WebResource.axd" type="text/javascript"></script>
-<script src="./resources/UI%20Online_files/WebResource(1).axd" type="text/javascript"></script>
-<script src="./resources/UI%20Online_files/WebResource(2).axd" type="text/javascript"></script>
-<script src="./resources/UI%20Online_files/WebResource(3).axd" type="text/javascript"></script>
-<script src="./resources/UI%20Online_files/ScriptResource.axd" type="text/javascript"></script>
-<script src="./resources/UI%20Online_files/ScriptResource(1).axd" type="text/javascript"></script>
-<div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1820C5BB">
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAe5grTHwRBU5N1LbZdObDu/rN2+LuphVo/lIo3VWVI6xoJVI2a8wA8UrXo+J12Z7JLH70E7d4JafKd82kyzpaXbCQEgYxKrUiadYPedZVzIzIAFc4LqHkyZILyAOM2Pfs8hvwTz7BTAekkHq7TFXic9xA8cODTifG1A/1KWfHN159vSh2I=">
-</div>
-<script type="text/javascript" src="./resources/jquery-1.6.2.min.js.download"></script>
-<script type="text/javascript" src="./resources/jquery-ui-1.8.16.custom.min.js.download"></script>
-<script type="text/javascript" src="./resources/scripts.js.download"></script>
-<div id="mainDiv" class="wrapper">
-<div id="main_content">
-<div id="headerDiv" class="header">
-<div id="head_cagov_logo" title="CA.gov">
-</div>
-<div id="head_organization_banner" title="EDD.CA.gov">
-<div id="skip_to_content">
-<a id="cmdSkiptoContent" title="Skip to Content" href="javascript:__doPostBack(&#39;ctl00$cmdSkiptoContent&#39;,&#39;&#39;)">Skip to Content</a>
-</div>
-<div class="paddingTop">
-<span onclick="javascript:DisplayHelpInNewWindow(&#39;https://UIO.edd.ca.gov/UIO/Pages/Public/help/index.htm#en-US/Public/NewClaim/UIOnlineNewClaimLandingPage.htm&#39;);__doPostBack(&#39;ctl00$cshPageHelp&#39;,&#39;cshPageHelp&#39;);" id="cshPageHelp"><span>
-<a href="https://uio.edd.ca.gov/UIO/Pages/Public/NewClaim/UIOnlineNewClaimLandingPage.aspx#">
-<span title="Help" id="cshPageHelp_ctl00_CustomLabel1">Help</span>
-</a>
-</span></span>
-<a id="cmdBenefitProgramOnline" href="javascript:__doPostBack(&#39;ctl00$cmdBenefitProgramOnline&#39;,&#39;&#39;)">| Benefit Programs Online </a>
-<span title="" id="CustomLabel2">|</span>
-<a id="cmdLoginLogout" href="javascript:__doPostBack(&#39;ctl00$cmdLoginLogout&#39;,&#39;&#39;)">Log Out</a>
-</div>
-</div>
-</div>
-<div id="pnlSkipContent">
-<input type="hidden" name="ctl00$hdnDisplayMode" id="hdnDisplayMode" value="Edit">
-<script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$contentMain$scriptManager1', 'frmClaimantMainNoMenu', [], [], [], 90, 'ctl00');
-//]]>
-</script>
-<div id="mainDiv" class="add_padding">
-<div class="dottedDiv">
-<table style="width: 100%">
-<tbody>
-<tr>
-<td style="width: 80%">
-<h1>
-<span title="" id="contentMain_lblUIOnlineServices">UI Online</span>
-</h1>
-</td>
-</tr>
-</tbody>
-</table>
-</div><div>
-<span id="contentMain_valSummary" class="ValiDationError" style="display:inline-block;width:99%;"></span>
-</div>
-<div>
-<span title="" id="contentMain_lblRegistrationPage">To get started select an option below.</span>
-<br>
-<br>
-</div>
-<div>
-<table style="width: 100%; padding-top: 15px;">
-<tbody><tr valign="top" style="width: 48%;">
-<td style="width: 48%;  height: 465px;" class="tblUsernameBackgroundEUR"><div id="contentMain_ucExternalUserLoginUserNameTemplate_pnlLogin" style="height:330px;">
-<h3 class="thHeader">
-<span title="" id="contentMain_ucExternalUserLoginUserNameTemplate_lblFileNewClaim">File a New  Claim</span>
-</h3>
-<div id="contentMain_ucExternalUserLoginUserNameTemplate_pnlFileNewClaim">
-<div style="padding-top:20px; padding-left: 10px; height:50px;">
-<span title="" id="contentMain_ucExternalUserLoginUserNameTemplate_lblNewClaimCMSText" class="RequiredIndicatorLabel">Select File New Claim to complete the application. No additional UI Online registration is required to file a claim.</span>
-</div>
-<div class="AlignCenter">
-<input type="submit" name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnSubmit" value="File New Claim" onclick="javascript:return DisableMulticlick();" id="contentMain_ucExternalUserLoginUserNameTemplate_btnSubmit" title="File New Claim" class="Button" style="width:200px;height: 35px;">
-</div><div style="padding-top: 30px; padding-left: 10px; height: 50px;">
-<span title="" id="contentMain_ucExternalUserLoginUserNameTemplate_lblSystemDowntime2" class="downTimeStyle">The File a New Claim features will be available during the times listed below. (All times are Pacific time)<br> <br><table><tbody><tr><td><b>Day of the Week</b></td><td><b>Available Time</b></td></tr><tr><td>Sunday</td><td>5:00 a.m. - 8:30 p.m.</td></tr><tr><td>Monday</td><td>4 a.m. - 10 p.m.</td></tr><tr><td>Tuesday - Friday</td><td>2 a.m. - 10 p.m.</td></tr><tr><td>Saturday</td><td>2 a.m. - 8 p.m.</td></tr></tbody></table></span>
-</div></div>
-</div></td>
-<td style="width: 4%;">
-</td>
-<td style="width: 48%; height: 465px;" class="tblUsernameBackgroundEUR">
-<div style="width: 100%; height: inherit">
-<h3 class="thHeader">
-<span title="" id="contentMain_ucExternalUserLoginUserNameTemplate_lblManageExistingClaim">Register or Manage Existing Claim</span>
-</h3>
-<div style="height:inherit; height:250px;">
-<div style="padding-top:20px; padding-left: 10px; height:100px;">
-<span title="" id="contentMain_ucExternalUserLoginUserNameTemplate_lblRegisterAsClaimant">Select Register or Manage if you would like to:<ul><li>Register for UI Online with your existing claim.</li><li>Manage your existing UI Online account.</li></ul></span></div>
-<div class="AlignCenter">
-<input type="submit" name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnManageClaim" value="Register or Manage" onclick="javascript:return DisableMulticlick();" id="contentMain_ucExternalUserLoginUserNameTemplate_btnManageClaim" title="Register or Manage" class="Button" htmlencode="true" style="height: 35px;
-width: 200px; white-space: normal;"></div>
-</div>
-</div>
-</td>
-</tr>
-</tbody></table>
-</div>
-</div></div>
-</div>
-<div class="cleaner">
-</div>
-<div id="footer_2" class="clearfix">
-<div>
-<a href="https://uio.edd.ca.gov/UIO/Pages/Public/NewClaim/UIOnlineNewClaimLandingPage.aspx#" accesskey="T">
-<span title="" id="cmdBacktoTop">Back to Top</span>
-</a><a href="http://www.edd.ca.gov/About_EDD/Contact_EDD.htm" id="ContactEDD" target="_blank">
-<span title="" id="cmdContactEDD">Contact EDD</span>
-</a><a href="http://www.edd.ca.gov/About_EDD/Conditions_Of_Use.htm" id="ConditionsofUse" target="_blank">
-<span title="" id="cmdConditionsofUse">Conditions of Use</span>
-</a><a href="http://www.edd.ca.gov/About_EDD/Privacy_Policy.htm" id="PrivacyPolicy" target="_blank">
-<span title="" id="cmdPrivacyPolicy">Privacy Policy</span>
-</a><a href="http://www.edd.ca.gov/About_EDD/Accessibility.htm" id="Accessibility" target="_blank">
-<span title="" id="cmdAccessaibility">Accessibility</span>
-</a>
-</div>
-<div>
-Copyright © 2018 State of California
-</div>
-</div>
-</div>
-<script type="text/javascript">
-//<![CDATA[
-javascript:SetupSessionTimeoutNotification('1500000','1800000','/UIO/Pages/Public/Logout.aspx','/UIO/Pages/Public/SessionTimeoutNotification.aspx');//]]>
-</script>
-</form>
-<div id="background_decorative">
-&nbsp;
-</div>
+    <script
+      type="text/javascript"
+      async=""
+      src="./resources/analytics.js.download"
+    ></script>
+    <script async="" src="./resources/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-3419582-31", { anonymize_ip: true });
+    </script>
+    <script type="text/javascript" language="javascript">
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="./css/cagov.core.css" type="text/css" rel="stylesheet" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="./resources/Default.css" type="text/css" rel="stylesheet" />
+  </head>
 
+  <body>
+    <form
+      method="post"
+      action="https://uio.edd.ca.gov/UIO/Pages/Public/NewClaim/UIOnlineNewClaimLandingPage.aspx"
+      id="frmClaimantMainNoMenu"
+    >
+      <div class="aspNetHidden">
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input
+          type="hidden"
+          name="__EVENTARGUMENT"
+          id="__EVENTARGUMENT"
+          value=""
+        />
+        <input
+          type="hidden"
+          name="__VIEWSTATE"
+          id="__VIEWSTATE"
+          value="/wEPDwUJNzkxOTAzMTQxDxQrAARkBSRiY2QwZTE5OC00YWI2LTQzM2MtODA1Yi0zYmZmMzE1YzhjOTAFJGE4YjQxZjQwLWNlZjYtNDAzMC1iYzdmLTEyMzAyZWZkMzc0ZAUkNDBhYWE3MTQtODYzYy00MWFmLTk5ZTMtMmQ2MDE1ZTQ4MzEyFgJmD2QWBGYPZBYCAgEPZBYCZg9kFgICAQ8WBB4VUmVzb3VyY2VDb250YWluZXJOYW1lBQdEZWZhdWx0HgRUZXh0BQlVSSBPbmxpbmVkAgEPZBYYZg8PFgofAAUHRGVmYXVsdB8BBQ9Ta2lwIHRvIENvbnRlbnQeB1Rvb2xUaXAFD1NraXAgdG8gQ29udGVudB4TRW5hYmxlQXV0aG9yaXphdGlvbmceGkFzc29jaWF0ZWRTZWN1cml0eVJlc291cmNlBVhFREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuUHVibGljLk5ld0NsYWltLlVJT25saW5lTmV3Q2xhaW1MYW5kaW5nUGFnZS5jbWRTa2lwdG9Db250ZW50ZGQCAQ8PFgYeCVRvcGljTmFtZQU1ZW4tVVMvUHVibGljL05ld0NsYWltL1VJT25saW5lTmV3Q2xhaW1MYW5kaW5nUGFnZS5odG0fAAUHRGVmYXVsdB4NUmVzb3VyY2VHcm91cGVkFgJmD2QWAgIBDw8WCB8DaB8ABQdEZWZhdWx0HwEFBEhlbHAfAgUESGVscGRkAgMPDxYKHwEFGnwgQmVuZWZpdCBQcm9ncmFtcyBPbmxpbmUgHwAFB0RlZmF1bHQfBmUfA2cfBAVfRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLlB1YmxpYy5OZXdDbGFpbS5VSU9ubGluZU5ld0NsYWltTGFuZGluZ1BhZ2UuY21kQmVuZWZpdFByb2dyYW1PbmxpbmVkZAIFDw8WBB4LTmF2aWdhdGVVcmwFL2h0dHA6Ly93d3cuZWRkLmNhLmdvdi9BYm91dF9FREQvQ29udGFjdF9FREQuaHRtHgZUYXJnZXQFBl9ibGFua2RkAgYPDxYGHwNoHwAFB0RlZmF1bHQfBmVkZAIHDw8WDB8BBQdMb2cgT3V0HwAFB0RlZmF1bHQfBmUfA2cfBAVWRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLlB1YmxpYy5OZXdDbGFpbS5VSU9ubGluZU5ld0NsYWltTGFuZGluZ1BhZ2UuY21kTG9naW5Mb2dvdXQeB1Zpc2libGVnZGQCCA9kFgICAw9kFgYCAw8PFggfA2gfAAUHRGVmYXVsdB8BBQlVSSBPbmxpbmUfAmVkZAIJDw8WCh4KSHRtbEVuY29kZWgfAQUmVG8gZ2V0IHN0YXJ0ZWQgc2VsZWN0IGFuIG9wdGlvbiBiZWxvdy4fA2gfAAUHRGVmYXVsdB8GZWRkAgsPZBYKZg8UKwAFZGdnZ2dkAgIPDxYCHwNoFgIeBXN0eWxlBQ1oZWlnaHQ6MzMwcHg7FgYCAQ8PFggfA2gfAAUHRGVmYXVsdB8BBRFGaWxlIGEgTmV3ICBDbGFpbR8CZWRkAgUPDxYEHwNoHwlnZBYGAgEPDxYIHwEFdFNlbGVjdCBGaWxlIE5ldyBDbGFpbSB0byBjb21wbGV0ZSB0aGUgYXBwbGljYXRpb24uIE5vIGFkZGl0aW9uYWwgVUkgT25saW5lIHJlZ2lzdHJhdGlvbiBpcyByZXF1aXJlZCB0byBmaWxlIGEgY2xhaW0uHwNoHwAFB0RlZmF1bHQfBmVkZAIDDw8WCh8BBQ5GaWxlIE5ldyBDbGFpbR8CBQ5GaWxlIE5ldyBDbGFpbR8DZx8EBYEBRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLlB1YmxpYy5OZXdDbGFpbS5VSU9ubGluZU5ld0NsYWltTGFuZGluZ1BhZ2UuY29udGVudE1haW5fdWNFeHRlcm5hbFVzZXJMb2dpblVzZXJOYW1lVGVtcGxhdGVfYnRuU3VibWl0HwAFB0RlZmF1bHRkZAIFDw8WCB8BBa4DVGhlIEZpbGUgYSBOZXcgQ2xhaW0gZmVhdHVyZXMgd2lsbCBiZSBhdmFpbGFibGUgZHVyaW5nIHRoZSB0aW1lcyBsaXN0ZWQgYmVsb3cuIChBbGwgdGltZXMgYXJlIFBhY2lmaWMgdGltZSk8YnIvPiA8YnIvPjx0YWJsZT48dGJvZHk+PHRyPjx0ZD48Yj5EYXkgb2YgdGhlIFdlZWs8L2I+PC90ZD48dGQ+PGI+QXZhaWxhYmxlIFRpbWU8L2I+PC90ZD48L3RyPjx0cj48dGQ+U3VuZGF5PC90ZD48dGQ+NTowMCBhLm0uIC0gODozMCBwLm0uPC90ZD48L3RyPjx0cj48dGQ+TW9uZGF5PC90ZD48dGQ+NCBhLm0uIC0gMTAgcC5tLjwvdGQ+PC90cj48dHI+PHRkPlR1ZXNkYXkgLSBGcmlkYXk8L3RkPjx0ZD4yIGEubS4gLSAxMCBwLm0uPC90ZD48L3RyPjx0cj48dGQ+U2F0dXJkYXk8L3RkPjx0ZD4yIGEubS4gLSA4IHAubS48L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPh8DaB8ABQdEZWZhdWx0HwZlZGQCBw9kFgYCAQ8PFgIfAQVQU2VsZWN0IENvbnRpbnVlIHdpdGggU2F2ZWQgRHJhZnQgdG8gZmlsZSBhIG5ldyBjbGFpbSB1c2luZyBleGlzdGluZyBpbmZvcm1hdGlvbi5kZAIFDw8WAh8BBU9TZWxlY3QgRmlsZSBOZXcgQ2xhaW0gdG8gZGVsZXRlIHRoZSBkcmFmdCBhbmQgcmVzdGFydCB0aGUgY2xhaW0gZmlsaW5nIHByb2Nlc3MuZGQCCQ8PFgIfAQWuA1RoZSBGaWxlIGEgTmV3IENsYWltIGZlYXR1cmVzIHdpbGwgYmUgYXZhaWxhYmxlIGR1cmluZyB0aGUgdGltZXMgbGlzdGVkIGJlbG93LiAoQWxsIHRpbWVzIGFyZSBQYWNpZmljIHRpbWUpPGJyLz4gPGJyLz48dGFibGU+PHRib2R5Pjx0cj48dGQ+PGI+RGF5IG9mIHRoZSBXZWVrPC9iPjwvdGQ+PHRkPjxiPkF2YWlsYWJsZSBUaW1lPC9iPjwvdGQ+PC90cj48dHI+PHRkPlN1bmRheTwvdGQ+PHRkPjU6MDAgYS5tLiAtIDg6MzAgcC5tLjwvdGQ+PC90cj48dHI+PHRkPk1vbmRheTwvdGQ+PHRkPjQgYS5tLiAtIDEwIHAubS48L3RkPjwvdHI+PHRyPjx0ZD5UdWVzZGF5IC0gRnJpZGF5PC90ZD48dGQ+MiBhLm0uIC0gMTAgcC5tLjwvdGQ+PC90cj48dHI+PHRkPlNhdHVyZGF5PC90ZD48dGQ+MiBhLm0uIC0gOCBwLm0uPC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT5kZAIEDw8WCB8DaB8ABQdEZWZhdWx0HwEFIVJlZ2lzdGVyIG9yIE1hbmFnZSBFeGlzdGluZyBDbGFpbR8CZWRkAgYPDxYIHwEFoQFTZWxlY3QgUmVnaXN0ZXIgb3IgTWFuYWdlIGlmIHlvdSB3b3VsZCBsaWtlIHRvOjx1bD48bGk+UmVnaXN0ZXIgZm9yIFVJIE9ubGluZSB3aXRoIHlvdXIgZXhpc3RpbmcgY2xhaW0uPC9saT48bGk+TWFuYWdlIHlvdXIgZXhpc3RpbmcgVUkgT25saW5lIGFjY291bnQuPC9saT48L3VsPh8DaB8ABQdEZWZhdWx0HwZlZGQCCA8PFgofA2cfBAWGAUVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5QdWJsaWMuTmV3Q2xhaW0uVUlPbmxpbmVOZXdDbGFpbUxhbmRpbmdQYWdlLmNvbnRlbnRNYWluX3VjRXh0ZXJuYWxVc2VyTG9naW5Vc2VyTmFtZVRlbXBsYXRlX2J0bk1hbmFnZUNsYWltHwAFB0RlZmF1bHQfAQUSUmVnaXN0ZXIgb3IgTWFuYWdlHwIFElJlZ2lzdGVyIG9yIE1hbmFnZWRkAgkPDxYIHwNoHwAFB0RlZmF1bHQfAQULQmFjayB0byBUb3AfAmVkZAIKDxYCHgRocmVmBS9odHRwOi8vd3d3LmVkZC5jYS5nb3YvQWJvdXRfRUREL0NvbnRhY3RfRURELmh0bRYCAgEPDxYIHwNoHwAFB0RlZmF1bHQfAQULQ29udGFjdCBFREQfAmVkZAILDxYCHwwFNWh0dHA6Ly93d3cuZWRkLmNhLmdvdi9BYm91dF9FREQvQ29uZGl0aW9uc19PZl9Vc2UuaHRtFgICAQ8PFggfA2gfAAUHRGVmYXVsdB8BBRFDb25kaXRpb25zIG9mIFVzZR8CZWRkAgwPFgIfDAUyaHR0cDovL3d3dy5lZGQuY2EuZ292L0Fib3V0X0VERC9Qcml2YWN5X1BvbGljeS5odG0WAgIBDw8WCB8DaB8ABQdEZWZhdWx0HwEFDlByaXZhY3kgUG9saWN5HwJlZGQCDQ8WAh8MBTFodHRwOi8vd3d3LmVkZC5jYS5nb3YvQWJvdXRfRUREL0FjY2Vzc2liaWxpdHkuaHRtFgICAQ8PFggfA2gfAAUHRGVmYXVsdB8BBQ1BY2Nlc3NpYmlsaXR5HwJlZGRkZiufqqujKBj8cZXz15Bh3lcKNjY="
+        />
+      </div>
+      <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms["frmClaimantMainNoMenu"];
+        if (!theForm) {
+          theForm = document.frmClaimantMainNoMenu;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+          if (!theForm.onsubmit || theForm.onsubmit() != false) {
+            theForm.__EVENTTARGET.value = eventTarget;
+            theForm.__EVENTARGUMENT.value = eventArgument;
+            theForm.submit();
+          }
+        }
+        //]]>
+      </script>
+      <script
+        src="./resources/UI%20Online_files/WebResource.axd"
+        type="text/javascript"
+      ></script>
+      <script
+        src="./resources/UI%20Online_files/WebResource(1).axd"
+        type="text/javascript"
+      ></script>
+      <script
+        src="./resources/UI%20Online_files/WebResource(2).axd"
+        type="text/javascript"
+      ></script>
+      <script
+        src="./resources/UI%20Online_files/WebResource(3).axd"
+        type="text/javascript"
+      ></script>
+      <script
+        src="./resources/UI%20Online_files/ScriptResource.axd"
+        type="text/javascript"
+      ></script>
+      <script
+        src="./resources/UI%20Online_files/ScriptResource(1).axd"
+        type="text/javascript"
+      ></script>
+      <div class="aspNetHidden">
+        <input
+          type="hidden"
+          name="__VIEWSTATEGENERATOR"
+          id="__VIEWSTATEGENERATOR"
+          value="1820C5BB"
+        />
+        <input
+          type="hidden"
+          name="__EVENTVALIDATION"
+          id="__EVENTVALIDATION"
+          value="/wEdAAe5grTHwRBU5N1LbZdObDu/rN2+LuphVo/lIo3VWVI6xoJVI2a8wA8UrXo+J12Z7JLH70E7d4JafKd82kyzpaXbCQEgYxKrUiadYPedZVzIzIAFc4LqHkyZILyAOM2Pfs8hvwTz7BTAekkHq7TFXic9xA8cODTifG1A/1KWfHN159vSh2I="
+        />
+      </div>
+      <script
+        type="text/javascript"
+        src="./resources/jquery-1.6.2.min.js.download"
+      ></script>
+      <script
+        type="text/javascript"
+        src="./resources/jquery-ui-1.8.16.custom.min.js.download"
+      ></script>
+      <script
+        type="text/javascript"
+        src="./resources/scripts.js.download"
+      ></script>
+      <div id="mainDiv" class="wrapper">
+        <div id="main_content">
+          <div id="headerDiv" class="header">
+            <div id="head_cagov_logo" title="CA.gov"></div>
+            <div id="head_organization_banner" title="EDD.CA.gov">
+              <div id="skip_to_content">
+                <a
+                  id="cmdSkiptoContent"
+                  title="Skip to Content"
+                  href="javascript:__doPostBack(&#39;ctl00$cmdSkiptoContent&#39;,&#39;&#39;)"
+                  >Skip to Content</a
+                >
+              </div>
+              <div class="paddingTop">
+                <span
+                  onclick="javascript:DisplayHelpInNewWindow(&#39;https://UIO.edd.ca.gov/UIO/Pages/Public/help/index.htm#en-US/Public/NewClaim/UIOnlineNewClaimLandingPage.htm&#39;);__doPostBack(&#39;ctl00$cshPageHelp&#39;,&#39;cshPageHelp&#39;);"
+                  id="cshPageHelp"
+                  ><span>
+                    <a
+                      href="https://uio.edd.ca.gov/UIO/Pages/Public/NewClaim/UIOnlineNewClaimLandingPage.aspx#"
+                    >
+                      <span title="Help" id="cshPageHelp_ctl00_CustomLabel1"
+                        >Help</span
+                      >
+                    </a>
+                  </span></span
+                >
+                <a
+                  id="cmdBenefitProgramOnline"
+                  href="javascript:__doPostBack(&#39;ctl00$cmdBenefitProgramOnline&#39;,&#39;&#39;)"
+                  >| Benefit Programs Online
+                </a>
+                <span title="" id="CustomLabel2">|</span>
+                <a
+                  id="cmdLoginLogout"
+                  href="javascript:__doPostBack(&#39;ctl00$cmdLoginLogout&#39;,&#39;&#39;)"
+                  >Log Out</a
+                >
+              </div>
+            </div>
+          </div>
+          <div id="pnlSkipContent">
+            <input
+              type="hidden"
+              name="ctl00$hdnDisplayMode"
+              id="hdnDisplayMode"
+              value="Edit"
+            />
+            <script type="text/javascript">
+              //<![CDATA[
+              Sys.WebForms.PageRequestManager._initialize(
+                "ctl00$contentMain$scriptManager1",
+                "frmClaimantMainNoMenu",
+                [],
+                [],
+                [],
+                90,
+                "ctl00"
+              );
+              //]]>
+            </script>
+            <div id="mainDiv" class="add_padding">
+              <div class="dottedDiv">
+                <table style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td style="width: 80%;">
+                        <h1>
+                          <span title="" id="contentMain_lblUIOnlineServices"
+                            >UI Online</span
+                          >
+                        </h1>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <span
+                  id="contentMain_valSummary"
+                  class="ValiDationError"
+                  style="display: inline-block; width: 99%;"
+                ></span>
+              </div>
+              <div>
+                <span title="" id="contentMain_lblRegistrationPage"
+                  >To get started select an option below.</span
+                >
+                <br />
+                <br />
+              </div>
+              <div>
+                <table style="width: 100%; padding-top: 15px;">
+                  <tbody>
+                    <tr valign="top" style="width: 48%;">
+                      <td
+                        style="width: 48%; height: 465px;"
+                        class="tblUsernameBackgroundEUR"
+                      >
+                        <div
+                          id="contentMain_ucExternalUserLoginUserNameTemplate_pnlLogin"
+                          style="height: 330px;"
+                        >
+                          <h3 class="thHeader">
+                            <span
+                              title=""
+                              id="contentMain_ucExternalUserLoginUserNameTemplate_lblFileNewClaim"
+                              >File a New Claim</span
+                            >
+                          </h3>
+                          <div
+                            id="contentMain_ucExternalUserLoginUserNameTemplate_pnlFileNewClaim"
+                          >
+                            <div
+                              style="
+                                padding-top: 20px;
+                                padding-left: 10px;
+                                height: 50px;
+                              "
+                            >
+                              <span
+                                title=""
+                                id="contentMain_ucExternalUserLoginUserNameTemplate_lblNewClaimCMSText"
+                                class="RequiredIndicatorLabel"
+                                >Select File New Claim to complete the
+                                application. No additional UI Online
+                                registration is required to file a claim.</span
+                              >
+                            </div>
+                            <div class="AlignCenter">
+                              <input
+                                type="submit"
+                                name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnSubmit"
+                                value="File New Claim"
+                                onclick="javascript:return DisableMulticlick();"
+                                id="contentMain_ucExternalUserLoginUserNameTemplate_btnSubmit"
+                                title="File New Claim"
+                                class="Button"
+                                style="width: 200px; height: 35px;"
+                              />
+                            </div>
+                            <div
+                              style="
+                                padding-top: 30px;
+                                padding-left: 10px;
+                                height: 50px;
+                              "
+                            >
+                              <span
+                                title=""
+                                id="contentMain_ucExternalUserLoginUserNameTemplate_lblSystemDowntime2"
+                                class="downTimeStyle"
+                                >The File a New Claim features will be available
+                                during the times listed below. (All times are
+                                Pacific time)<br />
+                                <br />
+                                <table>
+                                  <tbody>
+                                    <tr>
+                                      <td><b>Day of the Week</b></td>
+                                      <td><b>Available Time</b></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Sunday</td>
+                                      <td>5:00 a.m. - 8:30 p.m.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Monday</td>
+                                      <td>4 a.m. - 10 p.m.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Tuesday - Friday</td>
+                                      <td>2 a.m. - 10 p.m.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Saturday</td>
+                                      <td>2 a.m. - 8 p.m.</td>
+                                    </tr>
+                                  </tbody>
+                                </table></span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td style="width: 4%;"></td>
+                      <td
+                        style="width: 48%; height: 465px;"
+                        class="tblUsernameBackgroundEUR"
+                      >
+                        <div style="width: 100%; height: inherit;">
+                          <h3 class="thHeader">
+                            <span
+                              title=""
+                              id="contentMain_ucExternalUserLoginUserNameTemplate_lblManageExistingClaim"
+                              >Register or Manage Existing Claim</span
+                            >
+                          </h3>
+                          <div style="height: inherit; height: 250px;">
+                            <div
+                              style="
+                                padding-top: 20px;
+                                padding-left: 10px;
+                                height: 100px;
+                              "
+                            >
+                              <span
+                                title=""
+                                id="contentMain_ucExternalUserLoginUserNameTemplate_lblRegisterAsClaimant"
+                                >Select Register or Manage if you would like to:
+                                <ul>
+                                  <li>
+                                    Register for UI Online with your existing
+                                    claim.
+                                  </li>
+                                  <li>
+                                    Manage your existing UI Online account.
+                                  </li>
+                                </ul></span
+                              >
+                            </div>
+                            <div class="AlignCenter">
+                              <input
+                                type="submit"
+                                name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnManageClaim"
+                                value="Register or Manage"
+                                onclick="javascript:return DisableMulticlick();"
+                                id="contentMain_ucExternalUserLoginUserNameTemplate_btnManageClaim"
+                                title="Register or Manage"
+                                class="Button"
+                                htmlencode="true"
+                                style="
+                                  height: 35px;
+                                  width: 200px;
+                                  white-space: normal;
+                                "
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cleaner"></div>
+        <div id="footer_2" class="clearfix">
+          <div>
+            <a
+              href="https://uio.edd.ca.gov/UIO/Pages/Public/NewClaim/UIOnlineNewClaimLandingPage.aspx#"
+              accesskey="T"
+            >
+              <span title="" id="cmdBacktoTop">Back to Top</span> </a
+            ><a
+              href="http://www.edd.ca.gov/About_EDD/Contact_EDD.htm"
+              id="ContactEDD"
+              target="_blank"
+            >
+              <span title="" id="cmdContactEDD">Contact EDD</span> </a
+            ><a
+              href="http://www.edd.ca.gov/About_EDD/Conditions_Of_Use.htm"
+              id="ConditionsofUse"
+              target="_blank"
+            >
+              <span title="" id="cmdConditionsofUse"
+                >Conditions of Use</span
+              > </a
+            ><a
+              href="http://www.edd.ca.gov/About_EDD/Privacy_Policy.htm"
+              id="PrivacyPolicy"
+              target="_blank"
+            >
+              <span title="" id="cmdPrivacyPolicy">Privacy Policy</span> </a
+            ><a
+              href="http://www.edd.ca.gov/About_EDD/Accessibility.htm"
+              id="Accessibility"
+              target="_blank"
+            >
+              <span title="" id="cmdAccessaibility">Accessibility</span>
+            </a>
+          </div>
+          <div>
+            Copyright © 2018 State of California
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        //<![CDATA[
+        javascript: SetupSessionTimeoutNotification(
+          "1500000",
+          "1800000",
+          "/UIO/Pages/Public/Logout.aspx",
+          "/UIO/Pages/Public/SessionTimeoutNotification.aspx"
+        ); //]]>
+      </script>
+    </form>
+    <div id="background_decorative">
+      &nbsp;
+    </div>
 
-<script type="text/javascript">
-var eddBaseUrl = "/UIO/";
-function pageLoad() {
-setUpDatePicker();
-}
-function setUpDatePicker() {
-//set up the datepicker for all controls that need it
-$('input').each(function (index) {
-if ($(this).hasClass('eddDateField')) {
-var options = {
-showOn: "button",
-buttonImage: resolveUrl("~/App_Themes/Default/Images/CalendarButton.png"),
-buttonImageOnly: true,
-buttonText: '',
-dateFormat: 'mm/dd/yy',  // year will appear with four digits, not two
-showButtonPanel: true
-}
-if ($(this).prop('disabled')) {
-options.disabled = true;
-}
-$(this).datepicker(options);
-}
-});
-}
-function resolveUrl(url) {
-if (url.indexOf("~/") == 0) {
-url = eddBaseUrl + url.substring(2);
-}
-return url;
-}
-</script>
-<!--Added processBar.js-->
-<script type="text/javascript">
-/*  (function () {//self invoking function so we don't pollute the global name space
+    <script type="text/javascript">
+      var eddBaseUrl = "/UIO/";
+      function pageLoad() {
+        setUpDatePicker();
+      }
+      function setUpDatePicker() {
+        //set up the datepicker for all controls that need it
+        $("input").each(function (index) {
+          if ($(this).hasClass("eddDateField")) {
+            var options = {
+              showOn: "button",
+              buttonImage: resolveUrl(
+                "~/App_Themes/Default/Images/CalendarButton.png"
+              ),
+              buttonImageOnly: true,
+              buttonText: "",
+              dateFormat: "mm/dd/yy", // year will appear with four digits, not two
+              showButtonPanel: true,
+            };
+            if ($(this).prop("disabled")) {
+              options.disabled = true;
+            }
+            $(this).datepicker(options);
+          }
+        });
+      }
+      function resolveUrl(url) {
+        if (url.indexOf("~/") == 0) {
+          url = eddBaseUrl + url.substring(2);
+        }
+        return url;
+      }
+    </script>
+    <!--Added processBar.js-->
+    <script type="text/javascript">
+      /*  (function () {//self invoking function so we don't pollute the global name space
 var x = document.getElementsByClassName('groupItem'); //targets elements with the class "groupItem"
 for (var i = 0, max = x.length; i < max; i++) { //runs through all the elements with the class groupItems
 x[i].setAttribute("style", "width:" + 100 / x.length + "%"); //changes the width of the elements so that they fit
@@ -231,40 +492,159 @@ x[i].className += " complete"; //since this element is before active, its comple
 * Released under the WTFPL license
 * http://sam.zoy.org/wtfpl/
 */
-(function () {
-window.$clamp = function (c, d) {
-function s(a, b) { n.getComputedStyle || (n.getComputedStyle = function (a, b) { this.el = a; this.getPropertyValue = function (b) { var c = /(\-([a-z]){1})/g; "float" == b && (b = "styleFloat"); c.test(b) && (b = b.replace(c, function (a, b, c) { return c.toUpperCase() })); return a.currentStyle && a.currentStyle[b] ? a.currentStyle[b] : null }; return this }); return n.getComputedStyle(a, null).getPropertyValue(b) } function t(a) { a = a || c.clientHeight; var b = u(c); return Math.max(Math.floor(a / b), 0) } function x(a) {
-return u(c) * a
-} function u(a) { var b = s(a, "line-height"); "normal" == b && (b = 1.2 * parseInt(s(a, "font-size"))); return parseInt(b) } function l(a) { if (a.lastChild.children && 0 < a.lastChild.children.length) return l(Array.prototype.slice.call(a.children).pop()); if (a.lastChild && a.lastChild.nodeValue && "" != a.lastChild.nodeValue && a.lastChild.nodeValue != b.truncationChar) return a.lastChild; a.lastChild.parentNode.removeChild(a.lastChild); return l(c) } function p(a, d) {
-if (d) {
-var e = a.nodeValue.replace(b.truncationChar, ""); f || (h = 0 < k.length ? k.shift() : "", f = e.split(h)); 1 < f.length ? (q = f.pop(), r(a, f.join(h))) : f = null; m && (a.nodeValue = a.nodeValue.replace(b.truncationChar, ""), c.innerHTML = a.nodeValue + " " + m.innerHTML + b.truncationChar); if (f) { if (c.clientHeight <= d) if (0 <= k.length && "" != h) r(a, f.join(h) + h + q), f = null; else return c.innerHTML } else "" == h && (r(a, ""), a = l(c), k = b.splitOnChars.slice(0), h = k[0], q = f = null); if (b.animate) setTimeout(function () { p(a, d) }, !0 === b.animate ? 10 : b.animate); else return p(a, d)
-}
-} function r(a, c) { a.nodeValue = c + b.truncationChar } d = d || {};
-var n = window, b = { clamp: d.clamp || 2, useNativeClamp: "undefined" != typeof d.useNativeClamp ? d.useNativeClamp : !0, splitOnChars: d.splitOnChars || [".", "-", "\u2013", "\u2014", " "], animate: d.animate || !1, truncationChar: d.truncationChar || "\u2026", truncationHTML: d.truncationHTML }, e = c.style, y = c.innerHTML, z = "undefined" != typeof c.style.webkitLineClamp, g = b.clamp, v = g.indexOf && (-1 < g.indexOf("px") || -1 < g.indexOf("em")), m; b.truncationHTML && (m = document.createElement("span"), m.innerHTML = b.truncationHTML); var k = b.splitOnChars.slice(0), h = k[0], f, q; "auto" == g ? g = t() : v && (g = t(parseInt(g))); var w; z && b.useNativeClamp ? (e.overflow = "hidden", e.textOverflow = "ellipsis", e.webkitBoxOrient = "vertical", e.display = "-webkit-box", e.webkitLineClamp = g, v && (e.height = b.clamp + "px")) : (e = x(g), e <= c.clientHeight && (w = p(l(c), e))); return { original: y, clamped: w }
-}
-})();
-/**********************
+      (function () {
+        window.$clamp = function (c, d) {
+          function s(a, b) {
+            n.getComputedStyle ||
+              (n.getComputedStyle = function (a, b) {
+                this.el = a;
+                this.getPropertyValue = function (b) {
+                  var c = /(\-([a-z]){1})/g;
+                  "float" == b && (b = "styleFloat");
+                  c.test(b) &&
+                    (b = b.replace(c, function (a, b, c) {
+                      return c.toUpperCase();
+                    }));
+                  return a.currentStyle && a.currentStyle[b]
+                    ? a.currentStyle[b]
+                    : null;
+                };
+                return this;
+              });
+            return n.getComputedStyle(a, null).getPropertyValue(b);
+          }
+          function t(a) {
+            a = a || c.clientHeight;
+            var b = u(c);
+            return Math.max(Math.floor(a / b), 0);
+          }
+          function x(a) {
+            return u(c) * a;
+          }
+          function u(a) {
+            var b = s(a, "line-height");
+            "normal" == b && (b = 1.2 * parseInt(s(a, "font-size")));
+            return parseInt(b);
+          }
+          function l(a) {
+            if (a.lastChild.children && 0 < a.lastChild.children.length)
+              return l(Array.prototype.slice.call(a.children).pop());
+            if (
+              a.lastChild &&
+              a.lastChild.nodeValue &&
+              "" != a.lastChild.nodeValue &&
+              a.lastChild.nodeValue != b.truncationChar
+            )
+              return a.lastChild;
+            a.lastChild.parentNode.removeChild(a.lastChild);
+            return l(c);
+          }
+          function p(a, d) {
+            if (d) {
+              var e = a.nodeValue.replace(b.truncationChar, "");
+              f || ((h = 0 < k.length ? k.shift() : ""), (f = e.split(h)));
+              1 < f.length ? ((q = f.pop()), r(a, f.join(h))) : (f = null);
+              m &&
+                ((a.nodeValue = a.nodeValue.replace(b.truncationChar, "")),
+                (c.innerHTML =
+                  a.nodeValue + " " + m.innerHTML + b.truncationChar));
+              if (f) {
+                if (c.clientHeight <= d)
+                  if (0 <= k.length && "" != h)
+                    r(a, f.join(h) + h + q), (f = null);
+                  else return c.innerHTML;
+              } else
+                "" == h &&
+                  (r(a, ""),
+                  (a = l(c)),
+                  (k = b.splitOnChars.slice(0)),
+                  (h = k[0]),
+                  (q = f = null));
+              if (b.animate)
+                setTimeout(
+                  function () {
+                    p(a, d);
+                  },
+                  !0 === b.animate ? 10 : b.animate
+                );
+              else return p(a, d);
+            }
+          }
+          function r(a, c) {
+            a.nodeValue = c + b.truncationChar;
+          }
+          d = d || {};
+          var n = window,
+            b = {
+              clamp: d.clamp || 2,
+              useNativeClamp:
+                "undefined" != typeof d.useNativeClamp ? d.useNativeClamp : !0,
+              splitOnChars: d.splitOnChars || [
+                ".",
+                "-",
+                "\u2013",
+                "\u2014",
+                " ",
+              ],
+              animate: d.animate || !1,
+              truncationChar: d.truncationChar || "\u2026",
+              truncationHTML: d.truncationHTML,
+            },
+            e = c.style,
+            y = c.innerHTML,
+            z = "undefined" != typeof c.style.webkitLineClamp,
+            g = b.clamp,
+            v = g.indexOf && (-1 < g.indexOf("px") || -1 < g.indexOf("em")),
+            m;
+          b.truncationHTML &&
+            ((m = document.createElement("span")),
+            (m.innerHTML = b.truncationHTML));
+          var k = b.splitOnChars.slice(0),
+            h = k[0],
+            f,
+            q;
+          "auto" == g ? (g = t()) : v && (g = t(parseInt(g)));
+          var w;
+          z && b.useNativeClamp
+            ? ((e.overflow = "hidden"),
+              (e.textOverflow = "ellipsis"),
+              (e.webkitBoxOrient = "vertical"),
+              (e.display = "-webkit-box"),
+              (e.webkitLineClamp = g),
+              v && (e.height = b.clamp + "px"))
+            : ((e = x(g)), e <= c.clientHeight && (w = p(l(c), e)));
+          return { original: y, clamped: w };
+        };
+      })();
+      /**********************
 Everything below is custom code for CA.gov
 ***********************/
-(function () {//self invoking function so we don't pollute the global name space
-var x = document.querySelectorAll('.groupItem'); //targets elements with the class "groupItem"
-for (var i = 0, max = x.length; i < max; i++) { //runs through all the elements with the class groupItems
-x[i].setAttribute("style", "width:" + 100 / x.length + "%"); //changes the width of the elements so that they fit
-}
-function hasClass(element, cls) {//element = test element, cls = class to test for
-return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-}
-for (var i = 0, max = x.length; i < max; i++) {//this loop is looking for elements that are before active
-if (hasClass(x[i], "active")) {//Does the current element have the class of active? If so, stop, else continue
-break;
-}
-x[i].className += " complete"; //since this element is before active, its complete so add the class complete
-}
-//This is code to add ellipsis for when the detail span is too long.
-var y = document.getElementsByClassName('detail'); //this finds all the detail spans
-for (var i = 0, max = y.length; i < max; i++) {//loops through all the detail spans to add code to each one
-$clamp(y[i], { clamp: 2 }); //uses clamp.js to add ellipsises to content that is more then 2 lines long.
-}
-})();
-</script>
-</body></html>
+      (function () {
+        //self invoking function so we don't pollute the global name space
+        var x = document.querySelectorAll(".groupItem"); //targets elements with the class "groupItem"
+        for (var i = 0, max = x.length; i < max; i++) {
+          //runs through all the elements with the class groupItems
+          x[i].setAttribute("style", "width:" + 100 / x.length + "%"); //changes the width of the elements so that they fit
+        }
+        function hasClass(element, cls) {
+          //element = test element, cls = class to test for
+          return (" " + element.className + " ").indexOf(" " + cls + " ") > -1;
+        }
+        for (var i = 0, max = x.length; i < max; i++) {
+          //this loop is looking for elements that are before active
+          if (hasClass(x[i], "active")) {
+            //Does the current element have the class of active? If so, stop, else continue
+            break;
+          }
+          x[i].className += " complete"; //since this element is before active, its complete so add the class complete
+        }
+        //This is code to add ellipsis for when the detail span is too long.
+        var y = document.getElementsByClassName("detail"); //this finds all the detail spans
+        for (var i = 0, max = y.length; i < max; i++) {
+          //loops through all the detail spans to add code to each one
+          $clamp(y[i], { clamp: 2 }); //uses clamp.js to add ellipsises to content that is more then 2 lines long.
+        }
+      })();
+    </script>
+  </body>
+</html>
