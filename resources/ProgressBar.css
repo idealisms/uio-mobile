@@ -1,0 +1,182 @@
+
+/*Background Gradient*/
+
+body {
+    background: #113b68; /* Old browsers */
+    background: -moz-linear-gradient(left, #113b68 0%, #97bbd9 40%, #97bbd9 60%, #113b68 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#113b68), color-stop(40%,#97bbd9), color-stop(60%,#97bbd9), color-stop(100%,#113b68)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #113b68 0%,#97bbd9 40%,#97bbd9 60%,#113b68 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #113b68 0%,#97bbd9 40%,#97bbd9 60%,#113b68 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #113b68 0%,#97bbd9 40%,#97bbd9 60%,#113b68 100%); /* IE10+ */
+    background: linear-gradient(to right, #113b68 0%,#97bbd9 40%,#97bbd9 60%,#113b68 100%); /* W3C */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF113b68', endColorstr='#FF113b68',GradientType=1 ); /* IE6-9 */
+}
+
+
+
+#head_log_status {
+    display: block;
+    position: absolute;
+    background: rgba(0, 51, 102, 0.85);
+    color: white;
+    padding: 7px 15px;
+    width: 300px;
+    margin-left: 678px;
+    top: 0;
+    overflow: hidden;
+    border-radius: 0 0 0 5px;
+}
+
+#head_log_status a {
+    color: white;
+}
+
+/*Footer Style*/
+
+#footer_2 {
+    background: rgba(0, 51, 102, 0.85);
+}
+
+/*Drop Shadow Styling*/
+
+.nav ul,
+#mainDiv {
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+
+/******************************
+end of none Process Bar Styles
+*******************************/
+
+/*Process Bar Styles
+Include images from the folder ProcessBar found in ../Images/ProgressBar*/
+
+.wizard .groupItem {
+	height: auto;
+	padding-left: 25px;
+	background: url("../Images/InactiveToInactive.png") left center no-repeat #ebf1f5;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing: border-box;
+	width: auto;
+}
+
+.wizard .groupItem:first-child {
+	border-radius: 5px 0 0 5px;
+	background-image: none;
+	padding-left: 10px;
+}
+
+.wizard .groupItem:last-child {
+	border-radius: 0 5px 5px 0;
+}
+
+.wizard .groupItem .container {
+	display: table;
+	vertical-align: middle;
+	height: 70px;
+}
+
+table.wizard {
+	table-layout: fixed;
+}
+
+/********************************
+******Style for Number Step******
+*********************************/
+
+.wizard .groupItem .stepNumberContainer {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: url("../Images/step-background.png") no-repeat center center;	
+}
+
+.wizard .groupItem .stepNumber {
+	display: table-cell;
+	color: rgb(80, 80, 80);
+	width: 15px;
+	height: 15px;
+	font-weight: bold;
+	padding: 2px;
+	font-size: 1.1em;
+	vertical-align: middle;
+}
+
+/********************************
+*******Style for Step Info*******
+*********************************/
+
+
+.wizard .groupItem .stepDescription  {
+	display: table-cell;
+	vertical-align: middle;
+	
+}
+
+.wizard .groupItem h3.stepTitle {
+	border: 0;
+	font-weight: normal;
+	text-align: left;
+}
+
+.detail
+{
+    border: 0;
+    text-align:left;
+}
+
+/********************************
+******Style for Active Step******
+*********************************/
+
+.wizard .groupItem.active {
+	background: url("../Images/CompleteToActive.png") left center no-repeat #006599;
+	color: #fff;
+}
+
+.wizard .groupItem.active:first-child {
+	background-image: none;
+	
+}
+
+.wizard .groupItem.active + .itemSeparator + .groupItem {
+	background-image: url("../Images/ActiveToInactive.png");
+}
+
+.wizard .groupItem.active .stepNumber {
+	border-color: #006599;
+	color: #006599;
+}
+
+
+/********************************
+****Style for Completed Step*****
+*********************************/
+
+.wizard .groupItem.complete {
+	background: url("../Images/CompleteToComplete.png") left center no-repeat #d6ebfa;
+	color: rgb(80, 80, 80);
+}
+
+.wizard .groupItem.complete:first-child,
+.wizard .groupItem.complete .stepNumberContainer {
+	background-image: none;
+}
+
+.wizard .groupItem.complete .stepNumberContainer {
+	padding-right: 12px;
+}
+
+.wizard .groupItem.complete .stepNumber:before {
+	content: url("../Images/Complete.png");
+	display: block;
+	position: absolute;
+	margin-top: -7px;
+	margin-left: -9px;
+}
+
+.wizard .groupItem.complete:last-child {
+	background: #d6ebfa;
+}

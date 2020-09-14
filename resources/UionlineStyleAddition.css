@@ -1,0 +1,1024 @@
+﻿/*--WDC.css-------------------start --*/
+/*.thHeader
+{
+	background: #006599;
+	padding: 2px 10px;
+	color: #FFFFFF;
+	text-align: left;
+	font-size: 1.3em;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 3px solid #fbad23;
+	font-weight: normal;
+}*/
+
+.acrcPadding
+{
+	padding: 0px 10px 0px 10px;
+}
+
+.divButtonPadding
+{
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 10px;
+}
+/* EUR Css Properties*/
+
+.thHeaderEUR04
+{
+	background-color: #fbad23;
+	padding: 2px 10px;
+	color: #505050;
+	text-align: left;
+	font-size: 1.3em;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 3px solid #fbad23;
+	font-weight: bold;
+}
+
+.divPasswordOptionsEUR20
+{
+	margin-left: 20%;
+	vertical-align: middle;
+}
+
+.cellLabelBottomEUR
+{
+	vertical-align: baseline;
+	text-transform: none;
+	text-indent: 0pt;
+	text-align: right;
+	padding-right: 0px;
+}
+
+.cellLabelLeftBottom
+{
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: top;
+	text-transform: none;
+	font-family: Arial, Helvetica, sans-serif;
+	text-indent: 0pt;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 10px;
+}
+
+.hrBorderLine
+{
+	vertical-align: middle;
+	color: #000000;
+	height: 1px;
+	border-bottom-color: #fbad23;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+.tableBottomPadding
+{
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+.divPaddingContent
+{
+	padding: 10px;
+	padding-bottom: 20px;
+}
+.divPaddingContentNoBottom
+{
+	padding: 10px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+.divPaddingContentNoLeft
+{
+	padding: 10px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+
+.divPaddingContentEUR04
+{
+	padding: 10px;
+	background-color: #F9DEAE;
+}
+
+.divPaddingBottomEUR04
+{
+	padding-bottom: 30px;
+}
+
+.divMarginLeftEUR04
+{
+	margin-left: -10px;
+}
+
+.divMarginWithMarginLeftEUR04 
+{
+	margin:0;
+	padding: 0;
+	border: 0;
+	margin-left:4px;
+}
+.divMarginTopEUR04
+{
+	margin-top: 4px;
+}
+
+.tdEvenRow
+{
+	/*background-color: #dddddd;*/
+	vertical-align: middle;
+	height: 25px;
+	text-align: left;
+	padding-top: 10px;
+}
+
+.tdContentEUR04
+{
+	padding-top: 5px;
+}
+
+.trContentEUR04
+{
+	padding-bottom: 0px;
+}
+
+.thHeaderEUR
+{
+	margin: 0;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+.tdLeftPaddingContentEUR
+{
+	padding-left: 5px;
+}
+
+.divContentEUR19
+{
+	padding-top: 0px;
+	padding-bottom: 10px;
+}
+
+.tdContentAlignEUR50
+{
+	text-align: right;
+	vertical-align: top;
+}
+.tdContentVAlignEUR50
+{
+	vertical-align: top;
+}
+
+.tdPaddingContentEUR50
+{
+	vertical-align: top;
+	padding-bottom: 20px;
+}
+
+.ulTextAligingEUR23
+{
+	margin-left: 12px;
+}
+
+.divPaddingContentEUR
+{
+	padding: 0px;
+	padding-top: 5px;
+}
+
+.divPaddingContentCaptcha
+{
+	padding: 0px;
+}
+
+.tdPaddingContentEURRecaptcha
+{
+	padding-left: 3px;
+}
+
+.tdCaptchaImageHeightEUR
+{
+	height: 150px;
+}
+
+.tblUsernameBackgroundEUR
+{
+	background-color: #f2f3ed;
+	border: 1px solid #ddded6;
+}
+
+.trRowHeight
+{
+	height: 58px;
+}
+
+.trRowHeight1
+{
+	height: 40px;
+}
+
+.tblPasswordHelpTextEUR04
+{
+	vertical-align: top;
+	padding-top: 5px;
+}
+
+.tdShowMoreImagesEUR04
+{
+	color: #1f70a7;
+	text-decoration: none;
+}
+
+.tdPersonalImageCaptionEUR04
+{
+	padding-left: 3px;
+}
+
+.tdChangeCulture
+{
+	text-align: right;
+	padding-right: 15px;
+}
+
+.divPaddingEUR05
+{
+	padding: 0px 0px 10px 10px;
+}
+
+.divPaddingContentEUR19
+{
+	padding: 10px;
+	padding-bottom: 10px;
+}
+.tdCaptchaText
+{
+	padding-top: 13px;
+}
+
+/* EUR Css Properties*/
+
+/* CAM CSS Properties Starts */
+
+#dvCAMCMSReqPadding
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.tblTwntyEightyRuleCAM, .paddingCAM
+{
+	width: 100%;
+	padding: 10px;
+}
+.tblTwntyEightyRuleCAM td:first-child
+{
+	width: 20% !important;
+	text-align: right;
+}
+
+.tblTwntyEightyRuleCAM td
+{
+	width: 80%;
+	text-align: left;
+}
+
+/*.tblSxtyFrtyRuleCAM
+{
+    width:100%;
+    padding:10px;
+}
+.tblSxtyFrtyRuleCAM td:first-child
+{
+    width:40% !important;
+ text-align: right !important;
+}
+
+.tblSxtyFrtyRuleCAM td:nth-child(2)
+{
+    width:60%;
+    text-align: left;
+}*/
+
+/*.GridR3 span[id*="Amount"]
+{
+    text-align:right !important;
+}*/
+
+/* CAM CSS Properties Ends */
+
+.divPaddingLeft
+{
+	padding-left: 15px;
+}
+
+.cellHelpIcon
+{
+	font-size: 100%;
+	vertical-align: top;
+	text-transform: none;
+	text-indent: 0pt;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: right;
+	padding-right: 0px;
+}
+
+.blueHeader
+{
+	border-top: #036 3px solid;
+}
+
+.thHeaderNoPadding
+{
+	background: #006599;
+	padding: 0px 10px;
+	color: #FFFFFF;
+	text-align: left;
+	font-size: 1.3em;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 3px solid #fbad23;
+	font-weight: normal;
+}
+
+.cellLabelCert
+{
+	font-size: 100%;
+	vertical-align: top;
+	text-transform: none;
+	color: #000000;
+	text-indent: 0pt;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: right;
+	padding-right: 6px;
+}
+
+.dayColumn, .timeControlColumn TD
+{
+	padding-left: 0px;
+	height: 0px;
+}
+
+.buttonThreeSpreadCenter
+{
+	position: static;
+	text-align: center;
+}
+.buttonThreeSpreadRight
+{
+	position: static;
+	text-align: right;
+}
+.buttonThreeSpreadLeft
+{
+	position: static;
+	text-align: left;
+}
+
+/*---WDC.css -----------------------END*/
+
+/*WDC.control.css---------------Start */
+div.ControlGridField.XdsAppletContainerField > label, div.ControlGridField.XdsAppletContainerField > label > span, div.XdsAppletContainer
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.subQuestionPadding
+{
+	padding: 0px 0px 0px 50px;
+}
+
+.subQuestionPadding2
+{
+	padding: 0px 0px 0px 100px;
+}
+
+.subQuestionPadding3
+{
+	padding: 0px 0px 0px 150px;
+}
+
+.subQuestionPadding4
+{
+	padding: 0px 0px 0px 200px;
+}
+
+.divPaddingContent tr td
+{
+	padding-bottom: 1px !important;
+}
+
+.QuestionsRadiobuttonlist
+{
+	/*width: 100%; 	height: 35px; */ /*padding-left: 15px;*/
+	padding-left: 8px;
+	vertical-align: top;
+}
+
+.QuestionsRadiobuttonlist label
+{
+	color: #666666;
+}
+
+.QuestionText
+{
+	vertical-align: top;
+}
+
+.groupItem
+{
+	float: left;
+	text-align: center;
+	font-size: 1em;
+	z-index: 2;
+	position: relative;
+	width: 120px;
+	margin-bottom: 10px;
+}
+.itemSeparator
+{
+	background: #d6d7d1;
+	height: 15px;
+	width: 120px;
+	float: left;
+	position: relative;
+	top: 11px;
+	margin: 0 -50px;
+	z-index: 1;
+}
+
+/*.GridR3
+{
+    border-top: 1pt solid #D6D7D1 !important;
+    border-bottom: 1pt solid #D6D7D1 !important;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    font-family: Arial Helvetica sans-serif;
+}
+.GridR3 th
+{
+    background-color: #A6C6E9;
+    color: #000000;
+    font-weight: bolder;
+    border-collapse: collapse;
+    border-color: transparent;
+    height: 25px;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 10px;
+    border-bottom: #99A4AD 2px solid;
+    border-bottom-width: thin;
+}
+
+.GridR3 td
+{
+    height: 25px;
+    border-left: none;
+    border-right: none;
+    vertical-align: middle;
+    padding-left: 5px;
+}*/
+
+.block_with_rounded_corners_noBottomPadding
+{
+	padding-top: 10px;
+}
+
+.customFormViewPadding > tbody > tr > td
+{
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+.customFormViewOnlyBottomPadding > tbody > tr > td
+{
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+.tableRadio table
+{
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+.tableRadio td
+{
+	padding: 0;
+}
+
+.customFormViewNoLeftPadding > tbody > tr > td
+{
+	padding: 10px;
+	padding-left: 0px;
+}
+
+.customFormViewNoBottomtPadding > tbody > tr > td
+{
+	padding: 10px;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+
+.customDivNoBottomtPadding
+{
+	padding: 10px;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+
+.tdFieldLabel
+{
+    text-align: right;
+}
+
+.tdPadLeft
+{
+    padding-left: 5px;
+}
+
+.dataRow td
+{
+	vertical-align: top;
+}
+
+.dataRow2 td
+{
+    vertical-align: top;
+}
+
+.dataRow4 td
+{
+	vertical-align: top;
+}
+
+.dataRow1 td
+{
+	vertical-align: top;
+}
+
+.dataRow1 td > span
+{
+	vertical-align: top;
+}
+
+.dataRow3 td
+{
+	vertical-align: top;
+}
+
+.dataRowLast_SubQuestionContained td
+{
+	vertical-align: top;
+}
+
+.topAlign
+{
+    vertical-align: top;
+}
+
+.borderTop
+{
+	border-top: 1px solid #ccc;
+}
+
+.questionHeight_ThreeLine
+{
+	height: 60px;
+}
+
+.questionHeight_TwoLine
+{
+	height: 30px;
+}
+
+.question_PreserveWhiteSpace
+{
+	white-space: pre;
+}
+/*Top Aligning all text*/
+.dataRow td span, .dataRow1 td span, .dataRow3 td span, .dataRowLast_SubQuestionContained td span, .dataRow4 td span, .topAlign td span, .dataRow2 td span
+{
+	vertical-align: top;
+}
+
+.topAlign td span textarea
+{
+    vertical-align: top;
+}
+
+.topAlign td span select
+{
+    vertical-align: top;
+}
+
+.dataRow th span
+{
+	vertical-align: top;
+}
+
+.dataRow table td, .dataRow1 table td, .dataRow3 table td, .dataRowLast_SubQuestionContained table td, .dataRow4 table td, .dataRow2 table td
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+}
+
+.estimatedCheckBoxTopAlign label
+{
+	vertical-align: top;
+}
+
+.questionPadding 
+{
+    padding-right: 7px !important;
+}
+
+/*End: Top Aligning all text*/
+
+.GridR3
+{
+	text-align: left;
+}
+.GridR3 th
+{
+	background-color: #A6C6E9;
+	color: #000000;
+	font-weight: bolder;
+	border-collapse: collapse;
+	border-color: transparent;
+	height: 0px;
+	vertical-align: middle;
+	text-align: left;
+	border-bottom: #99A4AD 2px solid;
+	border-bottom-width: thin;
+}
+
+.GridR3 > tbody > tr > td
+{
+	border-left: none;
+	border-right: none;
+	height: 0px;
+	padding: 5px !important;
+	vertical-align: top !important;
+}
+
+.GridWidth
+{
+    width: 71%;
+}
+
+.SummaryTableHeader th
+{
+	font-size: 1.2em;
+	text-align: left;
+	vertical-align: bottom;
+	border-bottom: #036 3px solid;
+}
+
+/*R2 V. R3 Styles*/
+.subQuestionTable
+{
+}
+
+.reopenClaimTable
+{
+}
+
+.questionHeight_TwoLineR2vR3
+{
+}
+
+.questionHeight_ThreeLineR2vR3
+{
+}
+
+.questionHeight_TwoThreeSix
+{
+}
+
+.questionHeight_FourFive
+{
+}
+
+.questionHeight_TwentyThree
+{
+}
+
+.questionHeight_TwentyNine
+{
+}
+
+.questionHeight_TwentySix
+{
+}
+
+.questionHeight_TwentyFour
+{
+}
+
+.boldFont
+{
+}
+
+.thR2vR3Header
+{
+}
+/*End: R2 V. R3 Styles*/
+
+.ulMarginBottomReset
+{
+	margin-bottom: 0px;
+}
+
+.validationSummary_ULPadding ul
+{
+	padding-left: 12px;
+}
+
+/*WDC.control.css------------------END*/
+
+/* Start style.css */
+
+sup
+{
+	font-size: 0.8em;
+	vertical-align: super;
+}
+
+.requiredtext
+{
+	padding-top: 10px;
+}
+
+.cmsContentbelowtitle
+{
+	padding-top: 13px;
+	padding-bottom: 10px;
+}
+
+.acrcHeader
+{
+	border-top: 1px solid #d6d7d1;
+}
+
+/*blank style created as the style is used in R2*/
+.sigAccept
+{
+}
+
+.warninglabel
+{
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: bottom;
+	text-transform: none;
+	text-indent: 0pt;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+.trheaderbold
+{
+	background-color: #2D547D;
+	height: 25px;
+}
+
+.subHeader
+{
+	border-top: #2D547D 3px solid;
+}
+
+.thHeaderSaveAsDraft
+{
+	background-color: #A6C6DF;
+	padding: 2px 10px;
+	color: #000000;
+	text-align: left;
+	font-size: 1.3em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.divPaddingSaveAsDraft
+{
+	padding: 10px;
+	background-color: #E0EEF7;
+	color: #505050;
+}
+
+.divBackGroundColorNotifications
+{
+	background-color: #A6C6E9;
+	padding: 6px 10px;
+}
+
+.divBackGroundNotificationMessage
+{
+	background-color: #E0EDF6;
+}
+
+.tdNotifications1 tr td
+{
+    padding-bottom: 10px; 
+    padding-top: 10px; 
+}
+
+.tdNotifications2 tr td
+{
+    padding-bottom: 10px; 
+    padding-top: 10px; 
+    border-top: 2px solid #E3E3E0;
+}
+
+.listColor
+{
+	color: Black;
+}
+.vbottomspecial
+{
+	vertical-align: bottom !important;
+}
+
+.tab
+{
+	padding: 0 0 0 192px;
+}
+
+.spacingbetweenColumns
+{
+	padding: 0 0 3px 0;
+}
+
+.subQuestionTableR2
+{
+    width: 100%;
+    
+}
+.DataLabel
+{
+    font-weight:bold;
+ }
+ 
+ 
+.FormatRadioButtonList label
+{
+  margin-right: 15%;
+}
+
+.Summary
+{
+  padding: 20px;
+}
+
+.showLinkasButton
+{
+  height: 35px;
+  width:100%;
+  background:#003466;
+  color:#fff;
+  padding:8px 44px 8px 44px;
+  border-radius:8px;
+  font-size:14px;
+  border-bottom:2px solid#000
+  
+}
+
+.RadioButtonList label
+{
+  margin-right: 5%;
+}
+
+
+.AlignmentRadioButtonList input
+{   
+    position: relative;
+    vertical-align:-3px;
+}
+.AlignmentRadioButtonList label
+{
+    
+    padding-right: 3px;
+    vertical-align:middle;
+    
+}
+.ForgotPasswordRadioButtonList input
+{
+    vertical-align:-3px;
+}
+.ForgotPasswordRadioButtonList label
+{
+     vertical-align:middle;
+     margin-right: 150px;
+}
+
+.RadioButtonListSurvey
+{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.RadioButtonListSurvey td
+{
+    text-align: center;
+}
+
+.MultiLineTextBoxSurvey textarea
+{
+    width: 92%;
+}
+
+.MultiLineTextBoxSurvey img
+{
+    vertical-align: top;
+}
+
+.block1
+{
+    display: inline-block;
+}
+.block1 span:nth-child(1)
+{
+    display: inline-flex;
+    position: relative;
+}
+.block1 span > span
+{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    padding-left: 20px;
+}
+.block1 span > span > img
+{
+    float: right;
+}
+.block2
+{
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+
+.aknowledgementCheckBox input {
+    margin-left: 0px;
+}
+
+.subQuestionHideNumber {
+    visibility: hidden;
+}
+
+.radioButtonListNoWrap label {
+    vertical-align: top;
+    display: table-header-group;
+}
+
+.radioButtonListNoWrap input[type=radio] {
+    float: left;
+}
+
+.thHeaderDpo {
+    margin-left:-10px !important;
+    margin-right:-10px !important;
+    width:930px;
+}
+
+.docUploadH2 {
+    font-size: 200% !important;
+    margin-left: 0em !important;
+    font-weight: normal !important;
+    margin: .8em !important;
+    margin-left: 0em !important;
+}
+.solidq7l {
+    font-weight: bold;
+    text-align: center;
+    border-top-style: solid;
+}
+
+
+.docUploadH3 {
+    font-size: 150% !important;
+    margin-left: 0em !important;
+    border-bottom: none !important;
+    font-weight: normal !important;
+    margin: .8em !important;
+    margin-left: 0em !important;
+}
+.subQuestionPaddinAlignTop {
+    padding: 0px 0px 0px 50px;
+    vertical-align: text-top;
+}
+
+.textAlignTop {
+    vertical-align: text-top;
+}
+/*End style.css*/
