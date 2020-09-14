@@ -120,7 +120,7 @@
         type="text/javascript"
         src="./resources/scripts.js.download"
       ></script>
-      <div id="mainDiv" class="wrapper">
+      <div id="mainDiv" style="max-width: 1008px;">
         <div id="main_content">
           <div id="headerDiv" class="header">
             <div id="head_cagov_logo" title="CA.gov"></div>
@@ -168,7 +168,7 @@
               id="hdnDisplayMode"
               value="Edit"
             />
-            <div class="add_padding">
+            <div class="add_padding container-fluid">
               <div>
                 <h1 class="pageHeader">
                   UNEMPLOYMENT INSURANCE AND PANDEMIC UNEMPLOYMENT ASSISTANCE
@@ -384,72 +384,60 @@
                 ></span>
               </div>
               <div class="block_with_rounded_corners">
-                <table class="tableBottomPadding">
-                  <tbody>
-                    <tr class="dataRow">
-                      <td align="left" style="padding-bottom: 10px;">
-                        <span title="Select"
-                          ><input
-                            id="contentMain_chkAcceptance"
-                            type="checkbox"
-                            name="ctl00$contentMain$chkAcceptance"
-                        /></span>
-                        <label
-                          for="contentMain_chkAcceptance"
-                          title=""
-                          id="contentMain_lblAcceptance"
-                          ><span class="ErrorText">*</span>I have read and
-                          understand each of the questions, and I have reviewed
-                          and agree with the answers to each of the questions I
-                          am submitting through this automated system.</label
-                        >
-                      </td>
-                    </tr>
-                    <tr class="dataRow">
-                      <td>
-                        <span
-                          title=""
-                          id="contentMain_lblUIClaimFilingInstructionsNavigationNote"
-                          >To file a new Unemployment Insurance claim, select
-                          the <b>Next</b> button.</span
-                        >
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div>
+                  <span title="Select"
+                    ><input
+                      id="contentMain_chkAcceptance"
+                      type="checkbox"
+                      name="ctl00$contentMain$chkAcceptance"
+                  /></span>
+                  <label
+                    for="contentMain_chkAcceptance"
+                    title=""
+                    id="contentMain_lblAcceptance"
+                    style="display: inline;"
+                    ><span class="ErrorText">*</span>I have read and understand
+                    each of the questions, and I have reviewed and agree with
+                    the answers to each of the questions I am submitting through
+                    this automated system.</label
+                  >
+                </div>
+                <div
+                  title=""
+                  id="contentMain_lblUIClaimFilingInstructionsNavigationNote"
+                >
+                  To file a new Unemployment Insurance claim, select the
+                  <b>Next</b> button.
+                </div>
                 <span class="bottom_right"></span
                 ><span class="bottom_left"></span
                 ><span class="top_right"> </span><span class="top_left"></span>
               </div>
-              <div class="buttons">
-                <table style="width: 100%;">
-                  <tbody>
-                    <tr>
-                      <td style="width: 50%;" class="buttonThreeSpreadLeft">
-                        <input
-                          type="submit"
-                          name="ctl00$contentMain$btnPrevious"
-                          value="Previous"
-                          onclick="javascript:return DisableMulticlick();"
-                          id="contentMain_btnPrevious"
-                          title="Previous"
-                          class="Button"
-                        />
-                      </td>
-                      <td style="width: 50%;" class="buttonThreeSpreadRight">
-                        <input
-                          type="submit"
-                          name="ctl00$contentMain$btnNext"
-                          value="Next"
-                          onclick="javascript:return DisableMulticlick();"
-                          id="contentMain_btnNext"
-                          title="Next"
-                          class="Button"
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="buttons row m-t-sm">
+                <div class="col-xs-5 col-sm-3">
+                  <input
+                    type="submit"
+                    name="ctl00$contentMain$btnPrevious"
+                    value="Previous"
+                    onclick="javascript:return DisableMulticlick();"
+                    id="contentMain_btnPrevious"
+                    title="Previous"
+                    class="Button"
+                    style="width: 100%;"
+                  />
+                </div>
+                <div class="col-xs-5 col-xs-offset-2 col-sm-3 col-sm-offset-6">
+                  <input
+                    type="submit"
+                    name="ctl00$contentMain$btnNext"
+                    value="Next"
+                    onclick="javascript:return DisableMulticlick();"
+                    id="contentMain_btnNext"
+                    title="Next"
+                    class="Button"
+                    style="width: 100%;"
+                  />
+                </div>
               </div>
             </div>
           </div>
