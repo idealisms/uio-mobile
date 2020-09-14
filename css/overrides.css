@@ -1,0 +1,12 @@
+/* Some CSS for overriding bootstrap. */
+label {
+  display: inline !important;
+}
+.dataRow {
+  margin-top: 8px;
+}
+
+.dataRow label {
+  margin-left: 4px;
+  margin-right: 8px;
+}
