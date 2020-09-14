@@ -10,3 +10,9 @@ label {
   margin-left: 4px;
   margin-right: 8px;
 }
+
+.dataRow > .number {
+  padding-right: 0;
+  /* 15 left padding + 24px for the number */
+  width: 39px;
+}
