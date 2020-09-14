@@ -132,7 +132,7 @@
         type="text/javascript"
         src="./resources/scripts.js.download"
       ></script>
-      <div id="mainDiv" class="wrapper">
+      <div id="mainDiv">
         <div id="main_content">
           <div id="headerDiv" class="header">
             <div id="head_cagov_logo" title="CA.gov"></div>
@@ -195,19 +195,11 @@
             </script>
             <div id="mainDiv" class="add_padding">
               <div class="dottedDiv">
-                <table style="width: 100%;">
-                  <tbody>
-                    <tr>
-                      <td style="width: 80%;">
-                        <h1>
-                          <span title="" id="contentMain_lblUIOnlineServices"
-                            >UI Online</span
-                          >
-                        </h1>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <h1>
+                  <span title="" id="contentMain_lblUIOnlineServices"
+                    >UI Online</span
+                  >
+                </h1>
               </div>
               <div>
                 <span
@@ -223,159 +215,132 @@
                 <br />
                 <br />
               </div>
-              <div>
-                <table style="width: 100%; padding-top: 15px;">
-                  <tbody>
-                    <tr valign="top" style="width: 48%;">
-                      <td
-                        style="width: 48%; height: 465px;"
-                        class="tblUsernameBackgroundEUR"
+              <div class="container-fluid">
+                <div class="row">
+                  <div
+                    id="contentMain_ucExternalUserLoginUserNameTemplate_pnlLogin"
+                    class="col-md-6"
+                    style="background-color: #f2f3ed;"
+                  >
+                    <h3 class="thHeader">
+                      <span
+                        title=""
+                        id="contentMain_ucExternalUserLoginUserNameTemplate_lblFileNewClaim"
+                        >File a New Claim</span
                       >
-                        <div
-                          id="contentMain_ucExternalUserLoginUserNameTemplate_pnlLogin"
-                          style="height: 330px;"
+                    </h3>
+                    <div
+                      id="contentMain_ucExternalUserLoginUserNameTemplate_pnlFileNewClaim"
+                    >
+                      <div style="padding-top: 20px; padding-left: 10px;">
+                        <span
+                          title=""
+                          id="contentMain_ucExternalUserLoginUserNameTemplate_lblNewClaimCMSText"
+                          class="RequiredIndicatorLabel"
+                          >Select File New Claim to complete the application. No
+                          additional UI Online registration is required to file
+                          a claim.</span
                         >
-                          <h3 class="thHeader">
-                            <span
-                              title=""
-                              id="contentMain_ucExternalUserLoginUserNameTemplate_lblFileNewClaim"
-                              >File a New Claim</span
-                            >
-                          </h3>
-                          <div
-                            id="contentMain_ucExternalUserLoginUserNameTemplate_pnlFileNewClaim"
-                          >
-                            <div
-                              style="
-                                padding-top: 20px;
-                                padding-left: 10px;
-                                height: 50px;
-                              "
-                            >
-                              <span
-                                title=""
-                                id="contentMain_ucExternalUserLoginUserNameTemplate_lblNewClaimCMSText"
-                                class="RequiredIndicatorLabel"
-                                >Select File New Claim to complete the
-                                application. No additional UI Online
-                                registration is required to file a claim.</span
-                              >
-                            </div>
-                            <div class="AlignCenter">
-                              <input
-                                type="submit"
-                                name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnSubmit"
-                                value="File New Claim"
-                                onclick="javascript:return DisableMulticlick();"
-                                id="contentMain_ucExternalUserLoginUserNameTemplate_btnSubmit"
-                                title="File New Claim"
-                                class="Button"
-                                style="width: 200px; height: 35px;"
-                              />
-                            </div>
-                            <div
-                              style="
-                                padding-top: 30px;
-                                padding-left: 10px;
-                                height: 50px;
-                              "
-                            >
-                              <span
-                                title=""
-                                id="contentMain_ucExternalUserLoginUserNameTemplate_lblSystemDowntime2"
-                                class="downTimeStyle"
-                                >The File a New Claim features will be available
-                                during the times listed below. (All times are
-                                Pacific time)<br />
-                                <br />
-                                <table>
-                                  <tbody>
-                                    <tr>
-                                      <td><b>Day of the Week</b></td>
-                                      <td><b>Available Time</b></td>
-                                    </tr>
-                                    <tr>
-                                      <td>Sunday</td>
-                                      <td>5:00 a.m. - 8:30 p.m.</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Monday</td>
-                                      <td>4 a.m. - 10 p.m.</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Tuesday - Friday</td>
-                                      <td>2 a.m. - 10 p.m.</td>
-                                    </tr>
-                                    <tr>
-                                      <td>Saturday</td>
-                                      <td>2 a.m. - 8 p.m.</td>
-                                    </tr>
-                                  </tbody>
-                                </table></span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td style="width: 4%;"></td>
-                      <td
-                        style="width: 48%; height: 465px;"
-                        class="tblUsernameBackgroundEUR"
+                      </div>
+                      <div class="AlignCenter">
+                        <input
+                          type="submit"
+                          name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnSubmit"
+                          value="File New Claim"
+                          onclick="javascript:return DisableMulticlick();"
+                          id="contentMain_ucExternalUserLoginUserNameTemplate_btnSubmit"
+                          title="File New Claim"
+                          class="Button"
+                          style="width: 200px;"
+                        />
+                      </div>
+                      <div style="padding-top: 30px; padding-left: 10px;">
+                        <span
+                          title=""
+                          id="contentMain_ucExternalUserLoginUserNameTemplate_lblSystemDowntime2"
+                          class="downTimeStyle"
+                          >The File a New Claim features will be available
+                          during the times listed below. (All times are Pacific
+                          time)<br />
+                          <br />
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td><b>Day of the Week</b></td>
+                                <td><b>Available Time</b></td>
+                              </tr>
+                              <tr>
+                                <td>Sunday</td>
+                                <td>5:00 a.m. - 8:30 p.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Monday</td>
+                                <td>4 a.m. - 10 p.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Tuesday - Friday</td>
+                                <td>2 a.m. - 10 p.m.</td>
+                              </tr>
+                              <tr>
+                                <td>Saturday</td>
+                                <td>2 a.m. - 8 p.m.</td>
+                              </tr>
+                            </tbody>
+                          </table></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6" style="background-color: #f2f3ed;">
+                    <h3 class="thHeader">
+                      <span
+                        title=""
+                        id="contentMain_ucExternalUserLoginUserNameTemplate_lblManageExistingClaim"
+                        >Register or Manage Existing Claim</span
                       >
-                        <div style="width: 100%; height: inherit;">
-                          <h3 class="thHeader">
-                            <span
-                              title=""
-                              id="contentMain_ucExternalUserLoginUserNameTemplate_lblManageExistingClaim"
-                              >Register or Manage Existing Claim</span
-                            >
-                          </h3>
-                          <div style="height: inherit; height: 250px;">
-                            <div
-                              style="
-                                padding-top: 20px;
-                                padding-left: 10px;
-                                height: 100px;
-                              "
-                            >
-                              <span
-                                title=""
-                                id="contentMain_ucExternalUserLoginUserNameTemplate_lblRegisterAsClaimant"
-                                >Select Register or Manage if you would like to:
-                                <ul>
-                                  <li>
-                                    Register for UI Online with your existing
-                                    claim.
-                                  </li>
-                                  <li>
-                                    Manage your existing UI Online account.
-                                  </li>
-                                </ul></span
-                              >
-                            </div>
-                            <div class="AlignCenter">
-                              <input
-                                type="submit"
-                                name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnManageClaim"
-                                value="Register or Manage"
-                                onclick="javascript:return DisableMulticlick();"
-                                id="contentMain_ucExternalUserLoginUserNameTemplate_btnManageClaim"
-                                title="Register or Manage"
-                                class="Button"
-                                htmlencode="true"
-                                style="
-                                  height: 35px;
-                                  width: 200px;
-                                  white-space: normal;
-                                "
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                    </h3>
+                    <div style="height: inherit; height: 250px;">
+                      <div
+                        style="
+                          padding-top: 20px;
+                          padding-left: 10px;
+                          height: 100px;
+                        "
+                      >
+                        <span
+                          title=""
+                          id="contentMain_ucExternalUserLoginUserNameTemplate_lblRegisterAsClaimant"
+                          >Select Register or Manage if you would like to:
+                          <ul>
+                            <li>
+                              Register for UI Online with your existing claim.
+                            </li>
+                            <li>
+                              Manage your existing UI Online account.
+                            </li>
+                          </ul></span
+                        >
+                      </div>
+                      <div class="AlignCenter">
+                        <input
+                          type="submit"
+                          name="ctl00$contentMain$ucExternalUserLoginUserNameTemplate$btnManageClaim"
+                          value="Register or Manage"
+                          onclick="javascript:return DisableMulticlick();"
+                          id="contentMain_ucExternalUserLoginUserNameTemplate_btnManageClaim"
+                          title="Register or Manage"
+                          class="Button"
+                          htmlencode="true"
+                          style="
+                            height: 35px;
+                            width: 200px;
+                            white-space: normal;
+                          "
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
