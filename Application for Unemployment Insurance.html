@@ -138,7 +138,7 @@
         type="text/javascript"
         src="./resources/scripts.js.download"
       ></script>
-      <div id="mainDiv" class="wrapper">
+      <div id="mainDiv" style="max-width: 1008px;">
         <div id="main_content">
           <div id="headerDiv" class="header">
             <div id="head_cagov_logo" title="CA.gov"></div>
@@ -179,7 +179,7 @@
               </div>
             </div>
           </div>
-          <div id="pnlSkipContent">
+          <div id="pnlSkipContent" class="container-fluid">
             <input
               type="hidden"
               name="ctl00$hdnDisplayMode"
@@ -683,46 +683,46 @@
                 </table>
               </div>
               <div class="divPaddingContentBottom"></div>
-              <div class="buttons">
-                <table style="width: 100%;">
-                  <tbody>
-                    <tr>
-                      <td style="width: 25%;" class="buttonThreeSpreadLeft">
-                        <input
-                          type="submit"
-                          name="ctl00$contentMain$CustomButton2"
-                          value="Previous"
-                          onclick='javascript:return DisableMulticlick();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$contentMain$CustomButton2", "", true, "", "", false, false))'
-                          id="contentMain_CustomButton2"
-                          title="Previous"
-                          class="Button"
-                        />
-                      </td>
-                      <td style="width: 50%;" class="buttonThreeSpreadCenter">
-                        <input
-                          type="submit"
-                          name="ctl00$contentMain$CustomButton3"
-                          value="Cancel"
-                          onclick='javascript:return DisableMulticlick();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$contentMain$CustomButton3", "", true, "", "", false, false))'
-                          id="contentMain_CustomButton3"
-                          title="Cancel"
-                          class="Button"
-                        />
-                      </td>
-                      <td style="width: 25%;" class="buttonThreeSpreadRight">
-                        <input
-                          type="submit"
-                          name="ctl00$contentMain$CustomButton4"
-                          value="Next"
-                          onclick='javascript:return DisableMulticlick();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$contentMain$CustomButton4", "", true, "", "", false, false))'
-                          id="contentMain_CustomButton4"
-                          title="Next"
-                          class="Button"
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="buttons row">
+                <div class="col-xs-4 col-sm-3">
+                  <input
+                    type="submit"
+                    name="ctl00$contentMain$CustomButton2"
+                    value="Previous"
+                    onclick='javascript:return DisableMulticlick();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$contentMain$CustomButton2", "", true, "", "", false, false))'
+                    id="contentMain_CustomButton2"
+                    title="Previous"
+                    class="Button"
+                    style="width: 100%;"
+                  />
+                </div>
+                <div class="col-xs-4 col-sm-4 col-sm-offset-1 text-center">
+                  <!-- This is a bit hacky, rather than using col-xs-12 and col-sm-9, I would probably
+                               create some custom classes that set the width of the button to 75% when size sm+
+                          -->
+                  <input
+                    type="submit"
+                    name="ctl00$contentMain$CustomButton3"
+                    value="Cancel"
+                    onclick='javascript:return DisableMulticlick();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$contentMain$CustomButton3", "", true, "", "", false, false))'
+                    id="contentMain_CustomButton3"
+                    title="Cancel"
+                    class="Button col-xs-12 col-sm-9"
+                    style="float: none;"
+                  />
+                </div>
+                <div class="col-xs-4 col-sm-3 col-sm-offset-1">
+                  <input
+                    type="submit"
+                    name="ctl00$contentMain$CustomButton4"
+                    value="Next"
+                    onclick='javascript:return DisableMulticlick();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$contentMain$CustomButton4", "", true, "", "", false, false))'
+                    id="contentMain_CustomButton4"
+                    title="Next"
+                    class="Button"
+                    style="width: 100%;"
+                  />
+                </div>
               </div>
             </div>
           </div>
