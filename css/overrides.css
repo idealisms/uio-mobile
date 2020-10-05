@@ -16,3 +16,7 @@ label {
   /* 15 left padding + 24px for the number */
   width: 39px;
 }
+
+.questionInput {
+  margin-bottom: 16px;
+}
