@@ -23,7 +23,7 @@ function SetupSessionTimeoutNotification(SessionNotificationTimeout, SessionTime
 	_sessionTimeoutMs = SessionTimeout;
 	_logoutPageUrl = LogoutUrl;
 	_sessionTimeoutNotificationPageUrl = SessionTimeoutNotificationUrl;
-	ResetSessionTimers();
+	//ResetSessionTimers();
 }
 
 // Shows a popup with session timeout notification message
