@@ -20,3 +20,8 @@ label {
 .questionInput {
   margin-bottom: 16px;
 }
+
+.hint {
+  font-size: 80%;
+  color: rgba(0, 0, 0, .54);
+}

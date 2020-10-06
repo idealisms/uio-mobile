@@ -25,6 +25,12 @@
     ></script>
     <script async="" src="./resources/js"></script>
     <script>
+      function toggle(id) {
+        let elt = document.getElementById(id);
+        elt.style.display = elt.style.display == 'block' ? 'none' : 'block';
+      }
+    </script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -41,6 +47,9 @@
       }
     </script>
     <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="./css/cagov.core.css" type="text/css" rel="stylesheet" />
+    <link href="./css/overrides.css" type="text/css" rel="stylesheet" />
     <link href="./resources/Default.css" type="text/css" rel="stylesheet" />
   </head>
 
@@ -137,7 +146,7 @@
         type="text/javascript"
         src="./resources/scripts.js.download"
       ></script>
-      <div id="mainDiv" class="wrapper">
+      <div id="mainDiv" style="max-width: 1008px;">
         <div id="main_content">
           <div id="headerDiv" class="header">
             <div id="head_cagov_logo" title="CA.gov"></div>
@@ -178,7 +187,7 @@
               </div>
             </div>
           </div>
-          <div id="pnlSkipContent">
+          <div id="pnlSkipContent" class="container-fluid">
             <input
               type="hidden"
               name="ctl00$hdnDisplayMode"
@@ -604,6 +613,7 @@
                     </tr>
                   </tbody>
                 </table>
+                <div style="width: 100%; overflow: auto">
                 <table
                   id="contentMain_ucLastEmployerInformationTemplate_tblAddLastEmployer"
                   width="100%"
@@ -680,6 +690,7 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
                 <div
                   id="contentMain_ucLastEmployerInformationTemplate_pnlLastEmployerInformationAdditionalDetails"
                 >
@@ -697,27 +708,18 @@
                       </tr>
                     </tbody>
                   </table>
-                  <table
+                  <div
                     class="customFormViewPadding"
-                    cellspacing="0"
-                    align="center"
                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation"
-                    style="border-collapse: collapse; width: 100%;"
                   >
-                    <tbody>
-                      <tr>
-                        <td colspan="2">
-                          <table style="width: 100%;">
-                            <tbody>
-                              <tr class="dataRow">
-                                <td style="width: 3%;">
+
+
+                              <div class="dataRow">
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lbl1"
                                     >1.</span
                                   >
-                                </td>
-                                <td style="width: 57%;">
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lblSupervisor"
@@ -738,8 +740,8 @@
                                           title="Help"
                                           alt="Help" /></a></span
                                   ></span>
-                                </td>
-                                <td style="width: 40%;">
+                              </div>
+                              <div class="dataRow questionInput">
                                   <span
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_prtSupervisorFullName"
                                     maxlength="40"
@@ -763,17 +765,14 @@
                                     />
                                     &nbsp;
                                   </span>
-                                </td>
-                              </tr>
-                              <tr class="dataRow">
-                                <td>
+                                </div>
+
+                              <div class="dataRow">
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lbl2"
                                     >2.</span
                                   >
-                                </td>
-                                <td>
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lblLastWorkedDate"
@@ -793,8 +792,8 @@
                                           title="Help"
                                           alt="Help" /></a></span
                                   ></span>
-                                </td>
-                                <td>
+                                </div>
+                                <div class="dataRow questionInput">
                                   <span
                                     id="prtLastDateWorked"
                                     maxlength="10"
@@ -811,13 +810,20 @@
                                       size="10"
                                       aria-label="Last Date Worked "
                                     />&nbsp; &nbsp;
-                                    <span title="" id="lblDisplayFormat"
-                                      >(MM/DD/YYYY)</span
-                                    >
-                                  </span>
-                                </td>
-                              </tr>
-                              <tr
+                                </span>
+                                <div>
+                                  <span title="" id="lblDisplayFormat" class="hint"
+                                     >(MM/DD/YYYY)</span
+                                   >
+                                 </span>
+                               </div>
+
+                              </div>
+
+                              <div><!-- TODO: wage info -->
+                                <table>
+                                  <tbody>
+                                <tr
                                 class="dataRow trWagesInfo"
                                 style="display: none;"
                               >
@@ -1217,15 +1223,16 @@
                                   </table>
                                 </td>
                               </tr>
-                              <tr class="dataRow">
-                                <td>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="dataRow">
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lbl3"
                                     >3.</span
                                   >
-                                </td>
-                                <td>
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lblReason"
@@ -1246,12 +1253,8 @@
                                           title="Help"
                                           alt="Help" /></a></span
                                   ></span>
-                                </td>
-                                <td></td>
-                              </tr>
-                              <tr class="dataRow">
-                                <td></td>
-                                <td colspan="2">
+                              </div>
+                              <div class="dataRow">
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lblReasonInfo"
@@ -1263,28 +1266,18 @@
                                     fraud and may result in penalties.
                                     <br
                                   /></span>
-                                </td>
-                              </tr>
-                              <tr class="dataRow">
-                                <td colspan="3">
+                              </div>
                                   <div
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_pnlPrimaryReasonChanged"
                                   >
-                                    <table
-                                      style="width: 100%;"
-                                      class="tableSeparate"
-                                    >
-                                      <tbody>
-                                        <tr>
-                                          <td style="width: 3%;"></td>
-                                          <td align="right" style="width: 57%;">
+                                  <div class="dataRow">
                                             <span
                                               title=""
                                               id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lblLastEmployerInformationPrimaryReason"
                                               >Separation Category:</span
                                             >
-                                          </td>
-                                          <td style="width: 40%;">
+                                  </div>
+                                  <div class="dataRow questionInput">
                                             <span
                                               id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_prtPrimaryReasonNoLongerWorking"
                                               datasourceid="dsReasonNoLongerWorkingPrimary"
@@ -1327,18 +1320,15 @@
                                               </select>
                                               &nbsp;
                                             </span>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                          <td></td>
-                                          <td align="right">
+                                  </div>
+                                  <div class="dataRow">
                                             <span
                                               title=""
                                               id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lblLastEmployerInformationSecondaryReason"
                                               >Separation Explanation:</span
                                             >
-                                          </td>
-                                          <td>
+                                  </div>
+                                  <div class="dataRow questionInput">
                                             <span
                                               id="prtSecondaryReasonNoLongerWorking"
                                               autopostback="False"
@@ -1358,7 +1348,7 @@
                                                 name="ctl00$contentMain$ucLastEmployerInformationTemplate$frmLastEmployerInformation$prtSecondaryReasonNoLongerWorking$ctl00$ddlValue"
                                                 id="ddlValue"
                                                 aria-label="Separation Explanation "
-                                                style="width: 93%;"
+                                                style="min-width: 200px"
                                               >
                                                 <option
                                                   selected="selected"
@@ -1369,22 +1359,15 @@
                                               </select>
                                               &nbsp;
                                             </span>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr class="dataRow">
-                                <td>
+                                          </div>
+                                        </div><!-- id=contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_pnlPrimaryReasonChanged -->
+
+                              <div class="dataRow">
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lbl4"
                                     >4.</span
                                   >
-                                </td>
-                                <td colspan="2" class="questionPadding">
                                   <span
                                     title=""
                                     id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_lblOtherPayments"
@@ -1407,42 +1390,15 @@
                                           title="Help"
                                           alt="Help" /></a></span
                                   ></span>
-                                </td>
-                              </tr>
-                              <!-- Other Pay Info -->
-                            </tbody>
-                          </table>
-                          <table style="width: 100%;">
-                            <tbody>
-                              <tr>
-                                <td colspan="3" class="dataRow">
-                                  <div id="divOtherIncomeInformation">
-                                    <table style="width: 100%;">
-                                      <tbody>
-                                        <tr class="dataRow">
-                                          <td colspan="2" style="width: 38%;">
-                                            <div
-                                              id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_pnlHiddenRow_0"
-                                            ></div>
-                                            <table class="subQuestionTable">
-                                              <tbody>
-                                                <tr class="dataRow">
-                                                  <td>
-                                                    &nbsp;
-                                                  </td>
-                                                </tr>
+                            </div>
 
-                                                <tr class="dataRow">
-                                                  <td
-                                                    class="subQuestionPadding"
-                                                  >
+                                  <!-- Other Pay Info -->
+                          <div class="dataRow">
                                                     <span
                                                       title=""
                                                       id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_lblQuestionNumber_0"
                                                       >4a.</span
                                                     >
-                                                  </td>
-                                                  <td>
                                                     <span
                                                       id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_prtIsReceived_0"
                                                       class="estimatedCheckBoxTopAlign"
@@ -1454,6 +1410,7 @@
                                                         id="chkValue0"
                                                         type="checkbox"
                                                         name="ctl00$contentMain$ucLastEmployerInformationTemplate$frmLastEmployerInformation$ucLastEmployerOtherIncomeTemplate$lvOtherIncomeInformation$ctrl0$prtIsReceived$ctl00$chkValue"
+                                                        onclick="toggle('holidayPayFields')"
                                                       /><label for="chkValue0"
                                                         >Holiday Pay</label
                                                       >
@@ -1472,65 +1429,13 @@
                                                             title="Help"
                                                             alt="Help" /></a></span
                                                     ></span>
-                                                  </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </td>
-                                          <td style="width: 62%;">
-                                            <table
-                                              class="subQuestionTable"
-                                              style="width: 100%;"
-                                            >
-                                              <tbody>
-                                                <tr>
-                                                  <td id="tdIncomeType">
-                                                    <span
-                                                      title=""
-                                                      id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_lblOtherIncomeRead_0"
-                                                      class="screenreader"
-                                                      >Holiday Pay</span
-                                                    >
-                                                  </td>
-                                                </tr>
-                                                <tr class="dataRow">
-                                                  <td
-                                                    style="width: 20%;"
-                                                    id="tdAmount"
-                                                  >
-                                                    <span
-                                                      title=""
-                                                      id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_lblAmount_0"
-                                                      >Amount</span
-                                                    >
-                                                  </td>
-                                                  <td
-                                                    style="width: 40%;"
-                                                    id="tdFromDate"
-                                                  >
-                                                    <span
-                                                      title=""
-                                                      id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_lblFromDate_0"
-                                                      >From Date</span
-                                                    >
-                                                  </td>
-                                                  <td
-                                                    style="width: 40%;"
-                                                    id="tdToDate"
-                                                  >
-                                                    <span
-                                                      title=""
-                                                      id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_lblToDate_0"
-                                                      >To Date</span
-                                                    >
-                                                  </td>
-                                                </tr>
-                                                <tr class="dataRow">
-                                                  <td
-                                                    class="nowrap"
-                                                    style="width: 20%;"
-                                                    headers="tdIncomeType tdAmount"
-                                                  >
+                                  </div>
+
+                                  <div id="holidayPayFields" style="display: none">
+                                    <div class="dataRow">
+                                      Amount
+                                    </div>
+                                    <div class="dataRow questionInput">
                                                     <span
                                                       id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_prtOtherIncomeAmount_0"
                                                       maxlength="9"
@@ -1554,12 +1459,11 @@
                                                       />
                                                       &nbsp;
                                                     </span>
-                                                  </td>
-                                                  <td
-                                                    class="nowrap"
-                                                    style="width: 40%;"
-                                                    headers="tdIncomeType tdFromDate"
-                                                  >
+                                    </div>
+                                    <div class="dataRow">
+                                      From Date
+                                    </div>
+                                    <div class="dataRow questionInput">
                                                     <span
                                                       id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_prtOtherIncomeFromDate_0"
                                                       maxlength="10"
@@ -1571,25 +1475,24 @@
                                                     >
                                                       <input
                                                         name="ctl00$contentMain$ucLastEmployerInformationTemplate$frmLastEmployerInformation$ucLastEmployerOtherIncomeTemplate$lvOtherIncomeInformation$ctrl0$prtOtherIncomeFromDate$ctl00$txtDate"
-                                                        type="date"
+                                                        type="text"
                                                         maxlength="10"
                                                         id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_prtOtherIncomeFromDate_0_ctl00_0_txtDate_0"
                                                         class="TextBox eddDateField"
                                                         size="10"
                                                         aria-label="From Date "
                                                       />&nbsp; &nbsp;
-                                                      <span
+                                                      <div class="hint"
                                                         title=""
                                                         id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_prtOtherIncomeFromDate_0_ctl00_0_lblDisplayFormat_0"
-                                                        >(MM/DD/YYYY)</span
+                                                        >(MM/DD/YYYY)</div
                                                       >
                                                     </span>
-                                                  </td>
-                                                  <td
-                                                    class="nowrap"
-                                                    style="width: 40%;"
-                                                    headers="tdIncomeType tdToDate"
-                                                  >
+                                    </div>
+                                    <div class="dataRow">
+                                      To Date
+                                    </div>
+                                    <div class="dataRow questionInput">
                                                     <span
                                                       id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_prtOtherIncomeToDate_0"
                                                       maxlength="10"
@@ -1608,20 +1511,14 @@
                                                         size="10"
                                                         aria-label="To Date "
                                                       />&nbsp; &nbsp;
-                                                      <span
+                                                      <div class="hint"
                                                         title=""
                                                         id="contentMain_ucLastEmployerInformationTemplate_frmLastEmployerInformation_ucLastEmployerOtherIncomeTemplate_lvOtherIncomeInformation_prtOtherIncomeToDate_0_ctl00_0_lblDisplayFormat_0"
-                                                        >(MM/DD/YYYY)</span
-                                                      >
-                                                    </span>
-                                                  </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
+                                                        >(MM/DD/YYYY)</div>
+                                                    </div>
+                                  </div><!-- holidayPayFields -->
+
+<!--
                                     <table style="width: 100%;">
                                       <tbody>
                                         <tr class="dataRow">
@@ -2486,14 +2383,12 @@
                               </tbody>
                             </table>
                           </div>
+-->
                           <!-- Other Pay - END -->
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  </div>
                 </div>
               </div>
-              <div class="buttons">
+              <div class="buttons" style="padding-top: 24px">
                 <table style="width: 100%;">
                   <tbody>
                     <tr>
