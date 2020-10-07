@@ -1,0 +1,899 @@
+@charset "utf-8";
+/* CSS Document - Custom styles that overwrite the template CSS code*/
+
+.columnImage {
+	width:100%;
+	p-t-sm;
+}
+
+.red_text {
+	color:#C90000;
+}
+
+.new_highlight {
+	color: #FF0000;	
+	font-size: 0.8em;
+}
+
+/* begin responsive video */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	/*padding-bottom: 56.25%;*/
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* end responsive video */
+
+
+/* begin jQuery expand/collapse behavior */
+.question, .question_nested, .collapseAll, .expandAll  {
+	cursor: pointer;
+}
+
+.question, .question_nested {
+	color:#333;
+	font-size:1.6em;
+	line-height:1.5em;
+}
+
+.question a, .question a:hover, .question a:visited {
+	color:#333;
+}
+
+.question_nested a, .question_nested a:hover, .question_nested a:visited {
+	color:#333;
+}
+
+.answer, .answer_nested {
+	padding-left:2.5%;
+}
+/* end jQuery expand/collapse behavior */
+
+
+/* begin custom table color to provide alternative for zebra striped table to have darker header matching default table */
+.table.table-striped.alt-table-header > thead > tr > th,
+.table.table-striped.alt-table-header > thead > tr > td {
+  background: #d9d9d9;
+  border: 2px solid #fff;
+}
+/* end custom table color to provide alternative for zebra striped table to have darker header matching default table */
+
+.red-alert {
+	border-color:#C90000;
+}
+
+.red-alert .panel-heading {
+	border-color:#C90000;
+	background-color:#C90000;
+	color: #fff;
+}
+
+
+.red-alert .panel-heading h4 span[class^="ca-gov-icon-"] {
+	color: #fff;
+}
+
+
+.yellow-alert {
+	border-color:#FBAD23;
+}
+
+.yellow-alert .panel-heading {
+	border-color:#FBAD23;
+	background-color:#FBAD23;
+	/* color: #fff; */
+}
+
+/*
+.yellow-alert .panel-heading h4 span[class^="ca-gov-icon-"] {
+	color: #fff;
+}
+*/
+
+.green-alert {
+	border-color:#178300;
+}
+
+.green-alert .panel-heading {
+	border-color:#178300;
+	background-color:#178300;
+	color: #fff;
+}
+
+
+.green-alert .panel-heading h4 span[class^="ca-gov-icon-"] {
+	color: #fff;
+}
+
+
+.branding .header-organization-banner img {
+  width:171px;
+}
+
+@media (min-width: 768px) {
+  .fixed.compact .header-organization-banner img {
+    width:150px;
+  }
+}
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+/*overriding for new template that moved table caption to bottom of table - moving back to top so caption can be used as title for accessibility purposes */
+caption {
+  padding-left: 0.75rem;
+  color: #212529;  
+  text-align: left;
+  font-weight:bold;
+  caption-side:top;
+}
+
+
+.table_column_10 {
+	width:10%;
+}
+
+.table_column_15 {
+	width:15%;
+}
+
+.table_column_30 {
+	width:30%;
+}
+
+.table_column_sm {
+	width:20%;
+}
+
+.table_column_med {
+	width:40%;
+}
+
+.table_column_lg {
+	width:60%;
+}
+
+.table_column_qtr {
+	width:25%;
+}
+
+.table_column_half {
+	width:50%;
+}
+
+.table_column_3qtr {
+	width:75%;
+}
+
+.center-div-80 {
+	margin:auto;
+	width:80%;
+}
+
+.center-div-50 {
+	margin:auto;
+	width:50%;
+}
+
+/* -----------------------------------------
+ SERVICE TILE - No Panel Drop Down
+----------------------------------------- */
+.service-tile-no-panel {
+  float: left;
+  width: 100%;
+  /* Need to keep the two column longer than bootstrap has .make-*-column for */
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  min-height: 240px;
+  color: #E1F2F7;
+  background: #046B99;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 450px) {
+  .service-tile-no-panel {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .service-tile-no-panel {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .service-tile-no-panel {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .service-tile-no-panel {
+    min-height: 280px;
+  }
+}
+@media (min-width: 992px) {
+  .service-tile-no-panel {
+    min-height: 240px;
+  }
+}
+@media (min-width: 1280px) {
+  .service-tile-no-panel {
+    min-height: 320px;
+  }
+}
+.service-tile-no-panel .icon-fallback {
+  min-width: 100%;
+  line-height: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+.service-tile-no-panel .teaser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 30%, #000000 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 30%, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#000000', GradientType=0);
+  color: #fff;
+  padding: 10px 0;
+}
+.service-tile-no-panel .teaser .title {
+  margin: 5px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.service-tile-no-panel .teaser .title:hover {
+  color: #FDB81E;
+}
+.service-tile-no-panel:focus .teaser .title {
+  color: #FDB81E;
+}
+
+
+/*---------------------------------------------*/
+/*  benefitCalculator                          */
+/*---------------------------------------------*/
+
+.calculatorInput input {
+ font-family:Arial, Helvetica, sans-serif;
+}
+
+.calculatorResult input {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 0;
+	background: none;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.calculatorMessage input {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 0;
+	background: none;
+	font-weight: bolder;
+	color: #F00;
+}
+
+.CalcTextResult {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bold;
+}
+.CalcTextEnter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.calcLeftColumn {
+	margin: 0px;
+	float: left;
+	width: 65%;
+}
+
+.calcRightColumn {
+	margin: 0px;
+	float: right;
+	width: 30%;
+}
+
+/*---------------------------------------------*/
+/*  end benefitCalculator                      */
+/*---------------------------------------------*/
+
+.home-icon {
+	color:#333;
+}
+
+
+/* TEST REMOVING TO SEE IF UIBDG SPACES OKAY WITH NEW TEMPLATE
+
+li p {
+	padding-top: 8px;
+}
+
+ul li ul {
+	padding-bottom:8px;
+}
+
+ul li ol {
+	padding-bottom:8px;
+}
+
+ol li ol {
+	padding-bottom:8px;
+}
+
+ol li ul {
+	padding-bottom:8px;
+}
+
+ TEST REMOVING TO SEE IF UIBDG SPACES OKAY WITH NEW TEMPLATE  */
+
+
+
+.opener {
+	cursor:pointer;
+}
+
+@media (min-width: 768px) {
+	.fixed.compact .header-organization-banner img {
+		padding-top:4px;
+		padding-bottom:2px;
+  }
+}
+
+/*---------------------------------------------------------------*/
+/*  text accents override to pass accessibility color contrast   */
+/*---------------------------------------------------------------*/
+
+.text-accent1 {
+  color: #65b1e7 !important;
+}
+
+.text-accent6 {
+  color: #E381ee !important;
+}
+
+/*---------------------------------------------------------------------------*/
+/* This is to be able to hide a div that needs to be there for accessibility */
+/*---------------------------------------------------------------------------*/
+
+.visuallyHidden {
+	display:none;
+}
+
+/*-----------------------------------------------------*/
+/* Hiding the search menu from the main menu in mobile */
+/*-----------------------------------------------------*/
+
+@media (max-width: 768px) {
+	/*#nav-item-search {
+		display:none;
+  }*/
+	button.toggle-search {
+		display: none;
+	}
+}
+
+/*---------------------*/
+/* Custom Print Screen */
+/*---------------------*/
+@media print {
+  /*@page { margin: 0; }
+  body  { margin: 1.6cm; }*/
+	#main-content {
+		padding-top: 0px !important;
+	}
+	.main-primary {
+		margin-top: 0px !important;
+		width: 100% !important;
+	}
+	body {
+		font-size: 1rem !important;  
+	}
+	#header {
+		display:none;
+		height: 0px;
+	}
+	
+	.section section-impact p-b-lg {
+		display: none;
+	}
+	.section.section-impact.p-b-lg div.container{
+		display: none;
+	}
+	
+	#footer {
+		display:none;
+	}
+	
+}
+
+/*----------------------------------------------*/
+/* Adds top margin to tabs panel(office locator */
+/* page, maybe other tab panel pages) */
+/*----------------------------------------------*/
+
+.tab-group.responsive {margin-top: 20px;}
+
+/*------------------------------------------------------------------------*/
+/* --------Fix for the card headers on the office Locator page.---------- */
+/* This allows the link to expand the full width and height of the header */
+/*------------------------------------------------------------------------*/
+/*.card-header {
+	padding: 0px !important;	
+}*/
+.card-header a{
+	padding: 12px 20px !important;
+	display: block;	
+}
+
+/*-------------------------------*/
+/* This makes the footer and google 
+translate stack better in mobile */
+/*-------------------------------*/
+
+
+@media (max-width: 992px) {
+	
+	.section.section-impact.p-b-lg div.container .quarter{
+		float: left;
+		width: 50%;
+	}
+	#google_translate_element {
+		margin-left: 20px;
+	}
+	
+	.section.section-impact.p-b-lg div.container .quarter a.opener{
+	  margin-left: 20px;
+	}
+	
+	/* this section below is for all page footers and manipulates the view disclaimer text for translate*/
+	.section.section-impact.p-b-lg div.container .quarter.p-t-sm a.opener{
+	  margin-left: 20px;
+	}
+  
+}
+
+@media (max-width: 768px) {
+	.section.section-impact.p-b-lg div.container .quarter{
+		float: none;
+		width: 100%;
+	}
+}
+
+/*----------------------------------------------*/
+/* Lines 11,591-11,637 of the cagov.core.css file
+have been modified. The new template broke the 
+.quarter class in mobile. Reverted back to the older
+code to fix this.*/
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+/* The following adds margin to the bottom of
+list items found on both login pages, potentially
+other pages as well.----------------------------*/
+/*----------------------------------------------*/
+ul.m-b-md li{
+	margin-bottom: 10px;
+}
+ul.p-b-md li{
+	margin-bottom: 10px;
+}
+/*------------------------------------------------*/
+/*The new accessible tab panels left a weird
+disparity in the top margin of the cards in the
+office locator. See lines 16521-16527 for the fix */
+/*------------------------------------------------*/
+
+/*--------------------------------------------------*/
+/* Custom changes were made to the settings-bar.html
+after testing by Level Access. State Template does not
+include aria-label descriptive fields for the buttons,
+and the text is non-descriptive. Aria-Labels for the 
+for the button groups referred to the ID, not what they
+were. For these reasons, always make sure the settings
+bar ssi is using the EDD one, not the standard CDT one.*/
+/*--------------------------------------------------*/
+
+/*--Color Accessibility focus fixes--*/
+
+.alert .alert-severe .alert-dismissible .alert-banner .btn:focus {
+	outline: solid 2px #483BB2;
+}
+
+.utility-header a:focus, .utility-header .btn:focus, #skip-to-content a:focus, #siteSettings .btn:focus, #siteSettings .close:focus, .section-impact a:not(.btn):focus, .card-impact a:not(.btn):focus, .icon.MinMaxChat.ClickableADA:focus, .global-footer a:focus {
+	outline: solid 2px #dce2ff !important;
+}
+ 
+.branding a:focus, #navigation a:focus, #navigation button:focus, .nav > li > a:focus, .nav > li > button:focus, .mobile-controls .toggle-menu:focus, .main-primary a:focus, .main-primary .accordion-list li:focus, .main-primary div.active:focus, .tabs [role="tabpanel"]:focus, div.gsc-cursor-page:focus, .main-primary button:focus, #chkSameEarning:focus, input#txtClaimDate:focus, input.form-control.money:focus, .tableFocus:focus, .main-primary select:focus, #AstuteBotToggleChatContainer:focus, i.reaction_option:focus, input.button:focus, i.ca-gov-icon-check-mark:focus {
+	outline: solid 2px #9646ff !important;
+}
+
+#Search>input:focus, #Search>textarea:focus, #Search>button:focus, #Search>select:focus, .close-search-btn>button:focus, .accordionExpand>button:active, .accordionExpand>button:focus, .accordionExpand>[role="button"], .mobile-controls .toggle-search:focus {
+  outline: solid 2px #8331C1 !important;
+}
+
+div.gs-visibleUrl {
+	color: #008233 !important;
+	/*this darkens the color contrast to pass AA WCAG requirements
+	for the link text that is returned in the search page. */
+}
+
+/*--end of focus field color accessibility fixes--*/
+
+/*--adds outline to the search box when no focus--*/
+
+.search-container.active .search-textfield {
+  border-color: #000 !important;
+}
+
+.search-container #Search .close-search .ca-gov-icon-close-mark {
+	color: #000 !important;
+}
+
+#q.w-100.height-50.p-x-sm {
+	border-color: #333;
+}
+button.pos-abs.gsc-search-button.right-0.top-0.width-50.height-50 {
+	border-color: #333;
+}
+
+/*----------------------------------------------*/
+/* The following adds margin to the bottom of
+list items found on both login pages, potentially
+other pages as well.----------------------------*/
+/*----------------------------------------------*/
+ul.m-b-md li{
+	margin-bottom: 10px;
+}
+ul.p-b-md li{
+	margin-bottom: 10px;
+}
+
+/* custom card float class */
+
+.cardFloat {
+	float: right;
+}
+
+@media (max-width: 576px) {
+	
+	.cardFloat {
+		float: none;
+	}
+	
+	.cardFloat .third {
+		width: 100% !important;
+	}
+  
+}
+
+/* custom image float class */
+
+.floatImage {
+	float: right;
+	clear: both;
+	width: 33%;
+	padding: 20px;
+}
+
+figure.floatImage {
+	border: 0px !important;
+	background-color: #fff;
+}
+
+@media (max-width: 767px) {
+	
+	.floatImage {
+		float: none;
+		width: 100% !important;
+	}
+	
+}
+
+/*The following is the jumplink anchors for the accordions. They should be placed directly above the desired accordion.*/
+
+.accordDivider {
+	border-bottom:1px; width:200px
+}
+
+/*targets twitter color issues*/
+
+.Identity-screenName {
+	color: #333 !important;
+}
+
+/*custom homepage banner*/
+
+/*.homepageBanner {
+	background-image:url(/images/CoronaVirusBanner.jpg);
+	height:375px;
+	background-size:cover;
+	background-position:bottom;
+}
+
+.homepageBannerContainer {
+	top: 50%;
+	position: relative;
+	transform: translatey(-50%);
+}
+
+.homepageBannerText {
+	background: rgba(1, 19, 27, 0.8);
+	color: white;
+	padding: .8em 2.4em 2em;
+	text-align: center;
+}
+
+.homepageBannerText p {
+	font-size: 1.2em;
+}*/
+
+@media (max-width: 768px) {
+	.homepageBanner {
+		height: 400px !important;
+	}
+	
+	.homepageBannerText p{
+		font-size: .9em !important;
+	}
+}
+
+/* remove gap on card decks on mobile */
+
+@media (max-width: 768px) {
+	div.card-deck {
+		padding-top: 0px !important;
+	}
+}
+
+/* trying to create equal card height */
+
+.card-body {
+	height: 100%;
+}
+div.card-body a.btn.btn-secondary {
+	margin-top: auto;
+}
+
+/*creating skip-to-chatbot functionality*/
+
+#skip-to-chat {
+  position: relative;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  z-index: 999;
+}
+
+#skip-to-chat a {
+  width: 0;
+  height: 0;
+  text-align: center;
+  position: absolute !important;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  clip: unset;
+  background-color: white;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  overflow: hidden;
+}
+
+#skip-to-chat a:focus {
+  width: 160px;
+  height: 27px;
+}
+
+i.clickable.reaction_option.si-fb_like, i.clickable.reaction_option.si-fb_dislike {
+	color: #046B99 !important;
+}
+
+/*--Modal overlay formatting--*/
+
+h2.modal-title, h3.modal-title, h4.modal-title, h5.modal-title {
+	font-size: 1.5rem !important;
+}
+div.modal-content {
+	color: #000 !important;
+}
+/* teaser tile corrections. */
+
+.teaser span.title {
+	font-size: 1.25rem !important;
+}
+
+.teaser h2, .teaser h3, .teaser h4, .teaser h5 {
+	font-size: 1.25rem !important;
+}
+
+/*adjust color of icons to be accessible for color contrast */
+
+.first-level-link > span[class^="ca-gov-icon"] {
+	color: #046B99;
+}
+.nav-item:hover > a > span[class^="ca-gov-icon"], .nav-item:hover > a {
+	color: #B55E00;
+}
+
+/*creates a gray background for sections*/
+.graySectionBg {
+	background-color: #eee;
+}
+
+.card-button-text {
+	text-align: center;
+	font-size: 1.25rem !important;
+}
+
+/*styling for spanish links on UI redesign pages*/
+.spanishLinks {
+	float: right;
+}	
+@media (max-width: 768px) {
+	.spanishLinks {
+		float: none;
+	}
+}
+/*remove rounding of card headers*/
+.card-header:first-child {
+	border-radius: 1px 1px 0 0 !important;
+}
+
+/*adjustments to margins in cards*/
+.two-thirds h2:first-child, div.collapse div.card-body h3:first-of-type, .card h2, .card h3, .card h4, div.card.card-understated div.card-default.border-dark div.card-block h3, div.card.card-understated div.card-default div.card-block h2, div.card.card-understated div.card-default div.card-block h3, div.card.card-understated div.card-default div.card-block h4 {
+	margin-top: 0px;
+}
+
+.card-warning-subtle, .card-warning-subtle div.card-header {
+	background-color: #ffe7a4;
+}
+
+.card-warning-subtle div.card-block {
+	background-color: #fff2cd;
+}
+
+.two-thirds h1:first-of-type {
+	clear:both;
+	margin-top: 0px;
+}
+
+/*adjusting font-sizes in card header tags*/
+.card-header h2, .card-header h3, .card-header h4 {
+	font-size: 1rem !important;
+	margin-bottom: 0px !important;
+}
+
+.font-header {
+	font-size: 1rem !important;
+}
+
+h2.card-title.consistant, h3.card-title.consistant, h4.card-title.consistant, h5.card-title.consistant {
+	font-size: 1.25rem !important;
+}
+
+.panel-heading h2, .panel-heading h3, .panel-heading h4, .panel-heading h5 {
+	font-size: 1.125rem !important;
+}
+
+/*allows for footer text to be smaller, like a subscript would. Use for UI dashboard, etc.*/
+
+.addendum {
+			font-size: .9em;
+		}
+
+/*css for ui-benefits section on home page, newsroom, etc.*/
+.thirdNoPad {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	height: 241px;
+}
+.bannerImageFloat {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	margin: 0px !important;
+}
+.benefitsPadding {
+	padding: 3rem;
+}
+
+@media (max-width: 1044px) {
+	
+	.benefitsPadding {
+		padding: 2.5rem;
+	}
+	
+}
+
+@media (max-width: 767px) {
+	
+	.thirdNoPad {
+		height: 0px;
+	}
+
+	.bannerImageFloat {
+		display: none;
+	}
+	
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   /* IE10+ CSS */
+	/*css for ui-benefits section on home page, newsroom, etc. for Internet Explorer*/
+		.thirdNoPad {
+			height: 0px !important;
+			width: 0px !important;
+		}
+		.bannerImageFloat {
+			display: none !important;
+		}
+		.benefitsPadding {
+			padding: 3rem;
+		}
+
+		@media (max-width: 1044px) {
+
+			.benefitsPadding {
+				padding: 2.5rem;
+			}
+
+		}
+}
+
+/*fixing breadcrumb stack issue */
+
+.breadcrumb li {
+	margin: 10px 0px;
+}
+
+/* new yellow border blockquote styling */
+
+.highlight-blockquote {
+    padding: 0 1rem;
+    margin: 1rem 0;
+    border-left: .3rem solid #fdb81e;
+	font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
