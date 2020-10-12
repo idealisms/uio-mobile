@@ -674,14 +674,23 @@ thead th .required-label
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
+    .first-level-link {
+        white-space: normal;
+        min-height: calc(100% - 5px) !important;
+        padding: 5px;
 
-    .nav-item > a {
-        padding-right: 0.25em;
-        font-size: 0.90em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     }
 }
-
+@media (min-width: 768px) and (max-width: 991px) {
+    a.es {
+        font-size: 75%;
+    }
+}
 /* -------------------------------------------------------
     pagination style
 ---------------------------------------------------------*/
@@ -1100,11 +1109,6 @@ a.socialIcons {
 	top: 13px;
 }
 
-.top-level-nav
-{
-	min-height: 0 !important;
-}
-
 /* Added everything below */
 
 /* File Browse */
@@ -1169,26 +1173,6 @@ a.socialIcons {
 {
 	margin-top: 0px !important;
 	float: right;
-}
-
-/* media queries */
-/*---------------------------------------------------------*/
-@media (min-width: 768px)
-{
-	.main-navigation
-	{
-		top: 2.54em;
-		margin-top: -88px;
-	}
-	.fixed.compact .main-navigation
-	{
-		top: 5px;
-	}
-	.fixed.compact .header-organization-banner img
-	{
-	    height: 45px;
-	    margin-top: -9px;
-	}
 }
 
 @media (max-width: 480px)
