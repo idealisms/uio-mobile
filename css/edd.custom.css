@@ -1,0 +1,1566 @@
+/* Custom CSS - The CSS properties in this stylesheet will over-write any original template styles if the same class names are used in addition to custom styles which can also be added. */
+
+/* -------------------------------------------------------
+    Any <div> tag rendered with inline syle(s) need to
+    disable the 'float' as it would impact the responsive
+    behaviour
+---------------------------------------------------------*/
+div[style], li[style], ul[style] {
+    float: none !important;
+}
+br
+{
+    display: none !important;
+}
+span[id*='lblDateDisplayFormat']
+{
+    display: none !important;
+}
+span>br , td>br, span>b>br
+{
+    display: inline-block !important;
+}
+P
+{
+    margin-top: 15px;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+table tr
+{
+    line-height: 1.4285;
+}
+
+/* WCAG 2.0 AA ********/
+a
+{
+	color: #046B99;
+}
+th > a
+{
+	color: #036491;
+}
+/* ----------------------------------------------------
+	Table List - no border and no background
+------------------------------------------------------*/
+.table.table-list
+{
+	border-width: 0;
+}
+
+.table.table-list > thead > tr > th,
+.table.table-list > tbody > tr > th,
+.table.table-list > tfoot > tr > th,
+.table.table-list > thead > tr > td,
+.table.table-list > tbody > tr > td,
+.table.table-list > tfoot > tr > td
+{
+	padding: 0;
+    vertical-align: middle;
+    border-top: none;
+    border-color: transparent;
+}
+/* -------------------------------------------------------
+    H3 font size
+-------------------------------------------------------*/
+@media (max-width:992px)
+{
+    h3, .h3
+    {
+        font-size: large;
+    }
+    .margin-top-15-medium_small
+    {
+        margin-top: 15px;
+    }
+}
+/* -------------------------------------------------------
+    SSN Number + any input maxlenght 9/10
+-------------------------------------------------------*/
+@media (min-width:992px) and (max-width:1280px)
+{
+    div.col-md-3 input[maxlength="9"], input[maxlength="10"]
+    {
+        width: 100% !important;
+    }
+
+    input[placeholder="(MMDDYYYY)"], input[placeholder="(MMDDAAAA)"]
+    {
+		padding: 6px 7px !important;
+    }
+
+}
+/* -------------------------------------------------------
+    Overrided two colum main content style to consistent
+    background as white becuase V4 template has a gray
+    background that would be inconsistent in SDIO
+---------------------------------------------------------*/
+.two-column .main-content
+{
+    background: white !important;
+}
+/* -------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+    Customize radio button and checkboxes for form entry
+---------------------------------------------------------*/
+.radio
+{
+    display: inline;
+}
+.radio, .checkbox {
+    margin-top: 0px !important;
+    margin-bottom: 5px !important;
+}
+
+td input[type=radio]
+{
+    left: 20px;
+}
+    .radio label, .checkbox label
+    {
+        text-align:left;
+    }
+    .radio label
+    {
+        margin-right: 1em;
+    }
+
+.check-icon-radio
+{
+	top: 0;
+	margin-top: 1em;
+}
+
+@media (max-width:992px)
+{
+    .radio label[for], .radio .edd_label
+    {
+		margin-bottom: 0px !important;
+		margin-top: 0px !important;
+    }
+}
+
+
+/* -------------------------------------------------------
+    buttons
+---------------------------------------------------------*/
+
+/* -----EDD Branded Standard-----------------------------*/
+.button {
+    height:30px;
+    padding-top:0px;
+    margin-bottom: 10px;
+    min-width: 10em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .button, .btn {
+	  min-width: 10em;
+    }
+
+    .form-label {
+        text-align:right;
+    }
+
+    /* correcting right dropdown from opening off page*/
+    ul .sub-nav.open.right-menu {
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 600px) {
+
+    .button, .btn {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .button-middle, .button-right {
+        text-align: left;
+    }
+
+
+    .prominent_link {
+        width: 50%;
+        text-align: left;
+    }
+
+    .input-medium, .input-small {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+
+
+    .button, .btn {
+        width: 100%;
+    }
+
+
+    .prominent_link {
+        width: 100%;
+        text-align: left;
+        padding-right: 14px;
+        background-image: url(../images/carat-r-dkblue.png);
+		background-repeat: no-repeat;
+		background-position: center;
+        background-position-x: 99%;
+    }
+
+}
+/* -----EDD Branded Standard-----------------------------*/
+
+/*
+.btn
+{
+    min-width: 10em;
+}
+*/
+
+.button_group_stacked{
+	width:100%;
+}
+
+.btn-group
+{
+    margin: 1em 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+.panel-footer .btn-group
+{
+    margin-top: auto;
+}
+
+	/*
+	.btn-group>input
+    {
+        margin: 0 .3em 0 .3em;
+    }
+	*/
+        .btn-group-left
+        {
+            display: inline-block;
+            float: left !important;
+            margin-right: -50%
+        }
+			/**/
+            .btn-group-left>input{
+                margin-left:1em;
+            }
+            .btn-group-left>input:first-child{
+                margin-left:0px;
+            }
+
+        .btn-group-right
+        {
+            display: inline-block;
+            float: right !important;
+            margin-left: -50%;
+        }
+			/**/
+            .btn-group-right>input{
+                margin-left:1em;
+            }
+            .btn-group-right>input:first-child{
+                margin-left:0px;
+            }
+
+        .btn-block + .btn-block
+        {
+            margin-top: 0px;
+        }
+        div[class^='btn-group']>input[type="submit"].btn-block, div[class^='btn-group']>input[type="reset"].btn-block, div[class^='btn-group']>input[type="button"].btn-block {
+            margin-top: 5px;
+        }
+
+@media (max-width:992px)
+{
+    div.col-lg-12 .checkbox
+    {
+        margin-top: 15px !important;
+    }
+}
+
+@media (max-width:992px)
+{
+     .form-check-inline
+    {
+      	margin-bottom:15px
+    }
+}
+
+@media (max-width:767px) {
+    div[class^='btn-group-']
+    {
+        width: 100%;
+        float: none !important;
+    }
+    .btn-block
+    {
+        display: inline-block;
+    }
+    .btn-group-left, .btn-group-right
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media (min-width:767px) and (max-width:992px)
+{
+    .btn
+    {
+        min-width: 8em;
+    }
+
+}
+@media (min-width:600px) and (max-width:767px) {
+    input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+        width: 50%;
+    }
+    .btn-group input{
+        margin-left:0px;
+    }
+        div[class^='btn-group']>input[type="submit"].btn-block, div[class^='btn-group']>input[type="reset"].btn-block, div[class^='btn-group']>input[type="button"].btn-block {
+            margin-top: .7em;
+        }
+    .btn-group
+    {
+        margin: 0;
+        text-align: left;
+        margin-top: 2em;
+    }
+}
+
+@media (max-width:600px) {
+    input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+        width: 100%;
+    }
+    .btn-group input{
+        margin-left:0px;
+    }
+        div[class^='btn-group']>input[type="submit"].btn-block, div[class^='btn-group']>input[type="reset"].btn-block, div[class^='btn-group']>input[type="button"].btn-block {
+            margin-top: .7em;
+        }
+
+}
+/* -------------------------------------------------------
+    Phone number control
+---------------------------------------------------------*/
+.phoneNumber .checkbox
+{
+	margin-top: .5em !important;
+}
+.phoneNumber .input-group span:last-child
+{
+    width: 25% !important;
+}
+.phoneNumber .input-group label
+{
+    float: none;
+    text-align: center;
+    padding-left: .5em;
+}
+@media (min-width:600px) and (max-width:992px) {
+	.phoneNumber .input-group span:first-child
+	{
+		width: 70% !important;
+	}
+}
+@media (max-width:599px) {
+	.phoneNumber .input-group span:first-child
+	{
+		width: 68% !important;
+	}
+}
+
+
+/* -------------------------------------------------------
+   Zip code control
+---------------------------------------------------------*/
+.zipCode
+{
+    padding-bottom: .3em;
+}
+.zipCode .input-group span:last-child
+{
+    width: 25% !important;
+}
+
+/* -------------------------------------------------------
+    Date Time control
+---------------------------------------------------------*/
+.dateTime .input-group
+{
+    /*padding-bottom: .5em;*/
+	width: 50% !important;
+}
+.dateTime .input-group span div
+{
+	display: flex;
+}
+.dateTime .input-group label
+{
+    float: none;
+    text-align: center;
+    padding-left: .2em;
+	padding-right: .2em;
+}
+
+.dateTime .input-group .form-control
+{
+	min-width: 0;
+	width: 0;
+}
+.dateTime .input-group select
+{
+	min-width: auto !important;
+	width: auto !important;
+	flex: 0 0 auto;
+}
+.dateTime .input-group select,
+.dateTime .input-group span:last-child
+{
+	margin-left: .5em;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+}
+/* bootstrap media queries */
+@media (max-width:767px)
+{
+	.dateTime .input-group
+	{
+		width: 100% !important;
+	}
+}
+
+@media (min-width: 992px)
+{
+	.dateTime .input-group label
+	{
+		top: 15px;
+	}
+}
+
+@media (max-width: 991px)
+{
+	.dateTime
+	{
+		margin-bottom: 15px;
+	}
+}
+
+/* -------------------------------------------------------
+    input group
+---------------------------------------------------------*/
+.input-group
+{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+}
+    .input-group span
+    {
+        position: relative;
+        display: table-cell;
+        padding-left: .5em;
+        vertical-align: top;
+        white-space: nowrap;
+    }
+    .input-group input, .input-group label, .input-group .btn, .input-group select
+    {
+        white-space: nowrap;
+        position: relative;
+        display: inline-block;
+        text-align: left;
+    }
+    .input-group:first-child, .input-group label:first-child, .input-group span:first-child, .input-group .btn:first-child, .input-group select
+    {
+        padding-left: 0;
+    }
+
+
+
+/* -------------------------------------------------------
+    Customize span tag to display as label
+---------------------------------------------------------*/
+span.edd_label
+{
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+@media (max-width:992px)
+{
+    .edd_label.pull-right.text-right
+    {
+        float: left !important;
+        text-align: left !important;
+    }
+}
+
+/* -------------------------------------------------------
+    Form style responsive behavior
+---------------------------------------------------------*/
+/* responsive behavior */
+@media (min-width:992px)
+{
+    label[for]
+    {
+        /*float: right;
+        text-align: right;*/
+    }
+
+    .radio label, .checkbox label
+    {
+        float: none;
+        text-align: left;
+    }
+}
+@media (max-width:992px)
+{
+    label[for], .edd_label
+    {
+        margin-bottom: 0px !important;
+        margin-top: 15px !important;
+    }
+
+    .checkbox label[for], checkbox .edd_label
+    {
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+    }
+
+    .form-group
+    {
+        margin-bottom: 0px;
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+    {
+        margin-bottom: 5px;
+    }
+    .p-t-12.large
+    {
+    	padding-top: 0px !important;
+    }
+}
+/* -------------------------------------------------------*/
+
+    div.radio label
+    {
+        display: inline-flex;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        margin-top: 0px !important;
+    }
+
+/* -------------------------------------------------------
+    Required field indicator
+---------------------------------------------------------*/
+.required-label
+{
+    color: #E00000 !important;
+}
+
+thead th .required-label
+{
+    color: #C00000 !important;
+}
+
+/* -------------------------------------------------------
+    Error panel
+---------------------------------------------------------*/
+.panel-error
+{
+    border-color: #f00;
+    background: #F5F5F5;
+	margin: 22px 0 0 0;
+}
+
+.panel-error .panel-heading
+{
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+
+.panel-error > .panel-heading
+{
+    color: #fff;
+    background-color: #C90000;
+    border-color: #C90000;
+}
+.white-space-normal
+{
+	white-space: normal;
+}
+
+/* -------------------------------------------------------
+    User Banner
+---------------------------------------------------------*/
+.float-right
+{
+    float: right !important;
+    margin-right: 10px;
+}
+
+.float-left
+{
+    float: left !important;
+    margin-left: 10px;
+}
+.inline-block
+{
+    display: inline-block !important;
+}
+
+
+.user-banner
+{
+    /*float: right;
+    padding-right: 1em;*/
+    overflow: hidden;
+    line-height: inherit;
+    text-align: right;
+    /*margin-bottom: .5em;*/
+    white-space: nowrap;
+    color: #f2f2f2;
+}
+.user-banner .user-name
+{
+	font-weight: bolder;
+}
+.user-banner a
+{
+	color: #f2f2f2;
+}
+
+@media (min-width:768px) {
+	.user-banner
+	{
+		right: 0;
+	}
+    .header-cagov-logo
+    {
+    	top: 30px;
+    }
+}
+
+
+/* bootstrap media queries */
+@media (max-width:767px) {
+    .user-banner
+    {
+        color: white;
+		right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .nav-item > a {
+        padding-right: 0.25em;
+        font-size: 0.90em;
+    }
+}
+
+/* -------------------------------------------------------
+    pagination style
+---------------------------------------------------------*/
+.GridPager>td
+{
+    background-color: transparent !important;
+}
+.GridPager span, .GridPager a
+{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.GridPager span
+{
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.GridPager a:focus, .GridPager a:hover
+{
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+.GridPager table>tbody>tr>td:first-child>a, .GridPager table>tbody>tr>td:first-child>span
+{
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.GridPager table>tbody>tr>td:last-child>a, .GridPager table>tbody>tr>td:last-child>span
+{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+/*-------------------------------------------------------
+    Address within table
+-------------------------------------------------------*/
+td div[class^='col-md-'], td div[class*=' col-md-']
+{
+    width: 100%;
+}
+td div[class^='col-md-'], td div[class*=' col-md-']
+, td div[class^='col-lg-'], td div[class*=' col-lg-']
+, td div[class^='col-xs-'], td div[class*=' col-xs-']
+{
+    padding: 0;
+}
+
+/* -------------------------------------------------------
+    Force Left Alignment when label has no text associated with it
+---------------------------------------------------------*/
+.leftalign {
+	float: left !important;
+}
+.width-full
+{
+    width: 100%;
+}
+.width-half
+{
+    width: 50%;
+}
+.width-quarter
+{
+    width: 25%;
+}
+.width-auto
+{
+    width: auto;
+}
+
+/* responsive behavior*/
+@media (max-width:767px)
+{
+    .width-half, .width-quarter, .width-auto
+    {
+        width: 100%;
+    }
+
+	td>span>select.width-auto
+    {
+        width: auto !important;
+    }
+
+    .table-responsive td>span>select.width-auto
+    {
+        width: 100% !important;
+    }
+}
+
+/*-------------------------------------------------------
+   for Glyphicon
+-------------------------------------------------------*/
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/glyphicons-halflings-regular.woff') format('woff'),url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),url('../fonts/glyphicons-halflings-regular.svg') format('svg');
+}
+
+.glyphicon {position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.glyphicon-asterisk:before{content:"\2a"}.glyphicon-plus:before{content:"\2b"}.glyphicon-euro:before{content:"\20ac"}.glyphicon-minus:before{content:"\2212"}.glyphicon-cloud:before{content:"\2601"}.glyphicon-envelope:before{content:"\2709"}.glyphicon-pencil:before{content:"\270f"}.glyphicon-glass:before{content:"\e001"}.glyphicon-music:before{content:"\e002"}.glyphicon-search:before{content:"\e003"}.glyphicon-heart:before{content:"\e005"}.glyphicon-star:before{content:"\e006"}.glyphicon-star-empty:before{content:"\e007"}.glyphicon-user:before{content:"\e008"}.glyphicon-film:before{content:"\e009"}.glyphicon-th-large:before{content:"\e010"}.glyphicon-th:before{content:"\e011"}.glyphicon-th-list:before{content:"\e012"}.glyphicon-ok:before{content:"\e013"}.glyphicon-remove:before{content:"\e014"}.glyphicon-zoom-in:before{content:"\e015"}.glyphicon-zoom-out:before{content:"\e016"}.glyphicon-off:before{content:"\e017"}.glyphicon-signal:before{content:"\e018"}.glyphicon-cog:before{content:"\e019"}.glyphicon-trash:before{content:"\e020"}.glyphicon-home:before{content:"\e021"}.glyphicon-file:before{content:"\e022"}.glyphicon-time:before{content:"\e023"}.glyphicon-road:before{content:"\e024"}.glyphicon-download-alt:before{content:"\e025"}.glyphicon-download:before{content:"\e026"}.glyphicon-upload:before{content:"\e027"}.glyphicon-inbox:before{content:"\e028"}.glyphicon-play-circle:before{content:"\e029"}.glyphicon-repeat:before{content:"\e030"}.glyphicon-refresh:before{content:"\e031"}.glyphicon-list-alt:before{content:"\e032"}.glyphicon-lock:before{content:"\e033"}.glyphicon-flag:before{content:"\e034"}.glyphicon-headphones:before{content:"\e035"}.glyphicon-volume-off:before{content:"\e036"}.glyphicon-volume-down:before{content:"\e037"}.glyphicon-volume-up:before{content:"\e038"}.glyphicon-qrcode:before{content:"\e039"}.glyphicon-barcode:before{content:"\e040"}.glyphicon-tag:before{content:"\e041"}.glyphicon-tags:before{content:"\e042"}.glyphicon-book:before{content:"\e043"}.glyphicon-bookmark:before{content:"\e044"}.glyphicon-print:before{content:"\e045"}.glyphicon-camera:before{content:"\e046"}.glyphicon-font:before{content:"\e047"}.glyphicon-bold:before{content:"\e048"}.glyphicon-italic:before{content:"\e049"}.glyphicon-text-height:before{content:"\e050"}.glyphicon-text-width:before{content:"\e051"}.glyphicon-align-left:before{content:"\e052"}.glyphicon-align-center:before{content:"\e053"}.glyphicon-align-right:before{content:"\e054"}.glyphicon-align-justify:before{content:"\e055"}.glyphicon-list:before{content:"\e056"}.glyphicon-indent-left:before{content:"\e057"}.glyphicon-indent-right:before{content:"\e058"}.glyphicon-facetime-video:before{content:"\e059"}.glyphicon-picture:before{content:"\e060"}.glyphicon-map-marker:before{content:"\e062"}.glyphicon-adjust:before{content:"\e063"}.glyphicon-tint:before{content:"\e064"}.glyphicon-edit:before{content:"\e065"}.glyphicon-share:before{content:"\e066"}.glyphicon-check:before{content:"\e067"}.glyphicon-move:before{content:"\e068"}.glyphicon-step-backward:before{content:"\e069"}.glyphicon-fast-backward:before{content:"\e070"}.glyphicon-backward:before{content:"\e071"}.glyphicon-play:before{content:"\e072"}.glyphicon-pause:before{content:"\e073"}.glyphicon-stop:before{content:"\e074"}.glyphicon-forward:before{content:"\e075"}.glyphicon-fast-forward:before{content:"\e076"}.glyphicon-step-forward:before{content:"\e077"}.glyphicon-eject:before{content:"\e078"}.glyphicon-chevron-left:before{content:"\e079"}.glyphicon-chevron-right:before{content:"\e080"}.glyphicon-plus-sign:before{content:"\e081"}.glyphicon-minus-sign:before{content:"\e082"}.glyphicon-remove-sign:before{content:"\e083"}.glyphicon-ok-sign:before{content:"\e084"}.glyphicon-question-sign:before{content:"\e085"}.glyphicon-info-sign:before{content:"\e086"}.glyphicon-screenshot:before{content:"\e087"}.glyphicon-remove-circle:before{content:"\e088"}.glyphicon-ok-circle:before{content:"\e089"}.glyphicon-ban-circle:before{content:"\e090"}.glyphicon-arrow-left:before{content:"\e091"}.glyphicon-arrow-right:before{content:"\e092"}.glyphicon-arrow-up:before{content:"\e093"}.glyphicon-arrow-down:before{content:"\e094"}.glyphicon-share-alt:before{content:"\e095"}.glyphicon-resize-full:before{content:"\e096"}.glyphicon-resize-small:before{content:"\e097"}.glyphicon-exclamation-sign:before{content:"\e101"}.glyphicon-gift:before{content:"\e102"}.glyphicon-leaf:before{content:"\e103"}.glyphicon-fire:before{content:"\e104"}.glyphicon-eye-open:before{content:"\e105"}.glyphicon-eye-close:before{content:"\e106"}.glyphicon-warning-sign:before{content:"\e107"}.glyphicon-plane:before{content:"\e108"}.glyphicon-calendar:before{content:"\e109"}.glyphicon-random:before{content:"\e110"}.glyphicon-comment:before{content:"\e111"}.glyphicon-magnet:before{content:"\e112"}.glyphicon-chevron-up:before{content:"\e113"}.glyphicon-chevron-down:before{content:"\e114"}.glyphicon-retweet:before{content:"\e115"}.glyphicon-shopping-cart:before{content:"\e116"}.glyphicon-folder-close:before{content:"\e117"}.glyphicon-folder-open:before{content:"\e118"}.glyphicon-resize-vertical:before{content:"\e119"}.glyphicon-resize-horizontal:before{content:"\e120"}.glyphicon-hdd:before{content:"\e121"}.glyphicon-bullhorn:before{content:"\e122"}.glyphicon-bell:before{content:"\e123"}.glyphicon-certificate:before{content:"\e124"}.glyphicon-thumbs-up:before{content:"\e125"}.glyphicon-thumbs-down:before{content:"\e126"}.glyphicon-hand-right:before{content:"\e127"}.glyphicon-hand-left:before{content:"\e128"}.glyphicon-hand-up:before{content:"\e129"}.glyphicon-hand-down:before{content:"\e130"}.glyphicon-circle-arrow-right:before{content:"\e131"}.glyphicon-circle-arrow-left:before{content:"\e132"}.glyphicon-circle-arrow-up:before{content:"\e133"}.glyphicon-circle-arrow-down:before{content:"\e134"}.glyphicon-globe:before{content:"\e135"}.glyphicon-wrench:before{content:"\e136"}.glyphicon-tasks:before{content:"\e137"}.glyphicon-filter:before{content:"\e138"}.glyphicon-briefcase:before{content:"\e139"}.glyphicon-fullscreen:before{content:"\e140"}.glyphicon-dashboard:before{content:"\e141"}.glyphicon-paperclip:before{content:"\e142"}.glyphicon-heart-empty:before{content:"\e143"}.glyphicon-link:before{content:"\e144"}.glyphicon-phone:before{content:"\e145"}.glyphicon-pushpin:before{content:"\e146"}.glyphicon-usd:before{content:"\e148"}.glyphicon-gbp:before{content:"\e149"}.glyphicon-sort:before{content:"\e150"}.glyphicon-sort-by-alphabet:before{content:"\e151"}.glyphicon-sort-by-alphabet-alt:before{content:"\e152"}.glyphicon-sort-by-order:before{content:"\e153"}.glyphicon-sort-by-order-alt:before{content:"\e154"}.glyphicon-sort-by-attributes:before{content:"\e155"}.glyphicon-sort-by-attributes-alt:before{content:"\e156"}.glyphicon-unchecked:before{content:"\e157"}.glyphicon-expand:before{content:"\e158"}.glyphicon-collapse-down:before{content:"\e159"}.glyphicon-collapse-up:before{content:"\e160"}.glyphicon-log-in:before{content:"\e161"}.glyphicon-flash:before{content:"\e162"}.glyphicon-log-out:before{content:"\e163"}.glyphicon-new-window:before{content:"\e164"}.glyphicon-record:before{content:"\e165"}.glyphicon-save:before{content:"\e166"}.glyphicon-open:before{content:"\e167"}.glyphicon-saved:before{content:"\e168"}.glyphicon-import:before{content:"\e169"}.glyphicon-export:before{content:"\e170"}.glyphicon-send:before{content:"\e171"}.glyphicon-floppy-disk:before{content:"\e172"}.glyphicon-floppy-saved:before{content:"\e173"}.glyphicon-floppy-remove:before{content:"\e174"}.glyphicon-floppy-save:before{content:"\e175"}.glyphicon-floppy-open:before{content:"\e176"}.glyphicon-credit-card:before{content:"\e177"}.glyphicon-transfer:before{content:"\e178"}.glyphicon-cutlery:before{content:"\e179"}.glyphicon-header:before{content:"\e180"}.glyphicon-compressed:before{content:"\e181"}.glyphicon-earphone:before{content:"\e182"}.glyphicon-phone-alt:before{content:"\e183"}.glyphicon-tower:before{content:"\e184"}.glyphicon-stats:before{content:"\e185"}.glyphicon-sd-video:before{content:"\e186"}.glyphicon-hd-video:before{content:"\e187"}.glyphicon-subtitles:before{content:"\e188"}.glyphicon-sound-stereo:before{content:"\e189"}.glyphicon-sound-dolby:before{content:"\e190"}.glyphicon-sound-5-1:before{content:"\e191"}.glyphicon-sound-6-1:before{content:"\e192"}.glyphicon-sound-7-1:before{content:"\e193"}.glyphicon-copyright-mark:before{content:"\e194"}.glyphicon-registration-mark:before{content:"\e195"}.glyphicon-cloud-download:before{content:"\e197"}.glyphicon-cloud-upload:before{content:"\e198"}.glyphicon-tree-conifer:before{content:"\e199"}.glyphicon-tree-deciduous:before{content:"\e200"}
+
+/* -------------------------------------------------------
+    stretched dropdown list box
+--------------------------------------------------------*/
+.width-full select
+{
+    width: 100%;
+}
+
+/*------------------------------------------------------
+    header banner
+-------------------------------------------------------*/
+.header-organization-banner {
+    line-height: normal;
+}
+
+/*------------------------------------------------------
+    Handling Long Words and URLs
+    force break, hyphenation, etc.
+-------------------------------------------------------*/
+.dont-break-out {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/*-------------------------------------------------------*/
+
+/*------------------------------------------------------
+    margin, padding and other common styles
+-------------------------------------------------------*/
+.margin_top_1em
+{
+    margin-top: 1em;
+}
+.margin_top_2em
+{
+    margin-top: 2em;
+}
+.margin_top_10px
+{
+    margin-top: 10px;
+}
+.margin_top_15px
+{
+    margin-top: 15px;
+}
+
+/*-------------------------------------------------------*/
+.line_height_0
+{
+   line-height: 0px;
+}
+
+.line_height
+{
+    line-height: 1.4285;
+}
+
+.display_sub_nav
+{
+    display: block;
+    opacity: 1;
+}
+
+.display_flex
+{
+    display: flex;
+}
+
+.display_block
+{
+    display:block;
+}
+.display_chrome_inline
+{
+    display: -webkit-inline-box;
+    display: inline-flex;
+}
+
+
+/* START - Custom CSS - The CSS properties in this stylesheet will over-write any original template styles if the same class names are used in addition to custom styles which can also be added. */
+
+/* alt header styles */
+
+.header_cagov_logo img {
+    height:37px;
+    width:47px;
+    float: left;
+    margin-top: 20px;
+}
+
+.header_organization_banner_x { /* 269 x 39 */
+	position:relative;
+	/* margin:0 auto;
+	top:0px;
+	width:100%; */
+	height:69px;
+	line-height:69px;
+	top: 30px;
+    margin: 0 auto;
+    text-align: center;
+
+    min-height: 64px;
+    line-height: 145px;
+
+    float: left;
+    padding-left:80px;
+}
+
+.header_organization_banner_x3 {
+    padding-left: 140px;
+}
+
+.header_organization_banner_x img {
+    margin-left:15px;
+    vertical-align:middle;
+}
+
+.login_options {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: auto;
+        width: 150px;
+        height: 30px;
+        min-width: 104px;
+}
+
+.login_options_container {
+        border: none;
+        width: 150px;
+        height: 30px;
+        padding-top: 5px;
+}
+
+.login_dropdown {
+    color: white;
+    margin-left: 10px;
+}
+
+.search_container {
+    margin-top: 35px;
+}
+
+/* end alt header styles*/
+
+/* custom header styles */
+.logo_and_banner {
+	margin:0 118px 0 59px; /* make room for buttons on left and right */
+}
+
+.header_organization_banner { /* 269 x 39 */
+	position:relative;
+	/* margin:0 auto;
+	top:0px;
+	width:100%; */
+	height:69px;
+	/*line-height:69px;*/ /* vertically centers the image */
+	/*text-align:center;*/
+    float: left;
+
+}
+.header_organization_banner img {
+	max-width:100%;
+	max-height:100%;
+    margin-left: 145px;
+    vertical-align:middle;
+}
+
+
+/************ Begin Footer Customization **************/
+
+.edd_footer {
+	background:#464646
+}
+
+.edd_footer ul li a {
+	background:none
+}
+
+.edd_footer a, .edd_footer a:hover {
+	color:#ffffff
+}
+
+
+.sub_footer {
+	background:#000;
+	color:#fff;
+}
+
+.sub_footer ul li a, .sub_footer a:hover, .sub_footer a:visited {
+	color:#fff
+}
+
+.sub_footer ul li a {
+	background:none
+}
+
+.global-footer .footer-links
+{
+	margin-left: -0.15em;
+}
+
+.global-footer .copyright
+{
+	padding: 0px;
+}
+
+/************ End Footer Customization **************/
+
+
+/* Social Media Icons */
+a.socialIcons:hover {
+	opacity: .8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+	text-decoration: none
+}
+
+a.socialIcons {
+	color:#fff
+}
+
+.socialIcons {
+	font-size:36px;
+}
+
+/**** media queries ***/
+
+@media (max-width:767px)
+{
+    .header_organization_banner_x, .header_organization_banner_x3
+    {
+        padding-left: 0px !important;
+        top: 10px;
+    }
+}
+
+
+/* END - Custom CSS - The CSS properties in this stylesheet will over-write any original template styles if the same class names are used in addition to custom styles which can also be added. */
+
+/* -------------------------------------------------------
+    State V5 changes
+---------------------------------------------------------*/
+.main-content
+{
+	padding-bottom: 1em;
+}
+
+.fixed + .main-content
+{
+	padding-top: 136px;
+}
+/*
+.main-navigation
+{
+    margin-top: -88px;
+}
+*/
+
+.ecos-list-icon {
+    font-size: 3.438em;
+    padding: 0 0 0 16px;
+    float: left;
+}
+.user-name
+{
+    padding: 3px 0;
+}
+
+.padding_0
+{
+	padding: 0 !important;
+}
+
+.section-understated, .card-understated
+{
+    background: #d6d6d6;
+}
+
+.branding .header-organization-banner
+{
+	margin-top: 1.5%;
+}
+
+.page-container
+{
+	position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/**** Branding *****/
+.branding img
+{
+	height: 70%;
+	top: 13px;
+}
+
+.top-level-nav
+{
+	min-height: 0 !important;
+}
+
+/* Added everything below */
+
+/* File Browse */
+.file-attach > .input-group-btn > .btn
+{
+    min-width: 0;
+    padding: 5px 12px !important;
+    height: 100%;
+    width: 100%;
+}
+.file-attach .button, .file-attach .btn
+{
+	margin-left: 0px !important;
+}
+
+.file-attach .form-control
+{
+	height: auto !important;
+	padding: 5px 12px !important;
+}
+
+.file-attach input[type="file"] {
+  left: -5%;
+  width: 110%;
+}
+
+/* Radio Buttons */
+.p-l-md.radio
+{
+    padding-left: 0px !important;
+}
+
+/* Checkbox color should be transperant
+   due to its use in table */
+.check-icon-checkbox
+{
+	color: transparent;
+	/* Added to fix alignment with text */
+    margin-top: 2px;
+}
+
+.card-block h2, .course-item h2
+{
+	margin-top: 0.5%;
+}
+
+.section.section-standout h1
+{
+	color: #FDB81E;
+}
+
+.main-navigation.dropdown .sub-nav
+{
+	right: 1%;
+}
+
+.utility-header .utility-links
+{
+    padding: 3px 0;
+}
+.copyright p
+{
+	margin-top: 0px !important;
+	float: right;
+}
+
+/* media queries */
+/*---------------------------------------------------------*/
+@media (min-width: 768px)
+{
+	.main-navigation
+	{
+		top: 2.54em;
+		margin-top: -88px;
+	}
+	.fixed.compact .main-navigation
+	{
+		top: 5px;
+	}
+	.fixed.compact .header-organization-banner img
+	{
+	    height: 45px;
+	    margin-top: -9px;
+	}
+}
+
+@media (max-width: 480px)
+{
+	.branding .header-organization-banner
+	{
+		margin-top: 2.5%;
+	}
+}
+@media (min-width: 992px) and (max-width: 1280px)
+{
+	.main-navigation
+	{
+		padding-left: 200px;
+	}
+}
+/*---------------------------------------------------------
+	Custom Spacing for SDIO implementation
+
+---------------------------------------------------------*/
+.p-t-12
+{
+	padding-top: 12PX;
+}
+
+.m-b-N10
+{
+    margin-bottom: -10px;
+}
+.m-b-N15
+{
+    margin-bottom: -15px;
+}
+.border-1
+{
+	border: 1px solid #000;
+}
+.p-15
+{
+	padding: 15px;
+}
+.min-height-300
+{
+	min-height: 300px;
+}
+
+
+/*---------------------------------------------------------*/
+
+/* EDD Branded V5 Header/Footer */
+/*---------------------------------------------------------*/
+
+.section-impact a:not(.btn){
+    color: #f5f5f5;
+}
+
+.section-impact a:not(.btn):hover,
+.section-impact a:not(.btn):focus {
+    color: #FDB81E;
+    text-decoration: underline;
+}
+
+
+.section .container
+{
+	width: auto;
+}
+
+@media (max-width: 767px) {
+    .mobile-controls{
+		height:77px;
+    }
+
+    #slideshow {
+        width:100%;
+    }
+}
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+
+/* Link wrapping */
+a
+{
+    word-wrap: break-word;
+}
+
+/* Indicates required spacing */
+div.panel.panel-error + div.m-t-sm
+{
+    margin-top: 15px !important;
+}
+
+.mobile-controls {
+    min-height:75px;
+}
+
+.container section {
+    padding: 5px 15px 5px 15px;
+}
+
+.button {
+    height:30px;
+    padding-top:0px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+
+}
+.file-attach .button, .file-attach .btn
+{
+    margin-bottom: 0px;
+}
+
+.btn-group-right .button, .btn
+{
+    margin-right: 0px !important;
+}
+
+.button[disabled] {
+    color: gray;
+}
+
+.button-middle {
+    text-align: center;
+}
+
+.button-right {
+    text-align: right;
+}
+
+.prominent_link {
+	text-align:center;
+	border-bottom:thin;
+	border-radius:3px;
+	background-color:#E0EDF6;
+}
+
+.prominent_link a {
+	display: block;
+	font-weight:normal;
+	padding: 4px;
+    margin-right: 4px;
+	font-size:1.1em;
+}
+
+.prominent_link a, .prominent_link a:hover, .prominent_link a:visited {
+	color:#003466;
+}
+
+form label {
+    margin-bottom: 0px;
+    vertical-align: middle;
+}
+
+.input-medium {
+    width: 150px;
+}
+
+.input-small {
+    width: 50px;
+}
+
+.error {
+    color: #d34a37;
+}
+
+.yellow_alert .panel-heading {
+    background-color: #FBAD23;
+	color:white;
+    margin: 0px;
+    padding: 5px 0 5px 10px;
+}
+
+.yellow_alert .panel {
+	border:1px solid #FBAD23;
+    background:#F5F5F5;
+}
+
+.yellow_alert .panel-body {
+   padding-left: 40px;
+}
+
+.red_alert .panel-heading {
+    background-color: #C90000;
+	color:white;
+    margin: 0px;
+    padding: 5px 0 5px 10px;
+}
+
+.red_alert .panel {
+	border:1px solid #C90000;
+    background:#F5F5F5;
+}
+
+.red_alert .panel-body {
+   padding-left: 40px;
+}
+
+@media only screen and (min-width: 1277px) {
+    /* two column input controls */
+    form .group > .half > .group {
+        min-width: 500px;
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 1277px) {
+
+    /* two column input controls */
+    form .group > .half:not(.button-middle) {
+        min-width: 100%;
+    }
+}
+
+.add_vertical_scroll {
+    height: auto;
+    max-height: 13em;
+    overflow-x: hidden;
+}
+
+.word_wrap{
+	word-wrap:break-word;
+}
+
+.input-group span[title]
+{
+    width: 1%;
+}
+
+/*********************************************************
+	Sub-menu heigh set to auto if menu item wraps
+*********************************************************/
+@media (min-width: 768px) {
+	.unit1
+	{
+		height: auto;
+	}
+}
+
+/*********************************************************
+	Table width in mobile view
+*********************************************************/
+@media screen and (max-width: 767px) {
+	.table-responsive > table
+	{
+		min-width: 767px;
+	}
+}
+
+/*********************************************************
+	Table responsive media query for Medium and Large view
+*********************************************************/
+@media (min-width:767px){
+	 .table-responsive {
+    width: 100%;
+    margin-bottom: 16.5px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+ .table-responsive > .table {
+    margin-bottom: 0;
+  }
+
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+  .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+  .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+  .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+  .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
+}
+
+
+
+/*********************************************************
+	Make the button right align on iphone view with landscapse
+*********************************************************/
+@media screen and (max-width: 767px){
+    .modal-footer > input[type=button]
+    {
+      float:right;
+    }
+}
+
+/*********************************************************
+	Make the alert message left align
+*********************************************************/
+.alert-level {
+    margin: 0;
+    padding-left: 0;
+}
+
+
+/*********************************************************
+	Utilities menu in development environment
+*********************************************************/
+#userBanner ul.menus {
+  height: auto;
+  width: auto;
+  background: #046B99;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  border: 0;
+}
+
+#userBanner ul.menus li {
+  display: block;
+  width: 100%;
+  text-transform: none;
+  text-align: left;
+  line-height: 25px;
+  padding-top: 5px;
+}
+
+#userBanner li:hover ul.menus {
+  display: block;
+}
+
+@media screen and (max-width: 376px){
+    #userBanner li:hover ul.menus
+    {
+      right: 1%;
+    }
+}
+
+.display-none
+{
+    display: none;
+}
+
+input[type="checkbox"][disabled] + * i  {
+    background-color: #d6d6d6;
+}
+
+input[type="checkbox"][disabled] + div.check-icon-checkbox
+{
+    border-color: #d6d6d6;
+}
+.cursor-not-allowed
+{
+    cursor: not-allowed !important;
+}
+
+.verifywithIDme
+{
+    width: 200px;
+    height: 35px;
+}
+
+
+

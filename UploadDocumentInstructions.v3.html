@@ -1,0 +1,602 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths flexbox flexboxlegacy no-flexboxtweener flexwrap" style="font-size: 1rem;"><head id="head"><title>
+Online Identity Verification
+</title>
+
+<!-- head content, for all pages -->
+<meta name="Author" content="State of California"><meta name="Description" content="State of California"><meta name="Keywords" content="California, government">
+<!-- Use highest compatibility mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<!-- for Blackberry, AvantGo -->
+<meta name="MobileOptimized" content="320">
+<!-- for Windows mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
+<!-- modernizr.com, feature detection -->
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/modernizr-2.0.6.min.js"></script>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/modernizr-extra.min.js"></script>
+<!-- selectivizr.com, emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8 -->
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/selectivizr-min.js"></script>
+<![endif]-->
+<!-- For iPad 3-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<!-- For iPhone 4 -->
+<link rel="apple-touch-icon" sizes="114x114" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<!-- For iPad 1-->
+<link rel="apple-touch-icon" sizes="72x72" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="apple-touch-icon" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<!-- For Nokia -->
+<link rel="shortcut icon" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<!-- For everything else -->
+<link rel="shortcut icon" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<!-- Activate ClearType for Mobile IE -->
+<!--[if IE]>
+<meta http-equiv="cleartype" content="on" />
+<![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/html5shiv.min.js"></script>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/edd.sessionTimeout.js"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-3419582-31', { 'anonymize_ip': true });
+</script>
+<script type="text/javascript" language="javascript">
+if (self === top) {
+var antiClickjack = document.getElementById("antiClickjack");
+antiClickjack.parentNode.removeChild(antiClickjack);
+}
+else {
+top.location = self.location;
+}
+</script>
+<meta name="format-detection" content="telephone=no">
+<link href="css/cagov.core.v3.css" type="text/css" rel="stylesheet">
+<link href="css/cagov.font-only.css" type="text/css" rel="stylesheet">
+<link href="css/colorscheme-oceanside.css" type="text/css" rel="stylesheet">
+<link href="css/edd.custom.css" type="text/css" rel="stylesheet">
+<link href="css/processbar.css" type="text/css" rel="stylesheet">
+<style type="text/css">.fancybox-margin{margin-right:17px;}</style>
+</head>
+<body>
+<form method="post" action="./UploadDocumentInstructions.aspx" id="frmClaimantMainNoMenu">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODE2MTExMTI0DxQrAARkBSQ4YzRiZjFmZi0yN2E5LTRmNDAtODNjZi0yNTQ3ZmQxNzc0Y2IFJGY2ODM5ZmU2LTkwNGYtNGM4Yi1iOTQ4LTc0OWYzN2JmY2JhMgUkN2U2YTljZDctNDhmMy00MTlkLThlMGUtZmM0NWViMGZiYzQyFgJmD2QWAmYPZBYEZg9kFgZmD2QWAmYPZBYCAgEPZBYCAgEPFgQeFVJlc291cmNlQ29udGFpbmVyTmFtZQUHRGVmYXVsdB4EVGV4dAUcT25saW5lIElkZW50aXR5IFZlcmlmaWNhdGlvbmQCEQ8VCTsuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2xpYnMvbW9kZXJuaXpyLTIuMC42Lm1pbi5qczsuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2xpYnMvbW9kZXJuaXpyLWV4dHJhLm1pbi5qczcuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2xpYnMvc2VsZWN0aXZpenItbWluLmpzLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvZAITDxUDNS4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvanMvbGlicy9odG1sNXNoaXYubWluLmpzMy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvanMvbGlicy9yZXNwb25kLm1pbi5qczUuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2VkZC5zZXNzaW9uVGltZW91dC5qc2QCAQ9kFhQCAQ8WAh4HVmlzaWJsZWhkAgUPZBYMAgEPFgQfAAUHRGVmYXVsdB8BBQRIb21lZAIDDw8WCh8BBRhCZW5lZml0IFByb2dyYW1zIE9ubGluZSAfAAUHRGVmYXVsdB4NUmVzb3VyY2VHcm91cGUeE0VuYWJsZUF1dGhvcml6YXRpb25nHhpBc3NvY2lhdGVkU2VjdXJpdHlSZXNvdXJjZQV1RURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLkV4dGVybmFsVXNlci5DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50LlVwbG9hZERvY3VtZW50SW5zdHJ1Y3Rpb25zLmNtZEJlbmVmaXRQcm9ncmFtT25saW5lZGQCBQ8PFgQfAAUHRGVmYXVsdB8DZWQWAmYPZBYCAgEPDxYGHwAFB0RlZmF1bHQfAQUESGVscB4HVG9vbFRpcAUESGVscGRkAgcPDxYKHwEFFyggRmlyc3RuYW1lICBMYXN0bmFtZSApHwRoHwAFB0RlZmF1bHQfA2UfAmdkZAIJDw8WAh4LTmF2aWdhdGVVcmwFNX4vUGFnZXMvRXh0ZXJuYWxVc2VyL1dlYkNvcnJlc3BvbmRlbmNlL0NvbnRhY3RVcy5hc3B4ZGQCCw8PFgwfAQUHTG9nIE91dB8ABQdEZWZhdWx0HwNlHwRnHwUFbEVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5VcGxvYWREb2N1bWVudEluc3RydWN0aW9ucy5jbWRMb2dpbkxvZ291dB8CZ2RkAgoPZBYCAgMPFCsADQ8WAh4LXyFEYXRhQm91bmRnZGRkZGRkZGRkEBYAFgBkZBAWABYAZBQrAAkFHzA6MCwwOjEsMDoyLDA6MywwOjQsMDo1LDA6NiwwOjcUKwACFhIeB0VuYWJsZWRnHglEYXRhQm91bmRnHghEYXRhUGF0aAUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9MV0fAQUHVUkgSG9tZR4FVmFsdWUFTX4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvVUlPbmxpbmVIb21lLmFzcHg/X19Ob2RlSUQ9MTYxHgZUYXJnZXQFS0VERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5Ib21lUGFnZR4KU2VsZWN0YWJsZWcfBgUHVUkgSG9tZR4IU2VsZWN0ZWRnZBQrAAIWDh8BBRRDZXJ0aWZ5IGZvciBCZW5lZml0cx8MBU9+L1BhZ2VzL0V4dGVybmFsVXNlci9DZXJ0aWZpY2F0aW9uL0F2YWlsYWJsZVdlZWtzTm90aWZpY2F0aW9uLmFzcHg/X19Ob2RlSUQ9MTYyHwYFFENlcnRpZnkgZm9yIEJlbmVmaXRzHwlnHw5nHwsFIC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTJdHwpnZBQrAAIWEB8BBRBQYXltZW50IEFjdGl2aXR5HwwFUH4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvUGF5bWVudEFjdGl2aXR5LmFzcHg/X19Ob2RlSUQ9MTYzHw0FUkVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5QYXltZW50QWN0aXZpdHkfBgUQUGF5bWVudCBBY3Rpdml0eR8JZx8OZx8LBSAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT0zXR8KZ2QUKwACFhAfAQUNQ2xhaW0gSGlzdG9yeR8MBU1+L1BhZ2VzL0V4dGVybmFsVXNlci9DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50L0NsYWltSGlzdG9yeS5hc3B4P19fTm9kZUlEPTE2Nh8NBU9FREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuRXh0ZXJuYWxVc2VyLkNsYWltYW50QWNjb3VudE1hbmFnZW1lbnQuQ2xhaW1IaXN0b3J5HwYFDUNsYWltIEhpc3RvcnkfCWcfDmcfCwUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9NF0fCmdkFCsAAhYQHwEFCyBGb3JtIDEwOTlHHwwFUn4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvRGlzcGxheTEwOTlHRm9ybXMuYXNweD9fX05vZGVJRD0xNjgfDQVURURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLkV4dGVybmFsVXNlci5DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50LkRpc3BsYXkxMDk5R0Zvcm1zHwYFCyBGb3JtIDEwOTlHHwlnHw5nHwsFIC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTVdHwpnZBQrAAIWEB8BBRBQZXJzb25hbCBQcm9maWxlHwwFUH4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvUGVyc29uYWxQcm9maWxlLmFzcHg/X19Ob2RlSUQ9MTY1Hw0FUkVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5QZXJzb25hbFByb2ZpbGUfBgUQUGVyc29uYWwgUHJvZmlsZR8JZx8OZx8LBSAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT02XR8KZ2QUKwACFhAfAQUFSW5ib3gfDAVGfi9QYWdlcy9FeHRlcm5hbFVzZXIvQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC9JbmJveC5hc3B4P19fTm9kZUlEPTE2NB8NBUhFREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuRXh0ZXJuYWxVc2VyLkNsYWltYW50QWNjb3VudE1hbmFnZW1lbnQuSW5ib3gfBgUFSW5ib3gfCWcfDmcfCwUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9N10fCmdkFCsAAhYQHwEFCkNvbnRhY3QgVXMfDAVCfi9QYWdlcy9FeHRlcm5hbFVzZXIvV2ViQ29ycmVzcG9uZGVuY2UvQ29udGFjdFVzLmFzcHg/X19Ob2RlSUQ9MTgzHw0FREVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuV2ViQ29ycmVzcG9uZGVuY2UuQ29udGFjdFVzHwYFCkNvbnRhY3QgVXMfCWcfDmcfCwUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9OF0fCmdkZAIODw8WAh8EaGQWBAIBD2QWAgIBD2QWAgIBD2QWBgIBDw8WCh8DBR5IZWFkZXJfVXBsb2FkX0RvY3VtZW50X1JlcXVlc3QfBGgfAAUHRGVmYXVsdB8BBRxPbmxpbmUgSWRlbnRpdHkgVmVyaWZpY2F0aW9uHwZlZGQCAw8PFgIfBGhkFgICAQ8PFgYfBGgfAAUHRGVmYXVsdB8DZWRkAgUPDxYCHwJoZGQCAw9kFgICAQ9kFgICAQ9kFgYCAQ8PFggfBGgfAAUHRGVmYXVsdB8BBf81DQo8aDI+DQogICAgV2h5IFlvdSBOZWVkIHRvIFJlc3BvbmQgdG8gVGhpcyBSZXF1ZXN0DQo8L2gyPg0KPHA+DQogICAgWW91IGFyZSByZWNlaXZpbmcgdGhpcyByZXF1ZXN0IHRvIHVwbG9hZCBkb2N1bWVudHMgYmVjYXVzZSB3ZSB3ZXJlIHVuYWJsZSB0byB2ZXJpZnkgeW91ciBpZGVudGl0eSBiYXNlZCBvbiB0aGUgaW5mb3JtYXRpb24geW91IHByb3ZpZGVkIG9uIHlvdXIgVW5lbXBsb3ltZW50IEluc3VyYW5jZSAoVUkpIGNsYWltLg0KPC9wPg0KPHA+DQogICAgSWYgeW91IGRpZCBub3QgZmlsZSB0aGlzIFVJIGNsYWltLCBzZWxlY3QgPHN0cm9uZz5OZXh0PC9zdHJvbmc+IGFuZCBpbmRpY2F0ZSB0aGF0IG9uIHRoZSBmb2xsb3dpbmcgc2NyZWVuLiBXZSBpbnZlc3RpZ2F0ZSBhbGwgZnJhdWQgcmVwb3J0cy4NCjwvcD4NCjxwPg0KICAgIElmIHlvdSBhcmUgc2VlaW5nIHRoaXMgcmVxdWVzdCBmb3IgYSBzZWNvbmQgdGltZSwgIHlvdSBkaWQgbm90IHJlc3BvbmQgdG8gdGhlIHByZXZpb3VzIHJlcXVlc3Qgb3IgZGlkIG5vdCBwcm92aWRlIHN1ZmZpY2llbnQgZG9jdW1lbnRzIHRvIHZlcmlmeSB5b3VyIGlkZW50aXR5LiBQbGVhc2UgcHJvdmlkZSB0aGUgcmVxdWlyZWQgZG9jdW1lbnRzLg0KPC9wPg0KPGgzPg0KICAgIEF2b2lkIENvbW1vbiBNaXN0YWtlcw0KPC9oMz4NCjxwPg0KICAgIE9uZSBvZiB0aGUgbW9zdCBjb21tb24gcmVhc29ucyB3aHkgd2UgY2Fu4oCZdCB2ZXJpZnkgeW91ciBpZGVudGl0eSBpcyBiZWNhdXNlIHlvdXIgbmFtZSwgZGF0ZSBvZiBiaXJ0aCwgb3IgU29jaWFsIFNlY3VyaXR5IG51bWJlciBkbyBub3QgbWF0Y2ggdGhlIHJlY29yZHMgb24gZmlsZSB3aXRoIHRoZSBTb2NpYWwgU2VjdXJpdHkgQWRtaW5pc3RyYXRpb24gKFNTQSkgb3IgdGhlIERlcGFydG1lbnQgb2YgTW90b3IgVmVoaWNsZXMgKERNVikuIEZvciBleGFtcGxlLCB5b3UgbWF5IGhhdmUgY2hhbmdlZCB5b3VyIG5hbWUgYnV0IGRpZG7igJl0IG5vdGlmeSB0aGUgRE1WLg0KPC9wPg0KPHA+DQogICAgSWYgeW91IGhhdmUgYSBuYW1lIG9yIGRhdGUgb2YgYmlydGggZGlzY3JlcGFuY3kgb24geW91ciBjbGFpbSwgcHJvdmlkZSBkb2N1bWVudHMgd2l0aCB5b3VyIGNvcnJlY3QgbmFtZSBvciBkYXRlIG9mIGJpcnRoLCBzdWNoIGFzIGFuIG9mZmljaWFsIGJpcnRoIGNlcnRpZmljYXRlIG9yIG1hcnJpYWdlIGNlcnRpZmljYXRlLg0KPC9wPg0KPHA+DQogICAgPHN0cm9uZz5Ob3RlOjwvc3Ryb25nPiBXZSB3aWxsIG5vdCB1cGRhdGUgeW91ciBpbmZvcm1hdGlvbiB3aXRoIHRoZSBTU0EsIHRoZSBETVYsIG9yIHlvdXIgZW1wbG95ZXIuIENvbnRhY3QgdGhlbSBkaXJlY3RseSB0byBtYWtlIGNoYW5nZXMuDQo8L3A+DQo8aDM+DQogICAgU3VibWlzc2lvbiBEZWFkbGluZQ0KPC9oMz4NCjxwPg0KICAgIFlvdSBoYXZlIDxzdHJvbmc+MTAgY2FsZW5kYXIgZGF5czwvc3Ryb25nPiBmcm9tIHRoZSA8c3Ryb25nPk1haWwgRGF0ZTwvc3Ryb25nPiBvbiB5b3VyIDxpPlJlcXVlc3QgZm9yIElkZW50aXR5IFZlcmlmaWNhdGlvbjwvaT4gKERFIDEzMjZDKSBtYWlsZWQgdG8geW91IHRvIHJlc3BvbmQgd2l0aCBwcm9vZiBvZiBpZGVudGl0eS4gIEhvd2V2ZXIsIHdlIGVuY291cmFnZSB5b3UgdG8gdXBsb2FkIGRvY3VtZW50cyBhcyBzb29uIGFzIHBvc3NpYmxlIHRvIGF2b2lkIGRlbGF5cyBpbiByZWNlaXZpbmcgYmVuZWZpdHMuDQo8L3A+DQo8aDM+DQogICAgRG8gWW91IE5lZWQgTW9yZSBUaW1lPw0KPC9oMz4NCjxwPg0KICAgIFRvIHJlcXVlc3QgYWRkaXRpb25hbCB0aW1lLCB5b3UgbXVzdCBjYWxsIDEtODY2LTQwMS0yODQ5IG9yIG1haWwgYSByZXF1ZXN0IHRvIHRoZSBhZGRyZXNzIGF0IHRoZSB0b3Agb2YgdGhlIDxpPlJlcXVlc3QgZm9yIElkZW50aXR5IFZlcmlmaWNhdGlvbjwvaT4gKERFIDEzMjZDKSB0aGF0IHdhcyBtYWlsZWQgdG8geW91LiBXZSBtdXN0IHJlY2VpdmUgeW91ciByZXF1ZXN0IHdpdGhpbiA8c3Ryb25nPjEwIGNhbGVuZGFyIGRheXM8L3N0cm9uZz4gb2YgdGhlIDxzdHJvbmc+TWFpbCBEYXRlPC9zdHJvbmc+IG9uIHRoZSBwYXBlciBmb3JtLg0KPC9wPg0KPGgzPg0KICAgIFBlbmFsdGllcw0KPC9oMz4NCjxwPg0KICAgIElmIHdlIGRvIG5vdCByZWNlaXZlIHRoZSByZXF1aXJlZCBkb2N1bWVudHMgb3IgYSByZXF1ZXN0IGZvciBtb3JlIHRpbWUsIG9yIHdlIGFyZSBub3QgYWJsZSB0byB2ZXJpZnkgeW91ciBpZGVudGl0eToNCjwvcD4NCjxzcGFuPg0KICAgIDx1bD4NCiAgICAgICAgPGxpPllvdSB3aWxsIG5vdCBiZSBlbGlnaWJsZSB0byByZWNlaXZlIGJlbmVmaXRzLjwvbGk+DQogICAgICAgIDxsaT5Zb3Ugd2lsbCByZWNlaXZlIGEgZGlzcXVhbGlmaWNhdGlvbiBub3RpY2UgKE5vdGljZSBvZiBEZXRlcm1pbmF0aW9uKSBpbiB0aGUgbWFpbC48L2xpPg0KICAgICAgICA8bGk+WW91IHdpbGwgaGF2ZSB0byBmaWxlIGFuIGFwcGVhbCB0byByZWNlaXZlIGJlbmVmaXRzIGZvciB0aGlzIGNsYWltLjwvbGk+DQogICAgPC91bD4NCjwvc3Bhbj4NCg0KPGgyPg0KICAgIEdhdGhlciBZb3VyIERvY3VtZW50cw0KPC9oMj4NCjxwPg0KICAgIEZvciB1cyB0byB2ZXJpZnkgeW91ciBpZGVudGl0eSwgeW91IG11c3QgdXBsb2FkIHR3byBmaWxlczoNCjwvcD4NCjxzcGFuPg0KDQogICAgPHVsPg0KICAgICAgICA8bGk+PHN0cm9uZz5PbmU8L3N0cm9uZz4gUGhvdG8gSWRlbnRpZmljYXRpb248L2xpPg0KICAgICAgICA8bGk+PHN0cm9uZz5PbmU8L3N0cm9uZz4gT3RoZXIgSWRlbnRpdHkgRG9jdW1lbnQgPC9saT4NCiAgICAgICAgPGxpPjxzdHJvbmc+T3B0aW9uYWw6PC9zdHJvbmc+IFlvdSBjYW4gdXBsb2FkIHVwIHRvIHRocmVlIGFkZGl0aW9uYWwgSWRlbnRpdHkgRG9jdW1lbnRzPC9saT4NCiAgICA8L3VsPg0KPC9zcGFuPg0KDQo8aDMgY2xhc3M9ImRvY1VwbG9hZEgzIj4NCiAgICBQaG90byBJZGVudGlmaWNhdGlvbg0KPC9oMz4NCjxwPg0KICAgIFlvdXIgcGhvdG8gaWRlbnRpZmljYXRpb24gbXVzdCBzaG93IHlvdXIgbmFtZSwgZGF0ZSBvZiBiaXJ0aCwgYW5kIHBob3RvZ3JhcGguIFlvdSBjYW4gdXNlIGFueSBkb2N1bWVudCBmcm9tIHRoZSBmb2xsb3dpbmcgbGlzdCwgYXMgbG9uZyBhcyBpdCBoYXMgPHN0cm9uZz5ub3QgZXhwaXJlZDwvc3Ryb25nPi4NCjwvcD4NCjxzcGFuPg0KICAgIDx1bD4NCiAgICAgICAgPGxpPlN0YXRlIGlkZW50aWZpY2F0aW9uIChJRCkgY2FyZDwvbGk+DQogICAgICAgIDxsaT5Ecml2ZXIgbGljZW5zZTwvbGk+DQogICAgICAgIDxsaT5VUyBwYXNzcG9ydCBvciBwYXNzcG9ydCBjYXJkPC9saT4NCiAgICAgICAgPGxpPlVTIG1pbGl0YXJ5IGNhcmQgKGZyb250IGFuZCBiYWNrKSA8L2xpPg0KICAgICAgICA8bGk+TWlsaXRhcnkgZGVwZW5kZW504oCZcyBJRCBjYXJkIChmcm9udCBhbmQgYmFjayk8L2xpPg0KICAgICAgICA8bGk+UGVybWFuZW50IFJlc2lkZW50IENhcmQgPC9saT4NCiAgICAgICAgPGxpPkNlcnRpZmljYXRlIG9mIENpdGl6ZW5zaGlwPC9saT4NCiAgICAgICAgPGxpPkNlcnRpZmljYXRlIG9mIE5hdHVyYWxpemF0aW9uPC9saT4NCiAgICAgICAgPGxpPkVtcGxveW1lbnQgQXV0aG9yaXphdGlvbiBEb2N1bWVudDwvbGk+DQogICAgICAgIDxsaT5Gb3JlaWduIHBhc3Nwb3J0PC9saT4NCiAgICA8L3VsPg0KPC9zcGFuPg0KDQo8aDM+DQogICAgT3RoZXIgSWRlbnRpdHkgRG9jdW1lbnQNCjwvaDM+DQo8cD4NCiAgICBZb3UgY2FuIHVzZSBhbnkgZG9jdW1lbnQgZnJvbSB0aGUgZm9sbG93aW5nIGxpc3QuDQo8L3A+DQoNCjxzcGFuPg0KICAgIDx1bD4NCiAgICAgICAgPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5FbXBsb3ltZW50IHJlY29yZA0KCQkJPHVsPg0KCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+Vy0yIGZyb20gbGFzdCB5ZWFyPC9saT4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkEgcGF5IHN0dWIgb3IgcGF5bWVudCBzdGF0ZW1lbnQgdGhhdCBzaG93czoNCgkJCQkJPHVsPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5BbiBpc3N1ZSBkYXRlIHdpdGhpbiAxMiBtb250aHMgcHJpb3IgdG8gdGhlIGRhdGUgeW91ciBjbGFpbSB3YXMgZmlsZWQ8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5Zb3VyIGZpcnN0IG5hbWUgKG9yIGluaXRpYWwpIGFuZCBsYXN0IG5hbWU8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5BdCBsZWFzdCB0aGUgbGFzdCBmb3VyIGRpZ2l0cyBvZiB5b3VyIFNvY2lhbCBTZWN1cml0eSBudW1iZXIgb3IgeW91ciBlbXBsb3llZSBpZGVudGlmaWNhdGlvbiBudW1iZXI8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5Zb3VyIGVtcGxveWVy4oCZcyBuYW1lPC9saT4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+VGhlIHBheSBwZXJpb2QgZGF0ZXMgb3IgdGhlIGRhdGUgaXQgd2FzIGlzc3VlZDwvbGk+DQoJCQkJCTwvdWw+DQoJCQkJPC9saT4NCgkJCTwvdWw+DQoJCTwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+QWRkcmVzcyB2ZXJpZmljYXRpb24NCgkJCTx1bD4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkFueSBiaWxsIG9yIGZpbmFuY2lhbCBzdGF0ZW1lbnQgc2hvd2luZyB5b3VyIG5hbWUgYW5kIHJlc2lkZW5jZSBhZGRyZXNzDQoJCQkJCTx1bD4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+VXRpbGl0eSBiaWxsIChlbGVjdHJpY2l0eSwgZ2FzLCBnYXJiYWdlLCB3YXRlciwgb3Igc2V3ZXIpPC9saT4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+Q2FibGUgVFYgb3IgaW50ZXJuZXQgYmlsbDwvbGk+DQoJCQkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPlRlbGVwaG9uZSBiaWxsPC9saT4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+QmFuayBzdGF0ZW1lbnQ8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5Qcm9wZXJ0eSB0YXggYmlsbDwvbGk+DQoJCQkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPk1vcnRnYWdlIHN0YXRlbWVudDwvbGk+DQoJCQkJCTwvdWw+DQoJCQkJPC9saT4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkxlYXNlIG9yIHJlbnRhbCBhZ3JlZW1lbnQgc2hvd2luZyB5b3VyIG5hbWUgYW5kIHJlc2lkZW5jZSBhZGRyZXNzPC9saT4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPlJlZ2lzdHJhdGlvbiBmb3IgYSBQTyBCb3ggb3IgcHJpdmF0ZSBtYWlsYm94PC9saT4NCgkJCTwvdWw+DQoJCTwvbGk+DQoJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+U29jaWFsIFNlY3VyaXR5IG51bWJlcg0KICAgICAgICA8dWw+DQogICAgICAgICAgICA8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPjxzdHJvbmc+SW1wb3J0YW50Ojwvc3Ryb25nPiBBIFNvY2lhbCBTZWN1cml0eSBjYXJkIHdpbGwgPHN0cm9uZz5ub3Q8L3N0cm9uZz4gc2F0aXNmeSB0aGlzIHJlcXVpcmVtZW50LjwvbGk+DQogICAgICAgICAgICA8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPjxhIGhyZWY9Imh0dHBzOi8vd3d3LnNzYS5nb3YvbXlhY2NvdW50LyI+U29jaWFsIFNlY3VyaXR5IHN0YXRlbWVudDwvYT4gKGFsbCBwYWdlcyk8L2xpPg0KICAgICAgICAgICAgPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij48aT5Ob3RpY2UgdG8gVGhpcmQgUGFydHkgb2YgU29jaWFsIFNlY3VyaXR5IE51bWJlciBBc3NpZ25tZW50cyAoU1NBLTcwMjgpPC9pPjwvbGk+DQogICAgICAgICAgICA8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPjxpPlJlcG9ydCBvZiBDb25maWRlbnRpYWwgU29jaWFsIFNlY3VyaXR5IEJlbmVmaXQgSW5mb3JtYXRpb24gKFNTQS0yNDU4KTwvaT48L2xpPg0KICAgICAgICA8L3VsPg0KCQk8L2xpPg0KCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkRhdGUgb2YgYmlydGgNCiAgICAgICAgPHVsPg0KICAgICAgICAgICAgPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5PZmZpY2lhbCBiaXJ0aCBjZXJ0aWZpY2F0ZSAod2l0aCBvZmZpY2lhbCB0cmFuc2xhdGlvbiwgaWYgYW55KTwvbGk+DQogICAgICAgIDwvdWw+DQoJCTwvbGk+DQogICAgPC91bD4NCjwvc3Bhbj4NCjxoMj4NCiAgICBQcmVwYXJlIFlvdXIgRG9jdW1lbnRzIGZvciBVcGxvYWRpbmcNCjwvaDI+DQo8cD4NCiAgICBUaGUgZG9jdW1lbnRzIHlvdSB1cGxvYWQgbXVzdCBiZSBjbGVhciBhbmQgcmVhZGFibGUgc28gd2UgY2FuIHZlcmlmeSB5b3VyIGlkZW50aXR5LiBZb3UgY2FuIGVpdGhlciBzY2FuIHRoZW0gb3IgdGFrZSBhIHBpY3R1cmUgd2l0aCB5b3VyIGRpZ2l0YWwgY2FtZXJhIG9yIG1vYmlsZSBkZXZpY2UuDQo8L3A+DQo8cD4NCiAgICBNYXhpbXVtIGZpbGUgc2l6ZSBpcyAyNSBNQi4NCjwvcD4NCjxwPg0KICAgIEFjY2VwdGFibGUgZm9ybWF0czogSlBFRywgVElGRiwgUE5HLCBHSUYsIGFuZCBQREYuDQo8L3A+DQo8cD4NCiAgICBZb3VyIGRpZ2l0YWwgZG9jdW1lbnRzIG11c3QgYmUgYWNjZXNzaWJsZSB0byB0aGUgZGV2aWNlIHlvdSBhcmUgZ29pbmcgdG8gdXNlIHRvIHVwbG9hZCB0aGVtLg0KPC9wPg0KPGgyPg0KICAgIFVwbG9hZCBZb3VyIERvY3VtZW50cw0KPC9oMj4NCjxwPg0KICAgIEFmdGVyIHlvdSBoYXZlIHByZXBhcmVkIHlvdXIgZmlsZXMsIHNlbGVjdCA8c3Ryb25nPk5leHQ8L3N0cm9uZz4gYW5kIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIHRvIHVwbG9hZCB0aGVtLg0KPC9wPg0KPHA+DQogICAgPHN0cm9uZz5JbXBvcnRhbnQ6PC9zdHJvbmc+IFlvdSB3aWxsIGhhdmUgMzAgbWludXRlcyB0byB1cGxvYWQgeW91ciBkb2N1bWVudHMuDQo8L3A+DQofBmVkZAIDDw8WCh8EZx8FBYEBRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLkV4dGVybmFsVXNlci5DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50LlVwbG9hZERvY3VtZW50SW5zdHJ1Y3Rpb25zLmNvbnRlbnRNYWluX2NvbnRlbnRNYWluX2J0blByZXZpb3VzHwAFB0RlZmF1bHQfAQUIUHJldmlvdXMfBgUIUHJldmlvdXNkZAIFDw8WCh8EZx8FBX1FREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuRXh0ZXJuYWxVc2VyLkNsYWltYW50QWNjb3VudE1hbmFnZW1lbnQuVXBsb2FkRG9jdW1lbnRJbnN0cnVjdGlvbnMuY29udGVudE1haW5fY29udGVudE1haW5fYnRuTmV4dB8ABQdEZWZhdWx0HwEFBE5leHQfBgUETmV4dGRkAhAPZBYCAgEPZBYKAgEPFgQfAAUHRGVmYXVsdB8BBQtCYWNrIHRvIFRvcGQCAw8WAh4HZGF0YS1pZAUvaHR0cDovL3d3dy5lZGQuY2EuZ292L0Fib3V0X0VERC9Db250YWN0X0VERC5odG0WAgIBDw8WCB8EaB8ABQdEZWZhdWx0HwEFC0NvbnRhY3QgRUREHwZlZGQCBQ8WAh8QBTVodHRwOi8vd3d3LmVkZC5jYS5nb3YvQWJvdXRfRUREL0NvbmRpdGlvbnNfT2ZfVXNlLmh0bRYCAgEPDxYIHwRoHwAFB0RlZmF1bHQfAQURQ29uZGl0aW9ucyBvZiBVc2UfBmVkZAIHDxYCHxAFMmh0dHA6Ly93d3cuZWRkLmNhLmdvdi9BYm91dF9FREQvUHJpdmFjeV9Qb2xpY3kuaHRtFgICAQ8PFggfBGgfAAUHRGVmYXVsdB8BBQ5Qcml2YWN5IFBvbGljeR8GZWRkAgkPFgIfEAUxaHR0cDovL3d3dy5lZGQuY2EuZ292L0Fib3V0X0VERC9BY2Nlc3NpYmlsaXR5Lmh0bRYCAgEPDxYIHwRoHwAFB0RlZmF1bHQfAQUNQWNjZXNzaWJpbGl0eR8GZWRkAhIPFgQfAAUHRGVmYXVsdB8DZWQCFA8WBB8ABQdEZWZhdWx0HwEFEkNvbmZpcm0gTmF2aWdhdGlvbmQCFg8WBB8ABQdEZWZhdWx0HwEFhwFZb3UgYXJlIG9wZW5pbmcgYSBuZXcgdGFiIG91dHNpZGUgb2YgdGhlIGFwcGxpY2F0aW9uLiAgU2VsZWN0IENvbnRpbnVlIHRvIG9wZW4gYSBuZXcgdGFiIG9yIHNlbGVjdCBDYW5jZWwgdG8gcmV0dXJuIHRvIHRoZSBhcHBsaWNhdGlvbi5kAhgPFgIeBXZhbHVlBQhDb250aW51ZWQCGg8WAh8RBQZDYW5jZWxkGAIFFGN0bDAwJGN0bDAwJG12Rm9vdGVyDw9kAgFkBSJjdGwwMCRjdGwwMCRtZW51QmFyJEN1c3RvbU1haW5NZW51Dw9kBU1+L1BhZ2VzL0V4dGVybmFsVXNlci9DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50L1VJT25saW5lSG9tZS5hc3B4P19fTm9kZUlEPTE2MWSD+HWSD4VW3bvOlevU1mVT8k8ANcSdJnNFTXQ+MgOlVg==">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmClaimantMainNoMenu'];
+if (!theForm) {
+theForm = document.frmClaimantMainNoMenu;
+}
+function __doPostBack(eventTarget, eventArgument) {
+if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+theForm.__EVENTTARGET.value = eventTarget;
+theForm.__EVENTARGUMENT.value = eventArgument;
+theForm.submit();
+}
+}
+//]]>
+</script>
+<script src="/EDD.CCR.UserInterface/WebResource.axd?d=qPEv35zSXGV0fFL44w10dRbx-xE3noz816fF1ortHxK6MT6uatbNT0EZzJJZwKp5ZbYUnLR66KyfyO1zKQ04jfrs1rTrPExOlK69k9lcJS2RV3FGPXu5Mch2pKY_i36pdxwziofpL0XJafZ8qLRP4ZPKrm64d_dHk-3IiJQ0fBo1&amp;t=637378530114055650" type="text/javascript"></script>
+<script src="/EDD.CCR.UserInterface/WebResource.axd?d=l-AGXOLvzQ3NGkyNEy9ZWHOJMEYo8ZiTV-2y_KXLU_CDxLR8K6vWrVt4O7yA3WCJJEfnSZkIttWgC9vK5YcEd3ljnYwXAOMt1vHIRs2vgN0N1PizunY3_iXy1fWYBkw63lTVUJEt6DhzoZOb089poQ2&amp;t=637378530114055650" type="text/javascript"></script>
+<script src="/EDD.CCR.UserInterface/WebResource.axd?d=7CHKyLjwICsOp3a3ZgTGuwaJYOeqdAR5dA-eFRCtStdC7j1SorTuDRYkODCf4LDBax4iLGca2zRCyW68spH64-dz9MGzTiDe0JpDlCN66m66_6xKnV5L_b-GcPfGzWjOoifCPYteXJDGrrsrD0VnYifhYmYhlUludp0Jih3SKhTlDwbbo12KOCiALWqDTGY20&amp;t=637378530114055650" type="text/javascript"></script>
+<script src="/EDD.CCR.UserInterface/WebResource.axd?d=DEp5RCG8dXo_6tWrFaFftE2KFaaAo6uCEWdQ-kCJ8JgUkTdu_7M4pPdVNbbG_c9vMFsuR2h_rvn0bBNc1_Gq6C0j0wbBq7nP9EonbUR2kOU1&amp;t=637290526998988531" type="text/javascript"></script>
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9ECAA73F">
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA/zX0uTmv+vEkEY3eWsZy5dHOibBqibssBgu6rGuw4UfKhAQVSe+HiHdK4/WZ8L7LODTcp528mvIc6ZIdejgQqJF2S6elwKN4yKgFvF2nU4WzUQ4wiT0H7pMhIaWHkk0HgbaJPa1aXypycF4AudllW9IPRpKDKW31eV6Xd67ZecdIbUCRHbyOp/ER6IPxx38dmtoc6MbMyFUKtPsVyc8COo4tIdLjYwmOD+LxzxZxZAQyOusK/vcLulCB8psOGncVVBK/s5ZdnSRXyLAFYOd/NL/y9FO/0++5QLb3vC3MpaXBn9sFMQ1aS3Vb0fisfx48kZonCIg/0whoHCatfjT+/Tl328h02EN/5szippsG7x1Q==">
+</div>
+<a name="top"></a>
+<header role="banner" id="header" class="global-header fixed">
+<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+<!-- Alert Banner -->
+<!-- Location Setting -->
+<div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+<div class="container p-y">
+<button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close" role="tab" aria-selected="false" id="ui-collapse-953">
+<span aria-hidden="true">×</span>
+</button>
+<div class="form-group form-inline">
+<label for="locationZipCode">
+Saving your location allows us to provide you with more relevant information.</label>
+<input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
+<button type="button" class="btn btn-primary">
+Set Location</button>
+</div>
+</div>
+</div>
+<!-- Utility Header -->
+<div class="utility-header">
+<div class="container">
+<div class="group">
+<div class="quarter">
+<ul class="utility-links social-media-links">
+<li>
+<div class="header-cagov-logo">
+<a class="NavigationURL" data-id="http://ca.gov" title="CA.Gov" href="#main-content" data-target="#navigationModal" data-toggle="modal">
+<img src="../../../App_Themes/EDDTheme/images/Ca-Gov-Logo-Gold.svg" alt="CA.Gov logo" title="CA.Gov"></a></div>
+</li>
+</ul>
+</div>
+<div class="three-quarters settings-links">
+<ul id="userBanner" class="utility-links">
+<li>
+<a class="NavigationURL" data-id="http://edd.ca.gov" href="#main-content" data-target="#navigationModal" data-toggle="modal"><span class="ca-gov-icon-home" aria-hidden="true"></span> Home
+</a>
+</li>
+<li>
+<a id="cmdBenefitProgramOnline" href="javascript:__doPostBack('ctl00$ctl00$cmdBenefitProgramOnline','')">Benefit Programs Online </a>
+</li>
+<li>
+<span id="cshPageHelp"><span>
+<a href="#"><span title="Help">Help</span></a>
+</span></span>
+</li>
+<li>
+<div class="user-name">
+<span title="" id="lblLoginUserName">( Firstname  Lastname )</span>
+</div>
+</li>
+<li>
+<a id="cmdLoginLogout" href="javascript:__doPostBack('ctl00$ctl00$cmdLoginLogout','')">Log Out</a>
+<!-- EDD Template Change - removed the below button as its not used - start -->
+<!-- EDD Template Change - removed the below button as its not used - end -->
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Setting Bar -->
+<div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
+<div class="container  p-y">
+<button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close" role="tab" aria-selected="false" id="ui-collapse-722">
+<span aria-hidden="true">×</span></button>
+<div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
+<div class="btn-group">
+<button type="button" class="btn btn-standout disableHighContrastMode">
+Default</button></div>
+<div class="btn-group">
+<button type="button" class="btn btn-standout enableHighContrastMode">
+High Contrast</button></div>
+</div>
+<div class="btn-group" role="group" aria-label="textSizeMode">
+<div class="btn-group">
+<button type="button" class="btn btn-standout resetTextSize">
+Reset</button></div>
+<div class="btn-group">
+<button type="button" class="btn btn-standout increaseTextSize">
+<span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-plus-line"></small></span>
+</button>
+</div>
+<div class="btn-group">
+<button type="button" class="btn btn-standout decreaseTextSize">
+<span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-minus-line"></small></span>
+</button>
+</div>
+</div>
+<!-- <button type="button" class="btn btn-primary clipboard-activeonhover">Save links on hover</button> -->
+</div>
+</div>
+<!-- header branding -->
+<div class="branding">
+<div class="header-organization-banner">
+<a class="NavigationURL" data-id="http://edd.ca.gov" title="Welcome to the Employment Development Department" href="#main-content" data-target="#navigationModal" data-toggle="modal">
+<img src="../../../App_Themes/EDDTheme/images/EDD_Logo_Color.png" id="cmdLogoCA" alt="Employment Development Department">
+</a>
+</div>
+</div>
+<!-- mobile navigation controls -->
+<div class="mobile-controls">
+<div class="mobile-control toggle-menu" aria-expanded="false" role="button" aria-controls="navigation" tabindex="0">
+<span class="ca-gov-icon-menu" aria-hidden="true"></span>
+<span class="sr-only">Menu</span>
+</div>
+<span class="mobile-control-group mobile-header-icons">
+<!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
+</span>
+<!--<span class="mobile-control toggle-search"><span class="ca-gov-icon-search" aria-hidden="true"></span><span class="sr-only">Search</span></span>-->
+<span class="mobile-control-group mobile-menu-icons">
+<!-- Add more mobile controls here. These will be on the top right section of the expanded mobile menu -->
+</span>
+</div>
+<div class="navigation-search">
+<div id="head-search" class="search-container in">
+<!-- Include Search -->
+</div>
+<!-- Include Navigation -->
+<!--
+Step 2
+Select Navigation Type:
+Options are: megadropdown dropdown singlelevel
+-->
+<nav id="navigation" class="main-navigation dropdown mobile-closed" role="navigation">
+
+<ul class="level1 top-level-nav nav-menu static" id="nav_list" tabindex="0" style="">
+<li class="nav-item" style=""><a title="UI Home" class="first-level-link selected" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/UIOnlineHome.aspx?__NodeID=161')" id="accessible-menu-1602365417494-1">UI Home</a></li><li class="nav-item" style=""><a title="Certify for Benefits" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/Certification/AvailableWeeksNotification.aspx?__NodeID=162')" id="accessible-menu-1602365417495-2">Certify for Benefits</a></li><li class="nav-item" style=""><a title="Payment Activity" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/PaymentActivity.aspx?__NodeID=163')" id="accessible-menu-1602365417496-3">Payment Activity</a></li><li class="nav-item" style=""><a title="Claim History" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/ClaimHistory.aspx?__NodeID=166')" id="accessible-menu-1602365417496-4">Claim History</a></li><li class="nav-item" style=""><a title=" Form 1099G" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/Display1099GForms.aspx?__NodeID=168')" id="accessible-menu-1602365417497-5"> Form 1099G</a></li><li class="nav-item" style=""><a title="Personal Profile" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/PersonalProfile.aspx?__NodeID=165')" id="accessible-menu-1602365417497-6">Personal Profile</a></li><li class="nav-item" style=""><a title="Inbox" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/Inbox.aspx?__NodeID=164')" id="accessible-menu-1602365417498-7">Inbox</a></li><li class="nav-item" style=""><a title="Contact Us" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/WebCorrespondence/ContactUs.aspx?__NodeID=183')" id="accessible-menu-1602365417499-8">Contact Us</a></li>
+</ul>
+<div style="clear: left;"></div><a id="menuBar_CustomMainMenu_SkipLink"></a><div id="containerDiv" class="add_padding">
+</div></nav>
+</div>
+<div class="header-decoration"></div>
+</header>
+<div id="main-content" class="main-content" style="padding-top: 136px;">
+<div class="container">
+<main role="main" class="main-primary">
+<div id="pnlSkipContent">
+<div class="section section-auto">
+<h1>
+<span title="" id="pageTitle_pageTitle_ucScreen_lblHeader">Online Identity Verification</span>
+</h1>
+<div id="pageTitle_pageTitle_ucScreen_pnlValidationSummary" class="panel panel-error hidden">
+<div class="panel-heading">
+<h2>
+<span class="ca-gov-icon-important"></span>
+<span title="" id="pageTitle_pageTitle_ucScreen_CustomLabel1">&lt;img src='~/App_Themes/Default/Images/error.gif' /&gt; Error(s)  Occurred</span>
+</h2>
+</div>
+<div class="panel-body">
+<span id="pageTitle_pageTitle_ucScreen_validationSummary" htmlencode="false"></span>
+</div>
+</div>
+</div>
+<div id="contentMain_pnlSkipContent" class="pnlSkipContent">
+<span title="" id="contentMain_contentMain_lblPlaceHolder">
+<h2>
+Why You Need to Respond to This Request
+</h2>
+<p>
+You are receiving this request to upload documents because we were unable to verify your identity based on the information you provided on your Unemployment Insurance (UI) claim.
+</p>
+<p>
+If you did not file this UI claim, select <strong>Next</strong> and indicate that on the following screen. We investigate all fraud reports.
+</p>
+<p>
+If you are seeing this request for a second time,  you did not respond to the previous request or did not provide sufficient documents to verify your identity. Please provide the required documents.
+</p>
+<h3>
+Avoid Common Mistakes
+</h3>
+<p>
+One of the most common reasons why we can’t verify your identity is because your name, date of birth, or Social Security number do not match the records on file with the Social Security Administration (SSA) or the Department of Motor Vehicles (DMV). For example, you may have changed your name but didn’t notify the DMV.
+</p>
+<p>
+If you have a name or date of birth discrepancy on your claim, provide documents with your correct name or date of birth, such as an official birth certificate or marriage certificate.
+</p>
+<p>
+<strong>Note:</strong> We will not update your information with the SSA, the DMV, or your employer. Contact them directly to make changes.
+</p>
+<h3>
+Submission Deadline
+</h3>
+<p>
+You have <strong>10 calendar days</strong> from the <strong>Mail Date</strong> on your <i>Request for Identity Verification</i> (DE 1326C) mailed to you to respond with proof of identity.  However, we encourage you to upload documents as soon as possible to avoid delays in receiving benefits.
+</p>
+<h3>
+Do You Need More Time?
+</h3>
+<p>
+To request additional time, you must call 1-866-401-2849 or mail a request to the address at the top of the <i>Request for Identity Verification</i> (DE 1326C) that was mailed to you. We must receive your request within <strong>10 calendar days</strong> of the <strong>Mail Date</strong> on the paper form.
+</p>
+<h3>
+Penalties
+</h3>
+<p>
+If we do not receive the required documents or a request for more time, or we are not able to verify your identity:
+</p>
+<span>
+<ul>
+<li>You will not be eligible to receive benefits.</li>
+<li>You will receive a disqualification notice (Notice of Determination) in the mail.</li>
+<li>You will have to file an appeal to receive benefits for this claim.</li>
+</ul>
+</span>
+<h2>
+Gather Your Documents
+</h2>
+<p>
+For us to verify your identity, you must upload two files:
+</p>
+<span>
+<ul>
+<li><strong>One</strong> Photo Identification</li>
+<li><strong>One</strong> Other Identity Document </li>
+<li><strong>Optional:</strong> You can upload up to three additional Identity Documents</li>
+</ul>
+</span>
+<h3 class="docUploadH3">
+Photo Identification
+</h3>
+<p>
+Your photo identification must show your name, date of birth, and photograph. You can use any document from the following list, as long as it has <strong>not expired</strong>.
+</p>
+<span>
+<ul>
+<li>State identification (ID) card</li>
+<li>Driver license</li>
+<li>US passport or passport card</li>
+<li>US military card (front and back) </li>
+<li>Military dependent’s ID card (front and back)</li>
+<li>Permanent Resident Card </li>
+<li>Certificate of Citizenship</li>
+<li>Certificate of Naturalization</li>
+<li>Employment Authorization Document</li>
+<li>Foreign passport</li>
+</ul>
+</span>
+<h3>
+Other Identity Document
+</h3>
+<p>
+You can use any document from the following list.
+</p>
+<span>
+<ul>
+<li style="margin-top:10px;">Employment record
+<ul>
+<li style="margin-top:10px;">W-2 from last year</li>
+<li style="margin-top:10px;">A pay stub or payment statement that shows:
+<ul>
+<li style="margin-top:10px;">An issue date within 12 months prior to the date your claim was filed</li>
+<li style="margin-top:10px;">Your first name (or initial) and last name</li>
+<li style="margin-top:10px;">At least the last four digits of your Social Security number or your employee identification number</li>
+<li style="margin-top:10px;">Your employer’s name</li>
+<li style="margin-top:10px;">The pay period dates or the date it was issued</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="margin-top:10px;">Address verification
+<ul>
+<li style="margin-top:10px;">Any bill or financial statement showing your name and residence address
+<ul>
+<li style="margin-top:10px;">Utility bill (electricity, gas, garbage, water, or sewer)</li>
+<li style="margin-top:10px;">Cable TV or internet bill</li>
+<li style="margin-top:10px;">Telephone bill</li>
+<li style="margin-top:10px;">Bank statement</li>
+<li style="margin-top:10px;">Property tax bill</li>
+<li style="margin-top:10px;">Mortgage statement</li>
+</ul>
+</li>
+<li style="margin-top:10px;">Lease or rental agreement showing your name and residence address</li>
+<li style="margin-top:10px;">Registration for a PO Box or private mailbox</li>
+</ul>
+</li>
+<li style="margin-top:10px;">Social Security number
+<ul>
+<li style="margin-top:10px;"><strong>Important:</strong> A Social Security card will <strong>not</strong> satisfy this requirement.</li>
+<li style="margin-top:10px;"><a href="https://www.ssa.gov/myaccount/">Social Security statement</a> (all pages)</li>
+<li style="margin-top:10px;"><i>Notice to Third Party of Social Security Number Assignments (SSA-7028)</i></li>
+<li style="margin-top:10px;"><i>Report of Confidential Social Security Benefit Information (SSA-2458)</i></li>
+</ul>
+</li>
+<li style="margin-top:10px;">Date of birth
+<ul>
+<li style="margin-top:10px;">Official birth certificate (with official translation, if any)</li>
+</ul>
+</li>
+</ul>
+</span>
+<h2>
+Prepare Your Documents for Uploading
+</h2>
+<p>
+The documents you upload must be clear and readable so we can verify your identity. You can either scan them or take a picture with your digital camera or mobile device.
+</p>
+<p>
+Maximum file size is 25 MB.
+</p>
+<p>
+Acceptable formats: JPEG, TIFF, PNG, GIF, and PDF.
+</p>
+<p>
+Your digital documents must be accessible to the device you are going to use to upload them.
+</p>
+<h2>
+Upload Your Documents
+</h2>
+<p>
+After you have prepared your files, select <strong>Next</strong> and follow the instructions to upload them.
+</p>
+<p>
+<strong>Important:</strong> You will have 30 minutes to upload your documents.
+</p>
+</span>
+<div class="btn-row">
+<input type="submit" name="ctl00$ctl00$contentMain$contentMain$btnPrevious" value="Previous" onclick="javascript:return DisableMulticlick();" id="contentMain_contentMain_btnPrevious" title="Previous" class="btn btn-secondary">
+<input type="submit" name="ctl00$ctl00$contentMain$contentMain$btnNext" value="Next" onclick="javascript:return DisableMulticlick();" id="contentMain_contentMain_btnNext" title="Next" class="btn btn-primary">
+</div>
+</div>
+</div>
+</main>
+</div>
+<span class="return-top"></span></div>
+<!-- Global Footer -->
+<footer id="footer" class="global-footer">
+<div class="container">
+<div class="footer-links">
+<div id="PageNavigation">
+<ul class="footer-links"><li>
+<a href="#skip-to-content">
+Back to Top
+</a>
+</li>
+<li>
+<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="ContactEDD" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Contact_EDD.htm"><span title="" id="cmdContactEDD">Contact EDD</span>
+</a>
+</li>
+<li>
+<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="ConditionsofUse" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Conditions_Of_Use.htm"><span title="" id="cmdConditionsofUse">Conditions of Use</span>
+</a>
+</li>
+<li>
+<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="PrivacyPolicy" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Privacy_Policy.htm">
+<span title="" id="cmdPrivacyPolicy">Privacy Policy</span>
+</a>
+</li>
+<li>
+<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="Accessibility" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Accessibility.htm"><span title="" id="cmdAccessibility">Accessibility</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Copyright Statement -->
+<div id="copyright" class="copyright">
+<div class="container">
+<div class="group">
+<div class="half">
+Copyright ©
+<script>							document.write(new Date().getFullYear())</script>2020
+State of California
+</div>
+<div class="half">
+<p>
+</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!--Navigation Modal Popup -->
+<div id="navigationModal" class="modal fade" role="dialog" aria-labelledby="navigationModalLabel" aria-describedby="navigationModalDescription" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="panel panel-overstated">
+<div class="panel-heading">
+<h2 id="navigationModalLabel" class="modal-title" tabindex="0">
+<span class="ca-gov-icon-info"></span>
+Confirm Navigation
+</h2>
+<div class="options">
+<button class="btn-default" data-dismiss="modal" type="button">
+X</button>
+</div>
+</div>
+<div class="modal-body" id="navigationModalDescription">
+You are opening a new tab outside of the application.  Select Continue to open a new tab or select Cancel to return to the application.
+</div>
+<div class="modal-footer">
+<input name="ctl00$ctl00$btnNavigateContinue" type="button" id="btnNavigateContinue" class="button mb20" value="Continue">
+<input name="ctl00$ctl00$btnNavigateCancel" type="button" id="btnNavigateCancel" class="button mb20" data-dismiss="modal" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+<!-- Extra Decorative Content -->
+<div class="decoration-last">&nbsp;</div>
+<script type="text/javascript">
+//<![CDATA[
+javascript:SetupSessionTimeoutNotification('300000','1200000','/EDD.CCR.UserInterface/Pages/Public/Logout.aspx?status=AUTOMATICLOGOUT','/EDD.CCR.UserInterface/Pages/Public/SessionTimeoutNotification.aspx');//]]>
+</script>
+<script type="text/javascript">new Sys.WebForms.Menu({ element: 'menuBar_CustomMainMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/edd.nav.custom.js"></script>
+
+<!-- Load template core -->
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/cagov.core.js"></script>
+<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/edd.custom.js"></script>
+
+<script type="text/javascript">
+var eddBaseUrl = "/EDD.CCR.UserInterface/";
+function pageLoad(){
+setUpDatePicker();
+}
+function setUpDatePicker () {
+//set up the datepicker for all controls that need it
+$('input').each(function (index) {
+if ($(this).hasClass('eddDateField')) {
+var options = {
+showOn: "button",
+buttonImage: resolveUrl("~/App_Themes/Default/Images/CalendarButton.png"),
+buttonImageOnly: true,
+buttonText: '',
+dateFormat: 'mm/dd/yy',  // year will appear with four digits, not two
+showButtonPanel: true
+}
+if ($(this).prop('disabled')) {
+options.disabled = true;
+}
+$(this).datepicker(options);
+}
+});
+}
+function resolveUrl(url) {
+if (url.indexOf("~/") == 0) {
+url = eddBaseUrl + url.substring(2);
+}
+return url;
+}
+</script>
+<!--Added processBar.js-->
+<script type="text/javascript">
+/*  (function () {//self invoking function so we don't pollute the global name space
+var x = document.getElementsByClassName('groupItem'); //targets elements with the class "groupItem"
+for (var i = 0, max = x.length; i < max; i++) { //runs through all the elements with the class groupItems
+x[i].setAttribute("style", "width:" + 100 / x.length + "%"); //changes the width of the elements so that they fit
+}
+function hasClass(element, cls) {//element = test element, cls = class to test for
+return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+for (var i = 0, max = x.length; i < max; i++) {//this loop is looking for elements that are before active
+if (hasClass(x[i], "active")) {//Does the current element have the class of active? If so, stop, else continue
+break;
+}
+x[i].className += " complete"; //since this element is before active, its complete so add the class complete
+}
+})();
+/*!
+* Clamp.js 0.5.1
+*
+* Copyright 2011-2013, Joseph Schmitt http://joe.sh
+* Released under the WTFPL license
+* http://sam.zoy.org/wtfpl/
+*/
+(function () {
+window.$clamp = function (c, d) {
+function s(a, b) { n.getComputedStyle || (n.getComputedStyle = function (a, b) { this.el = a; this.getPropertyValue = function (b) { var c = /(\-([a-z]){1})/g; "float" == b && (b = "styleFloat"); c.test(b) && (b = b.replace(c, function (a, b, c) { return c.toUpperCase() })); return a.currentStyle && a.currentStyle[b] ? a.currentStyle[b] : null }; return this }); return n.getComputedStyle(a, null).getPropertyValue(b) } function t(a) { a = a || c.clientHeight; var b = u(c); return Math.max(Math.floor(a / b), 0) } function x(a) {
+return u(c) * a
+} function u(a) { var b = s(a, "line-height"); "normal" == b && (b = 1.2 * parseInt(s(a, "font-size"))); return parseInt(b) } function l(a) { if (a.lastChild.children && 0 < a.lastChild.children.length) return l(Array.prototype.slice.call(a.children).pop()); if (a.lastChild && a.lastChild.nodeValue && "" != a.lastChild.nodeValue && a.lastChild.nodeValue != b.truncationChar) return a.lastChild; a.lastChild.parentNode.removeChild(a.lastChild); return l(c) } function p(a, d) {
+if (d) {
+var e = a.nodeValue.replace(b.truncationChar, ""); f || (h = 0 < k.length ? k.shift() : "", f = e.split(h)); 1 < f.length ? (q = f.pop(), r(a, f.join(h))) : f = null; m && (a.nodeValue = a.nodeValue.replace(b.truncationChar, ""), c.innerHTML = a.nodeValue + " " + m.innerHTML + b.truncationChar); if (f) { if (c.clientHeight <= d) if (0 <= k.length && "" != h) r(a, f.join(h) + h + q), f = null; else return c.innerHTML } else "" == h && (r(a, ""), a = l(c), k = b.splitOnChars.slice(0), h = k[0], q = f = null); if (b.animate) setTimeout(function () { p(a, d) }, !0 === b.animate ? 10 : b.animate); else return p(a, d)
+}
+} function r(a, c) { a.nodeValue = c + b.truncationChar } d = d || {};
+var n = window, b = { clamp: d.clamp || 2, useNativeClamp: "undefined" != typeof d.useNativeClamp ? d.useNativeClamp : !0, splitOnChars: d.splitOnChars || [".", "-", "\u2013", "\u2014", " "], animate: d.animate || !1, truncationChar: d.truncationChar || "\u2026", truncationHTML: d.truncationHTML }, e = c.style, y = c.innerHTML, z = "undefined" != typeof c.style.webkitLineClamp, g = b.clamp, v = g.indexOf && (-1 < g.indexOf("px") || -1 < g.indexOf("em")), m; b.truncationHTML && (m = document.createElement("span"), m.innerHTML = b.truncationHTML); var k = b.splitOnChars.slice(0), h = k[0], f, q; "auto" == g ? g = t() : v && (g = t(parseInt(g))); var w; z && b.useNativeClamp ? (e.overflow = "hidden", e.textOverflow = "ellipsis", e.webkitBoxOrient = "vertical", e.display = "-webkit-box", e.webkitLineClamp = g, v && (e.height = b.clamp + "px")) : (e = x(g), e <= c.clientHeight && (w = p(l(c), e))); return { original: y, clamped: w }
+}
+})();
+/**********************
+Everything below is custom code for CA.gov
+***********************/
+(function () {//self invoking function so we don't pollute the global name space
+var x = document.querySelectorAll('.groupItem'); //targets elements with the class "groupItem"
+for (var i = 0, max = x.length; i < max; i++) { //runs through all the elements with the class groupItems
+x[i].setAttribute("style", "width:" + 100 / x.length + "%"); //changes the width of the elements so that they fit
+}
+function hasClass(element, cls) {//element = test element, cls = class to test for
+return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+for (var i = 0, max = x.length; i < max; i++) {//this loop is looking for elements that are before active
+if (hasClass(x[i], "active")) {//Does the current element have the class of active? If so, stop, else continue
+break;
+}
+x[i].className += " complete"; //since this element is before active, its complete so add the class complete
+}
+//This is code to add ellipsis for when the detail span is too long.
+var y = document.getElementsByClassName('detail'); //this finds all the detail spans
+for (var i = 0, max = y.length; i < max; i++) {//loops through all the detail spans to add code to each one
+$clamp(y[i], { clamp: 2 }); //uses clamp.js to add ellipsises to content that is more then 2 lines long.
+}
+})();
+</script>
+</body></html>
