@@ -64,7 +64,7 @@ h1 {
 	-webkit-margin-before: 0px;
 	-webkit-margin-after: 0px;
 	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;  
+	-webkit-margin-end: 0px;
 }
 mark {
   background: #ff0;
@@ -5108,6 +5108,20 @@ html {
 .ca-gov-icon-filter:before {
   content: "\e90a";
 }
+/* These icons are used in WCUG's design, but wasn't in the older template. */
+.ca-gov-icon-file-check:before {
+  content: "\e924";
+}
+.ca-gov-icon-clock:before {
+  content: "\e916";
+}
+.ca-gov-icon-file-invoice:before {
+  content: "\e92b";
+}
+.ca-gov-icon-users-dialog:before {
+  content: "\e952";
+}
+
 /* -----------------------------------------
    TYPE STYLES - /source/less/cagov/type.less
 ----------------------------------------- */
@@ -7722,7 +7736,7 @@ a.second-level-link [class^="ca-gov-icon-"] {
 }
 /* -----------------------------------------
    SPACING
-   Converted from Scss 
+   Converted from Scss
    http://v4-alpha.getbootstrap.com/components/utilities/
    /source/less/cagov/spacing.less
 ----------------------------------------- */
@@ -8097,7 +8111,7 @@ body {
 ----------------------------------------- */
 /*
  *  Core Owl Carousel CSS File
- 
+
  */
 .carousel {
   display: none;
@@ -12000,7 +12014,7 @@ blockquote {
    BUTTONS
    /source/less/cagov/button.less
 ----------------------------------------- */
-/* 
+/*
     NOTE: This might make more sence later to be moved to the color schemes
 */
 /* .btn-primary {
@@ -12008,7 +12022,7 @@ blockquote {
     background:none;
     color:#fff;
     transition:all 0.5s;
-    
+
     &:hover, &:focus {
         .rgba (#fff, .2);
         background-color: @rgba;

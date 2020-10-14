@@ -674,23 +674,6 @@ thead th .required-label
     }
 }
 
-@media (min-width: 768px) {
-    .first-level-link {
-        white-space: normal;
-        min-height: calc(100% - 5px) !important;
-        padding: 5px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-    a.es {
-        font-size: 75%;
-    }
-}
 /* -------------------------------------------------------
     pagination style
 ---------------------------------------------------------*/
