@@ -1084,6 +1084,9 @@ a.socialIcons {
 .branding .header-organization-banner img {
     width:171px;
 }
+.branding .header-organization-banner a {
+    text-decoration: none;
+}
 
 @media (min-width: 768px) {
     .fixed.compact .header-organization-banner img {
