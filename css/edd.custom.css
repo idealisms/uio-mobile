@@ -1073,11 +1073,6 @@ a.socialIcons {
     background: #d6d6d6;
 }
 
-.branding .header-organization-banner
-{
-	margin-top: 1.5%;
-}
-
 .page-container
 {
 	position: relative;
@@ -1086,10 +1081,14 @@ a.socialIcons {
     padding-right: 15px;
 }
 /**** Branding *****/
-.branding img
-{
-	height: 70%;
-	top: 13px;
+.branding .header-organization-banner img {
+    width:171px;
+}
+
+@media (min-width: 768px) {
+    .fixed.compact .header-organization-banner img {
+        width:150px;
+    }
 }
 
 /* Added everything below */
