@@ -1167,19 +1167,6 @@ a.socialIcons {
 		margin-top: 2.5%;
 	}
 }
-@media (min-width: 768px) and (max-width: 992px)
-{
-    /* Provide more space between the nav items to account for Spanish text that is longer. */
-    .top-level-nav .nav-item
-    {
-        padding: 0 2px;
-    }
-    .top-level-nav
-    {
-        margin-left: -16px;
-        width: calc(100% + 16px);
-    }
-}
 @media (min-width: 992px) and (max-width: 1280px)
 {
 	.main-navigation
