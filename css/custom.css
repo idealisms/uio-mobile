@@ -638,32 +638,6 @@ figure.floatImage {
 	color: #333 !important;
 }
 
-/*custom homepage banner*/
-
-/*.homepageBanner {
-	background-image:url(/images/CoronaVirusBanner.jpg);
-	height:375px;
-	background-size:cover;
-	background-position:bottom;
-}
-
-.homepageBannerContainer {
-	top: 50%;
-	position: relative;
-	transform: translatey(-50%);
-}
-
-.homepageBannerText {
-	background: rgba(1, 19, 27, 0.8);
-	color: white;
-	padding: .8em 2.4em 2em;
-	text-align: center;
-}
-
-.homepageBannerText p {
-	font-size: 1.2em;
-}*/
-
 @media (max-width: 768px) {
 	.homepageBanner {
 		height: 400px !important;
@@ -756,30 +730,6 @@ div.modal-content {
 	color: #B55E00;
 }
 
-/*creates a gray background for sections*/
-.graySectionBg {
-	background-color: #eee;
-}
-
-.card-button-text {
-	text-align: center;
-	font-size: 1.25rem !important;
-}
-
-/*styling for spanish links on UI redesign pages*/
-.spanishLinks {
-	float: right;
-}	
-@media (max-width: 768px) {
-	.spanishLinks {
-		float: none;
-	}
-}
-/*remove rounding of card headers*/
-.card-header:first-child {
-	border-radius: 1px 1px 0 0 !important;
-}
-
 /*adjustments to margins in cards*/
 .two-thirds h2:first-child, div.collapse div.card-body h3:first-of-type, .card h2, .card h3, .card h4, div.card.card-understated div.card-default.border-dark div.card-block h3, div.card.card-understated div.card-default div.card-block h2, div.card.card-understated div.card-default div.card-block h3, div.card.card-understated div.card-default div.card-block h4 {
 	margin-top: 0px;
@@ -816,84 +766,8 @@ h2.card-title.consistant, h3.card-title.consistant, h4.card-title.consistant, h5
 	font-size: 1.125rem !important;
 }
 
-/*allows for footer text to be smaller, like a subscript would. Use for UI dashboard, etc.*/
-
-.addendum {
-			font-size: .9em;
-		}
-
-/*css for ui-benefits section on home page, newsroom, etc.*/
-.thirdNoPad {
-	padding-left: 0px !important;
-	padding-right: 0px !important;
-	height: 241px;
-}
-.bannerImageFloat {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	margin: 0px !important;
-}
-.benefitsPadding {
-	padding: 3rem;
-}
-
-@media (max-width: 1044px) {
-	
-	.benefitsPadding {
-		padding: 2.5rem;
-	}
-	
-}
-
-@media (max-width: 767px) {
-	
-	.thirdNoPad {
-		height: 0px;
-	}
-
-	.bannerImageFloat {
-		display: none;
-	}
-	
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   /* IE10+ CSS */
-	/*css for ui-benefits section on home page, newsroom, etc. for Internet Explorer*/
-		.thirdNoPad {
-			height: 0px !important;
-			width: 0px !important;
-		}
-		.bannerImageFloat {
-			display: none !important;
-		}
-		.benefitsPadding {
-			padding: 3rem;
-		}
-
-		@media (max-width: 1044px) {
-
-			.benefitsPadding {
-				padding: 2.5rem;
-			}
-
-		}
-}
-
 /*fixing breadcrumb stack issue */
 
 .breadcrumb li {
 	margin: 10px 0px;
-}
-
-/* new yellow border blockquote styling */
-
-.highlight-blockquote {
-    padding: 0 1rem;
-    margin: 1rem 0;
-    border-left: .3rem solid #fdb81e;
-	font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.7;
 }
