@@ -1,6 +1,14 @@
+/* A space (&nbsp;) was added after the header logo. This was needed
+   for the image to vertically align. However, hovering over the logo
+   would cause a blue dot to appear (underline under the &nbsp;).
+   Remove the blue dot by removing the text underline. */
 .branding .header-organization-banner a {
   text-decoration: none;
 }
+
+/* The mobile controls were picking up the height from the <form>
+   that wraps the whole page. Since we probably can't remove the
+   <form>, override the height (which wasn't needed). */
 .mobile-controls {
-  height: auto !important;
+  height: auto;
 }
