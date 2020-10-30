@@ -12,3 +12,10 @@
 .mobile-controls {
   height: auto;
 }
+
+/* Grow the content div to fill the available space. This allows
+   for pages with a small amount of content to grow and push the
+   footer to the bottom of the screen. */
+.main-content {
+  flex: 1 0 auto;
+}
