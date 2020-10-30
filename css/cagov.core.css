@@ -1,5 +1,5 @@
 /**
- * CA State Template v5 -  @version v5.0.15 -  1/27/2020 
+ * CA State Template v5 -  @version v5.0.16 -  10/22/2020 
   STYLES COMPILED FROM SOURCE (SCSS) DO NOT MODIFY */
 /* -----------------------------------------
    BOOTSTRAP v4.4.1 - /source/scss/bootstrap/ 
@@ -4540,7 +4540,7 @@ input[type="button"].btn-block {
   margin-bottom: 15px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 767px) {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
