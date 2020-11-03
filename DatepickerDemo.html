@@ -1,498 +1,619 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths flexbox flexboxlegacy no-flexboxtweener flexwrap" style="font-size: 1rem;"><head id="head"><title>
-Datepicker Demo
-</title>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if (gt IE 9)]><!--> <html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<!--
+California State Template
+Version 5.0.16
 
+Based on Twitter Bootstrap
+-->
+<meta charset="utf-8">
+<title>Datepicker Demo</title>
+<meta name="Author" content="Employment Development Department" />
+<meta name="Description" content="Employment Development Department" />
+<meta name="Keywords" content="California, government" />
+<!--#include virtual="/ssi/head-css-js.html" -->
 <!-- head content, for all pages -->
-<meta name="Author" content="State of California"><meta name="Description" content="State of California"><meta name="Keywords" content="California, government">
 <!-- Use highest compatibility mode -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <!-- for Blackberry, AvantGo -->
 <meta name="MobileOptimized" content="320">
 <!-- for Windows mobile -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
-<!-- modernizr.com, feature detection -->
-<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/modernizr-2.0.6.min.js"></script>
-<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/modernizr-extra.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/cagov.core.css">
+
+<script src="js/search.js"></script>
+<!--
+Step 3
+Select a color scheme:
+<link rel="stylesheet" href="css/colorscheme-eureka.css">
+<link rel="stylesheet" href="css/colorscheme-mono.css">
+<link rel="stylesheet" href="css/colorscheme-oceanside.css">
+<link rel="stylesheet" href="css/colorscheme-orangecounty.css">
+<link rel="stylesheet" href="css/colorscheme-pasorobles.css">
+<link rel="stylesheet" href="css/colorscheme-santabarbara.css">
+<link rel="stylesheet" href="css/colorscheme-sacramento.css">
+<link rel="stylesheet" href="css/colorscheme-sierra.css">
+<link rel="stylesheet" href="css/colorscheme-trinity.css">
+-->
+
+<link rel="stylesheet" href="css/colorscheme-oceanside.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/EDDBot.css">
+
 <!-- selectivizr.com, emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8 -->
 <!--[if (lt IE 9) & (!IEMobile)]>
-<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/selectivizr-min.js"></script>
+<script src="js/libs/selectivizr-min.js"></script>
 <![endif]-->
-<!-- For iPad 3-->
-<link rel="apple-touch-icon" sizes="144x144" href="../../../App_Themes/EDDTheme/images/favicon.ico">
-<!-- For iPhone 4 -->
-<link rel="apple-touch-icon" sizes="114x114" href="../../../App_Themes/EDDTheme/images/favicon.ico">
-<!-- For iPad 1-->
-<link rel="apple-touch-icon" sizes="72x72" href="../../../App_Themes/EDDTheme/images/favicon.ico">
-<!-- For iPhone 3G, iPod Touch and Android -->
-<link rel="apple-touch-icon" href="../../../App_Themes/EDDTheme/images/favicon.ico">
-<!-- For Nokia -->
-<link rel="shortcut icon" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<!-- Load jQuery from CDN with fallback to local copy -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script>
+    //Fall back to local copy if no jquery found
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='/js/libs/jquery.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+</script>
+<!-- Load jQuery migrate from CDN with fallback to local copy -->
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+<script>
+    //Fall back to local copy if no jQuery migrate found
+    if (typeof jQuery.migrateWarnings == 'undefined') { // or typeof jQuery.fn.live == 'undefined'
+        document.write(unescape("%3Cscript src='/js/libs/jquery-migrate-3.0.1.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+
+</script>
+
+<!-- jQuery for accordion functionality -->
+<script src="js/jq_expand.js"></script>
+
+<!-- apple touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="100x100" href="images/apple-touch-icon-precomposed.png">
+<link rel="icon" sizes="192x192" href="images/apple-touch-icon-192x192.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+<link rel="shortcut icon" href="images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
 <!-- For everything else -->
-<link rel="shortcut icon" href="../../../App_Themes/EDDTheme/images/favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
+
 <!-- Activate ClearType for Mobile IE -->
 <!--[if IE]>
-<meta http-equiv="cleartype" content="on" />
+<meta http-equiv="cleartype" content="on">
 <![endif]-->
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/html5shiv.min.js"></script>
-<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/libs/respond.min.js"></script>
+  <script src="js/libs/html5shiv.min.js"></script>
+  <script src="js/libs/respond.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="../../../App_Themes/EDDTheme/js/edd.sessionTimeout.js"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'UA-3419582-31', { 'anonymize_ip': true });
-</script>
-<script type="text/javascript" language="javascript">
-if (self === top) {
-var antiClickjack = document.getElementById("antiClickjack");
-antiClickjack.parentNode.removeChild(antiClickjack);
-}
-else {
-top.location = self.location;
-}
-</script>
-<meta name="format-detection" content="telephone=no">
-<link href="css/cagov.core.css" type="text/css" rel="stylesheet">
-<link href="css/cagov.font-only.css" type="text/css" rel="stylesheet">
-<link href="css/colorscheme-oceanside.css" type="text/css" rel="stylesheet">
-<link href="css/custom.css" type="text/css" rel="stylesheet">
-<link href="css/uio.custom.css" type="text/css" rel="stylesheet">
-<link href="css/processbar.css" type="text/css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" type="text/css" rel="stylesheet">
-<style type="text/css">.fancybox-margin{margin-right:17px;}</style>
-
-<script>
-function toggleMenuItems() {
-  const navItems = document.querySelectorAll('.nav-item');
-  const lang = navItems[0].firstElementChild.firstElementChild.nextSibling.textContent.trim() === 'UI Home' ? 'es' : 'en';
-  const text = lang === 'en' ? [
-      'UI Home',
-      'Certify',
-      'Payments',
-      'History',
-      'Profile',
-      'Inbox',
-      'Contact'
-    ] : [
-      'UI Inicio',
-      'Certificar',
-      'Pagos',
-      'Historial',
-      'Perfil',
-      'Buzón',
-      'Contáctenos'
-    ];
-  for (let i = 0; i < text.length; ++i) {
-    navItems[i].firstElementChild.firstElementChild.nextSibling.textContent = text[i];
-  }
-  return false;
-}
-</script>
+<!-- Include Google Analytics -->
+<!-- #include virtual="/ssi/analytics.html" -->
+<!-- end "/ssi/head-css-js.html" -->
 </head>
-<body>
-<form method="post" action="./UploadDocumentInstructions.aspx" id="frmClaimantMainNoMenu" class="d-flex flex-column h-100 mb-0">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODE2MTExMTI0DxQrAARkBSQ4YzRiZjFmZi0yN2E5LTRmNDAtODNjZi0yNTQ3ZmQxNzc0Y2IFJGY2ODM5ZmU2LTkwNGYtNGM4Yi1iOTQ4LTc0OWYzN2JmY2JhMgUkN2U2YTljZDctNDhmMy00MTlkLThlMGUtZmM0NWViMGZiYzQyFgJmD2QWAmYPZBYEZg9kFgZmD2QWAmYPZBYCAgEPZBYCAgEPFgQeFVJlc291cmNlQ29udGFpbmVyTmFtZQUHRGVmYXVsdB4EVGV4dAUcT25saW5lIElkZW50aXR5IFZlcmlmaWNhdGlvbmQCEQ8VCTsuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2xpYnMvbW9kZXJuaXpyLTIuMC42Lm1pbi5qczsuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2xpYnMvbW9kZXJuaXpyLWV4dHJhLm1pbi5qczcuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2xpYnMvc2VsZWN0aXZpenItbWluLmpzLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvLy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvaW1hZ2VzL2Zhdmljb24uaWNvZAITDxUDNS4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvanMvbGlicy9odG1sNXNoaXYubWluLmpzMy4uLy4uLy4uL0FwcF9UaGVtZXMvRUREVGhlbWUvanMvbGlicy9yZXNwb25kLm1pbi5qczUuLi8uLi8uLi9BcHBfVGhlbWVzL0VERFRoZW1lL2pzL2VkZC5zZXNzaW9uVGltZW91dC5qc2QCAQ9kFhQCAQ8WAh4HVmlzaWJsZWhkAgUPZBYMAgEPFgQfAAUHRGVmYXVsdB8BBQRIb21lZAIDDw8WCh8BBRhCZW5lZml0IFByb2dyYW1zIE9ubGluZSAfAAUHRGVmYXVsdB4NUmVzb3VyY2VHcm91cGUeE0VuYWJsZUF1dGhvcml6YXRpb25nHhpBc3NvY2lhdGVkU2VjdXJpdHlSZXNvdXJjZQV1RURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLkV4dGVybmFsVXNlci5DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50LlVwbG9hZERvY3VtZW50SW5zdHJ1Y3Rpb25zLmNtZEJlbmVmaXRQcm9ncmFtT25saW5lZGQCBQ8PFgQfAAUHRGVmYXVsdB8DZWQWAmYPZBYCAgEPDxYGHwAFB0RlZmF1bHQfAQUESGVscB4HVG9vbFRpcAUESGVscGRkAgcPDxYKHwEFFyggRmlyc3RuYW1lICBMYXN0bmFtZSApHwRoHwAFB0RlZmF1bHQfA2UfAmdkZAIJDw8WAh4LTmF2aWdhdGVVcmwFNX4vUGFnZXMvRXh0ZXJuYWxVc2VyL1dlYkNvcnJlc3BvbmRlbmNlL0NvbnRhY3RVcy5hc3B4ZGQCCw8PFgwfAQUHTG9nIE91dB8ABQdEZWZhdWx0HwNlHwRnHwUFbEVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5VcGxvYWREb2N1bWVudEluc3RydWN0aW9ucy5jbWRMb2dpbkxvZ291dB8CZ2RkAgoPZBYCAgMPFCsADQ8WAh4LXyFEYXRhQm91bmRnZGRkZGRkZGRkEBYAFgBkZBAWABYAZBQrAAkFHzA6MCwwOjEsMDoyLDA6MywwOjQsMDo1LDA6NiwwOjcUKwACFhIeB0VuYWJsZWRnHglEYXRhQm91bmRnHghEYXRhUGF0aAUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9MV0fAQUHVUkgSG9tZR4FVmFsdWUFTX4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvVUlPbmxpbmVIb21lLmFzcHg/X19Ob2RlSUQ9MTYxHgZUYXJnZXQFS0VERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5Ib21lUGFnZR4KU2VsZWN0YWJsZWcfBgUHVUkgSG9tZR4IU2VsZWN0ZWRnZBQrAAIWDh8BBRRDZXJ0aWZ5IGZvciBCZW5lZml0cx8MBU9+L1BhZ2VzL0V4dGVybmFsVXNlci9DZXJ0aWZpY2F0aW9uL0F2YWlsYWJsZVdlZWtzTm90aWZpY2F0aW9uLmFzcHg/X19Ob2RlSUQ9MTYyHwYFFENlcnRpZnkgZm9yIEJlbmVmaXRzHwlnHw5nHwsFIC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTJdHwpnZBQrAAIWEB8BBRBQYXltZW50IEFjdGl2aXR5HwwFUH4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvUGF5bWVudEFjdGl2aXR5LmFzcHg/X19Ob2RlSUQ9MTYzHw0FUkVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5QYXltZW50QWN0aXZpdHkfBgUQUGF5bWVudCBBY3Rpdml0eR8JZx8OZx8LBSAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT0zXR8KZ2QUKwACFhAfAQUNQ2xhaW0gSGlzdG9yeR8MBU1+L1BhZ2VzL0V4dGVybmFsVXNlci9DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50L0NsYWltSGlzdG9yeS5hc3B4P19fTm9kZUlEPTE2Nh8NBU9FREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuRXh0ZXJuYWxVc2VyLkNsYWltYW50QWNjb3VudE1hbmFnZW1lbnQuQ2xhaW1IaXN0b3J5HwYFDUNsYWltIEhpc3RvcnkfCWcfDmcfCwUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9NF0fCmdkFCsAAhYQHwEFCyBGb3JtIDEwOTlHHwwFUn4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvRGlzcGxheTEwOTlHRm9ybXMuYXNweD9fX05vZGVJRD0xNjgfDQVURURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLkV4dGVybmFsVXNlci5DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50LkRpc3BsYXkxMDk5R0Zvcm1zHwYFCyBGb3JtIDEwOTlHHwlnHw5nHwsFIC8qW3Bvc2l0aW9uKCk9MV0vKltwb3NpdGlvbigpPTVdHwpnZBQrAAIWEB8BBRBQZXJzb25hbCBQcm9maWxlHwwFUH4vUGFnZXMvRXh0ZXJuYWxVc2VyL0NsYWltYW50QWNjb3VudE1hbmFnZW1lbnQvUGVyc29uYWxQcm9maWxlLmFzcHg/X19Ob2RlSUQ9MTY1Hw0FUkVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC5QZXJzb25hbFByb2ZpbGUfBgUQUGVyc29uYWwgUHJvZmlsZR8JZx8OZx8LBSAvKltwb3NpdGlvbigpPTFdLypbcG9zaXRpb24oKT02XR8KZ2QUKwACFhAfAQUFSW5ib3gfDAVGfi9QYWdlcy9FeHRlcm5hbFVzZXIvQ2xhaW1hbnRBY2NvdW50TWFuYWdlbWVudC9JbmJveC5hc3B4P19fTm9kZUlEPTE2NB8NBUhFREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuRXh0ZXJuYWxVc2VyLkNsYWltYW50QWNjb3VudE1hbmFnZW1lbnQuSW5ib3gfBgUFSW5ib3gfCWcfDmcfCwUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9N10fCmdkFCsAAhYQHwEFCkNvbnRhY3QgVXMfDAVCfi9QYWdlcy9FeHRlcm5hbFVzZXIvV2ViQ29ycmVzcG9uZGVuY2UvQ29udGFjdFVzLmFzcHg/X19Ob2RlSUQ9MTgzHw0FREVERC5DQ1IuVXNlckludGVyZmFjZS5QYWdlcy5FeHRlcm5hbFVzZXIuV2ViQ29ycmVzcG9uZGVuY2UuQ29udGFjdFVzHwYFCkNvbnRhY3QgVXMfCWcfDmcfCwUgLypbcG9zaXRpb24oKT0xXS8qW3Bvc2l0aW9uKCk9OF0fCmdkZAIODw8WAh8EaGQWBAIBD2QWAgIBD2QWAgIBD2QWBgIBDw8WCh8DBR5IZWFkZXJfVXBsb2FkX0RvY3VtZW50X1JlcXVlc3QfBGgfAAUHRGVmYXVsdB8BBRxPbmxpbmUgSWRlbnRpdHkgVmVyaWZpY2F0aW9uHwZlZGQCAw8PFgIfBGhkFgICAQ8PFgYfBGgfAAUHRGVmYXVsdB8DZWRkAgUPDxYCHwJoZGQCAw9kFgICAQ9kFgICAQ9kFgYCAQ8PFggfBGgfAAUHRGVmYXVsdB8BBf81DQo8aDI+DQogICAgV2h5IFlvdSBOZWVkIHRvIFJlc3BvbmQgdG8gVGhpcyBSZXF1ZXN0DQo8L2gyPg0KPHA+DQogICAgWW91IGFyZSByZWNlaXZpbmcgdGhpcyByZXF1ZXN0IHRvIHVwbG9hZCBkb2N1bWVudHMgYmVjYXVzZSB3ZSB3ZXJlIHVuYWJsZSB0byB2ZXJpZnkgeW91ciBpZGVudGl0eSBiYXNlZCBvbiB0aGUgaW5mb3JtYXRpb24geW91IHByb3ZpZGVkIG9uIHlvdXIgVW5lbXBsb3ltZW50IEluc3VyYW5jZSAoVUkpIGNsYWltLg0KPC9wPg0KPHA+DQogICAgSWYgeW91IGRpZCBub3QgZmlsZSB0aGlzIFVJIGNsYWltLCBzZWxlY3QgPHN0cm9uZz5OZXh0PC9zdHJvbmc+IGFuZCBpbmRpY2F0ZSB0aGF0IG9uIHRoZSBmb2xsb3dpbmcgc2NyZWVuLiBXZSBpbnZlc3RpZ2F0ZSBhbGwgZnJhdWQgcmVwb3J0cy4NCjwvcD4NCjxwPg0KICAgIElmIHlvdSBhcmUgc2VlaW5nIHRoaXMgcmVxdWVzdCBmb3IgYSBzZWNvbmQgdGltZSwgIHlvdSBkaWQgbm90IHJlc3BvbmQgdG8gdGhlIHByZXZpb3VzIHJlcXVlc3Qgb3IgZGlkIG5vdCBwcm92aWRlIHN1ZmZpY2llbnQgZG9jdW1lbnRzIHRvIHZlcmlmeSB5b3VyIGlkZW50aXR5LiBQbGVhc2UgcHJvdmlkZSB0aGUgcmVxdWlyZWQgZG9jdW1lbnRzLg0KPC9wPg0KPGgzPg0KICAgIEF2b2lkIENvbW1vbiBNaXN0YWtlcw0KPC9oMz4NCjxwPg0KICAgIE9uZSBvZiB0aGUgbW9zdCBjb21tb24gcmVhc29ucyB3aHkgd2UgY2Fu4oCZdCB2ZXJpZnkgeW91ciBpZGVudGl0eSBpcyBiZWNhdXNlIHlvdXIgbmFtZSwgZGF0ZSBvZiBiaXJ0aCwgb3IgU29jaWFsIFNlY3VyaXR5IG51bWJlciBkbyBub3QgbWF0Y2ggdGhlIHJlY29yZHMgb24gZmlsZSB3aXRoIHRoZSBTb2NpYWwgU2VjdXJpdHkgQWRtaW5pc3RyYXRpb24gKFNTQSkgb3IgdGhlIERlcGFydG1lbnQgb2YgTW90b3IgVmVoaWNsZXMgKERNVikuIEZvciBleGFtcGxlLCB5b3UgbWF5IGhhdmUgY2hhbmdlZCB5b3VyIG5hbWUgYnV0IGRpZG7igJl0IG5vdGlmeSB0aGUgRE1WLg0KPC9wPg0KPHA+DQogICAgSWYgeW91IGhhdmUgYSBuYW1lIG9yIGRhdGUgb2YgYmlydGggZGlzY3JlcGFuY3kgb24geW91ciBjbGFpbSwgcHJvdmlkZSBkb2N1bWVudHMgd2l0aCB5b3VyIGNvcnJlY3QgbmFtZSBvciBkYXRlIG9mIGJpcnRoLCBzdWNoIGFzIGFuIG9mZmljaWFsIGJpcnRoIGNlcnRpZmljYXRlIG9yIG1hcnJpYWdlIGNlcnRpZmljYXRlLg0KPC9wPg0KPHA+DQogICAgPHN0cm9uZz5Ob3RlOjwvc3Ryb25nPiBXZSB3aWxsIG5vdCB1cGRhdGUgeW91ciBpbmZvcm1hdGlvbiB3aXRoIHRoZSBTU0EsIHRoZSBETVYsIG9yIHlvdXIgZW1wbG95ZXIuIENvbnRhY3QgdGhlbSBkaXJlY3RseSB0byBtYWtlIGNoYW5nZXMuDQo8L3A+DQo8aDM+DQogICAgU3VibWlzc2lvbiBEZWFkbGluZQ0KPC9oMz4NCjxwPg0KICAgIFlvdSBoYXZlIDxzdHJvbmc+MTAgY2FsZW5kYXIgZGF5czwvc3Ryb25nPiBmcm9tIHRoZSA8c3Ryb25nPk1haWwgRGF0ZTwvc3Ryb25nPiBvbiB5b3VyIDxpPlJlcXVlc3QgZm9yIElkZW50aXR5IFZlcmlmaWNhdGlvbjwvaT4gKERFIDEzMjZDKSBtYWlsZWQgdG8geW91IHRvIHJlc3BvbmQgd2l0aCBwcm9vZiBvZiBpZGVudGl0eS4gIEhvd2V2ZXIsIHdlIGVuY291cmFnZSB5b3UgdG8gdXBsb2FkIGRvY3VtZW50cyBhcyBzb29uIGFzIHBvc3NpYmxlIHRvIGF2b2lkIGRlbGF5cyBpbiByZWNlaXZpbmcgYmVuZWZpdHMuDQo8L3A+DQo8aDM+DQogICAgRG8gWW91IE5lZWQgTW9yZSBUaW1lPw0KPC9oMz4NCjxwPg0KICAgIFRvIHJlcXVlc3QgYWRkaXRpb25hbCB0aW1lLCB5b3UgbXVzdCBjYWxsIDEtODY2LTQwMS0yODQ5IG9yIG1haWwgYSByZXF1ZXN0IHRvIHRoZSBhZGRyZXNzIGF0IHRoZSB0b3Agb2YgdGhlIDxpPlJlcXVlc3QgZm9yIElkZW50aXR5IFZlcmlmaWNhdGlvbjwvaT4gKERFIDEzMjZDKSB0aGF0IHdhcyBtYWlsZWQgdG8geW91LiBXZSBtdXN0IHJlY2VpdmUgeW91ciByZXF1ZXN0IHdpdGhpbiA8c3Ryb25nPjEwIGNhbGVuZGFyIGRheXM8L3N0cm9uZz4gb2YgdGhlIDxzdHJvbmc+TWFpbCBEYXRlPC9zdHJvbmc+IG9uIHRoZSBwYXBlciBmb3JtLg0KPC9wPg0KPGgzPg0KICAgIFBlbmFsdGllcw0KPC9oMz4NCjxwPg0KICAgIElmIHdlIGRvIG5vdCByZWNlaXZlIHRoZSByZXF1aXJlZCBkb2N1bWVudHMgb3IgYSByZXF1ZXN0IGZvciBtb3JlIHRpbWUsIG9yIHdlIGFyZSBub3QgYWJsZSB0byB2ZXJpZnkgeW91ciBpZGVudGl0eToNCjwvcD4NCjxzcGFuPg0KICAgIDx1bD4NCiAgICAgICAgPGxpPllvdSB3aWxsIG5vdCBiZSBlbGlnaWJsZSB0byByZWNlaXZlIGJlbmVmaXRzLjwvbGk+DQogICAgICAgIDxsaT5Zb3Ugd2lsbCByZWNlaXZlIGEgZGlzcXVhbGlmaWNhdGlvbiBub3RpY2UgKE5vdGljZSBvZiBEZXRlcm1pbmF0aW9uKSBpbiB0aGUgbWFpbC48L2xpPg0KICAgICAgICA8bGk+WW91IHdpbGwgaGF2ZSB0byBmaWxlIGFuIGFwcGVhbCB0byByZWNlaXZlIGJlbmVmaXRzIGZvciB0aGlzIGNsYWltLjwvbGk+DQogICAgPC91bD4NCjwvc3Bhbj4NCg0KPGgyPg0KICAgIEdhdGhlciBZb3VyIERvY3VtZW50cw0KPC9oMj4NCjxwPg0KICAgIEZvciB1cyB0byB2ZXJpZnkgeW91ciBpZGVudGl0eSwgeW91IG11c3QgdXBsb2FkIHR3byBmaWxlczoNCjwvcD4NCjxzcGFuPg0KDQogICAgPHVsPg0KICAgICAgICA8bGk+PHN0cm9uZz5PbmU8L3N0cm9uZz4gUGhvdG8gSWRlbnRpZmljYXRpb248L2xpPg0KICAgICAgICA8bGk+PHN0cm9uZz5PbmU8L3N0cm9uZz4gT3RoZXIgSWRlbnRpdHkgRG9jdW1lbnQgPC9saT4NCiAgICAgICAgPGxpPjxzdHJvbmc+T3B0aW9uYWw6PC9zdHJvbmc+IFlvdSBjYW4gdXBsb2FkIHVwIHRvIHRocmVlIGFkZGl0aW9uYWwgSWRlbnRpdHkgRG9jdW1lbnRzPC9saT4NCiAgICA8L3VsPg0KPC9zcGFuPg0KDQo8aDMgY2xhc3M9ImRvY1VwbG9hZEgzIj4NCiAgICBQaG90byBJZGVudGlmaWNhdGlvbg0KPC9oMz4NCjxwPg0KICAgIFlvdXIgcGhvdG8gaWRlbnRpZmljYXRpb24gbXVzdCBzaG93IHlvdXIgbmFtZSwgZGF0ZSBvZiBiaXJ0aCwgYW5kIHBob3RvZ3JhcGguIFlvdSBjYW4gdXNlIGFueSBkb2N1bWVudCBmcm9tIHRoZSBmb2xsb3dpbmcgbGlzdCwgYXMgbG9uZyBhcyBpdCBoYXMgPHN0cm9uZz5ub3QgZXhwaXJlZDwvc3Ryb25nPi4NCjwvcD4NCjxzcGFuPg0KICAgIDx1bD4NCiAgICAgICAgPGxpPlN0YXRlIGlkZW50aWZpY2F0aW9uIChJRCkgY2FyZDwvbGk+DQogICAgICAgIDxsaT5Ecml2ZXIgbGljZW5zZTwvbGk+DQogICAgICAgIDxsaT5VUyBwYXNzcG9ydCBvciBwYXNzcG9ydCBjYXJkPC9saT4NCiAgICAgICAgPGxpPlVTIG1pbGl0YXJ5IGNhcmQgKGZyb250IGFuZCBiYWNrKSA8L2xpPg0KICAgICAgICA8bGk+TWlsaXRhcnkgZGVwZW5kZW504oCZcyBJRCBjYXJkIChmcm9udCBhbmQgYmFjayk8L2xpPg0KICAgICAgICA8bGk+UGVybWFuZW50IFJlc2lkZW50IENhcmQgPC9saT4NCiAgICAgICAgPGxpPkNlcnRpZmljYXRlIG9mIENpdGl6ZW5zaGlwPC9saT4NCiAgICAgICAgPGxpPkNlcnRpZmljYXRlIG9mIE5hdHVyYWxpemF0aW9uPC9saT4NCiAgICAgICAgPGxpPkVtcGxveW1lbnQgQXV0aG9yaXphdGlvbiBEb2N1bWVudDwvbGk+DQogICAgICAgIDxsaT5Gb3JlaWduIHBhc3Nwb3J0PC9saT4NCiAgICA8L3VsPg0KPC9zcGFuPg0KDQo8aDM+DQogICAgT3RoZXIgSWRlbnRpdHkgRG9jdW1lbnQNCjwvaDM+DQo8cD4NCiAgICBZb3UgY2FuIHVzZSBhbnkgZG9jdW1lbnQgZnJvbSB0aGUgZm9sbG93aW5nIGxpc3QuDQo8L3A+DQoNCjxzcGFuPg0KICAgIDx1bD4NCiAgICAgICAgPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5FbXBsb3ltZW50IHJlY29yZA0KCQkJPHVsPg0KCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+Vy0yIGZyb20gbGFzdCB5ZWFyPC9saT4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkEgcGF5IHN0dWIgb3IgcGF5bWVudCBzdGF0ZW1lbnQgdGhhdCBzaG93czoNCgkJCQkJPHVsPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5BbiBpc3N1ZSBkYXRlIHdpdGhpbiAxMiBtb250aHMgcHJpb3IgdG8gdGhlIGRhdGUgeW91ciBjbGFpbSB3YXMgZmlsZWQ8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5Zb3VyIGZpcnN0IG5hbWUgKG9yIGluaXRpYWwpIGFuZCBsYXN0IG5hbWU8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5BdCBsZWFzdCB0aGUgbGFzdCBmb3VyIGRpZ2l0cyBvZiB5b3VyIFNvY2lhbCBTZWN1cml0eSBudW1iZXIgb3IgeW91ciBlbXBsb3llZSBpZGVudGlmaWNhdGlvbiBudW1iZXI8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5Zb3VyIGVtcGxveWVy4oCZcyBuYW1lPC9saT4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+VGhlIHBheSBwZXJpb2QgZGF0ZXMgb3IgdGhlIGRhdGUgaXQgd2FzIGlzc3VlZDwvbGk+DQoJCQkJCTwvdWw+DQoJCQkJPC9saT4NCgkJCTwvdWw+DQoJCTwvbGk+DQogICAgICAgIDxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+QWRkcmVzcyB2ZXJpZmljYXRpb24NCgkJCTx1bD4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkFueSBiaWxsIG9yIGZpbmFuY2lhbCBzdGF0ZW1lbnQgc2hvd2luZyB5b3VyIG5hbWUgYW5kIHJlc2lkZW5jZSBhZGRyZXNzDQoJCQkJCTx1bD4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+VXRpbGl0eSBiaWxsIChlbGVjdHJpY2l0eSwgZ2FzLCBnYXJiYWdlLCB3YXRlciwgb3Igc2V3ZXIpPC9saT4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+Q2FibGUgVFYgb3IgaW50ZXJuZXQgYmlsbDwvbGk+DQoJCQkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPlRlbGVwaG9uZSBiaWxsPC9saT4NCgkJCQkJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+QmFuayBzdGF0ZW1lbnQ8L2xpPg0KCQkJCQkJPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5Qcm9wZXJ0eSB0YXggYmlsbDwvbGk+DQoJCQkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPk1vcnRnYWdlIHN0YXRlbWVudDwvbGk+DQoJCQkJCTwvdWw+DQoJCQkJPC9saT4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkxlYXNlIG9yIHJlbnRhbCBhZ3JlZW1lbnQgc2hvd2luZyB5b3VyIG5hbWUgYW5kIHJlc2lkZW5jZSBhZGRyZXNzPC9saT4NCgkJCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPlJlZ2lzdHJhdGlvbiBmb3IgYSBQTyBCb3ggb3IgcHJpdmF0ZSBtYWlsYm94PC9saT4NCgkJCTwvdWw+DQoJCTwvbGk+DQoJCTxsaSBzdHlsZT0ibWFyZ2luLXRvcDoxMHB4OyI+U29jaWFsIFNlY3VyaXR5IG51bWJlcg0KICAgICAgICA8dWw+DQogICAgICAgICAgICA8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPjxzdHJvbmc+SW1wb3J0YW50Ojwvc3Ryb25nPiBBIFNvY2lhbCBTZWN1cml0eSBjYXJkIHdpbGwgPHN0cm9uZz5ub3Q8L3N0cm9uZz4gc2F0aXNmeSB0aGlzIHJlcXVpcmVtZW50LjwvbGk+DQogICAgICAgICAgICA8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPjxhIGhyZWY9Imh0dHBzOi8vd3d3LnNzYS5nb3YvbXlhY2NvdW50LyI+U29jaWFsIFNlY3VyaXR5IHN0YXRlbWVudDwvYT4gKGFsbCBwYWdlcyk8L2xpPg0KICAgICAgICAgICAgPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij48aT5Ob3RpY2UgdG8gVGhpcmQgUGFydHkgb2YgU29jaWFsIFNlY3VyaXR5IE51bWJlciBBc3NpZ25tZW50cyAoU1NBLTcwMjgpPC9pPjwvbGk+DQogICAgICAgICAgICA8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPjxpPlJlcG9ydCBvZiBDb25maWRlbnRpYWwgU29jaWFsIFNlY3VyaXR5IEJlbmVmaXQgSW5mb3JtYXRpb24gKFNTQS0yNDU4KTwvaT48L2xpPg0KICAgICAgICA8L3VsPg0KCQk8L2xpPg0KCQk8bGkgc3R5bGU9Im1hcmdpbi10b3A6MTBweDsiPkRhdGUgb2YgYmlydGgNCiAgICAgICAgPHVsPg0KICAgICAgICAgICAgPGxpIHN0eWxlPSJtYXJnaW4tdG9wOjEwcHg7Ij5PZmZpY2lhbCBiaXJ0aCBjZXJ0aWZpY2F0ZSAod2l0aCBvZmZpY2lhbCB0cmFuc2xhdGlvbiwgaWYgYW55KTwvbGk+DQogICAgICAgIDwvdWw+DQoJCTwvbGk+DQogICAgPC91bD4NCjwvc3Bhbj4NCjxoMj4NCiAgICBQcmVwYXJlIFlvdXIgRG9jdW1lbnRzIGZvciBVcGxvYWRpbmcNCjwvaDI+DQo8cD4NCiAgICBUaGUgZG9jdW1lbnRzIHlvdSB1cGxvYWQgbXVzdCBiZSBjbGVhciBhbmQgcmVhZGFibGUgc28gd2UgY2FuIHZlcmlmeSB5b3VyIGlkZW50aXR5LiBZb3UgY2FuIGVpdGhlciBzY2FuIHRoZW0gb3IgdGFrZSBhIHBpY3R1cmUgd2l0aCB5b3VyIGRpZ2l0YWwgY2FtZXJhIG9yIG1vYmlsZSBkZXZpY2UuDQo8L3A+DQo8cD4NCiAgICBNYXhpbXVtIGZpbGUgc2l6ZSBpcyAyNSBNQi4NCjwvcD4NCjxwPg0KICAgIEFjY2VwdGFibGUgZm9ybWF0czogSlBFRywgVElGRiwgUE5HLCBHSUYsIGFuZCBQREYuDQo8L3A+DQo8cD4NCiAgICBZb3VyIGRpZ2l0YWwgZG9jdW1lbnRzIG11c3QgYmUgYWNjZXNzaWJsZSB0byB0aGUgZGV2aWNlIHlvdSBhcmUgZ29pbmcgdG8gdXNlIHRvIHVwbG9hZCB0aGVtLg0KPC9wPg0KPGgyPg0KICAgIFVwbG9hZCBZb3VyIERvY3VtZW50cw0KPC9oMj4NCjxwPg0KICAgIEFmdGVyIHlvdSBoYXZlIHByZXBhcmVkIHlvdXIgZmlsZXMsIHNlbGVjdCA8c3Ryb25nPk5leHQ8L3N0cm9uZz4gYW5kIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIHRvIHVwbG9hZCB0aGVtLg0KPC9wPg0KPHA+DQogICAgPHN0cm9uZz5JbXBvcnRhbnQ6PC9zdHJvbmc+IFlvdSB3aWxsIGhhdmUgMzAgbWludXRlcyB0byB1cGxvYWQgeW91ciBkb2N1bWVudHMuDQo8L3A+DQofBmVkZAIDDw8WCh8EZx8FBYEBRURELkNDUi5Vc2VySW50ZXJmYWNlLlBhZ2VzLkV4dGVybmFsVXNlci5DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50LlVwbG9hZERvY3VtZW50SW5zdHJ1Y3Rpb25zLmNvbnRlbnRNYWluX2NvbnRlbnRNYWluX2J0blByZXZpb3VzHwAFB0RlZmF1bHQfAQUIUHJldmlvdXMfBgUIUHJldmlvdXNkZAIFDw8WCh8EZx8FBX1FREQuQ0NSLlVzZXJJbnRlcmZhY2UuUGFnZXMuRXh0ZXJuYWxVc2VyLkNsYWltYW50QWNjb3VudE1hbmFnZW1lbnQuVXBsb2FkRG9jdW1lbnRJbnN0cnVjdGlvbnMuY29udGVudE1haW5fY29udGVudE1haW5fYnRuTmV4dB8ABQdEZWZhdWx0HwEFBE5leHQfBgUETmV4dGRkAhAPZBYCAgEPZBYKAgEPFgQfAAUHRGVmYXVsdB8BBQtCYWNrIHRvIFRvcGQCAw8WAh4HZGF0YS1pZAUvaHR0cDovL3d3dy5lZGQuY2EuZ292L0Fib3V0X0VERC9Db250YWN0X0VERC5odG0WAgIBDw8WCB8EaB8ABQdEZWZhdWx0HwEFC0NvbnRhY3QgRUREHwZlZGQCBQ8WAh8QBTVodHRwOi8vd3d3LmVkZC5jYS5nb3YvQWJvdXRfRUREL0NvbmRpdGlvbnNfT2ZfVXNlLmh0bRYCAgEPDxYIHwRoHwAFB0RlZmF1bHQfAQURQ29uZGl0aW9ucyBvZiBVc2UfBmVkZAIHDxYCHxAFMmh0dHA6Ly93d3cuZWRkLmNhLmdvdi9BYm91dF9FREQvUHJpdmFjeV9Qb2xpY3kuaHRtFgICAQ8PFggfBGgfAAUHRGVmYXVsdB8BBQ5Qcml2YWN5IFBvbGljeR8GZWRkAgkPFgIfEAUxaHR0cDovL3d3dy5lZGQuY2EuZ292L0Fib3V0X0VERC9BY2Nlc3NpYmlsaXR5Lmh0bRYCAgEPDxYIHwRoHwAFB0RlZmF1bHQfAQUNQWNjZXNzaWJpbGl0eR8GZWRkAhIPFgQfAAUHRGVmYXVsdB8DZWQCFA8WBB8ABQdEZWZhdWx0HwEFEkNvbmZpcm0gTmF2aWdhdGlvbmQCFg8WBB8ABQdEZWZhdWx0HwEFhwFZb3UgYXJlIG9wZW5pbmcgYSBuZXcgdGFiIG91dHNpZGUgb2YgdGhlIGFwcGxpY2F0aW9uLiAgU2VsZWN0IENvbnRpbnVlIHRvIG9wZW4gYSBuZXcgdGFiIG9yIHNlbGVjdCBDYW5jZWwgdG8gcmV0dXJuIHRvIHRoZSBhcHBsaWNhdGlvbi5kAhgPFgIeBXZhbHVlBQhDb250aW51ZWQCGg8WAh8RBQZDYW5jZWxkGAIFFGN0bDAwJGN0bDAwJG12Rm9vdGVyDw9kAgFkBSJjdGwwMCRjdGwwMCRtZW51QmFyJEN1c3RvbU1haW5NZW51Dw9kBU1+L1BhZ2VzL0V4dGVybmFsVXNlci9DbGFpbWFudEFjY291bnRNYW5hZ2VtZW50L1VJT25saW5lSG9tZS5hc3B4P19fTm9kZUlEPTE2MWSD+HWSD4VW3bvOlevU1mVT8k8ANcSdJnNFTXQ+MgOlVg==">
-</div>
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['frmClaimantMainNoMenu'];
-if (!theForm) {
-theForm = document.frmClaimantMainNoMenu;
-}
-function __doPostBack(eventTarget, eventArgument) {
-if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-theForm.__EVENTTARGET.value = eventTarget;
-theForm.__EVENTARGUMENT.value = eventArgument;
-theForm.submit();
-}
-}
-//]]>
-</script>
-<script src="/EDD.CCR.UserInterface/WebResource.axd?d=qPEv35zSXGV0fFL44w10dRbx-xE3noz816fF1ortHxK6MT6uatbNT0EZzJJZwKp5ZbYUnLR66KyfyO1zKQ04jfrs1rTrPExOlK69k9lcJS2RV3FGPXu5Mch2pKY_i36pdxwziofpL0XJafZ8qLRP4ZPKrm64d_dHk-3IiJQ0fBo1&amp;t=637378530114055650" type="text/javascript"></script>
-<script src="/EDD.CCR.UserInterface/WebResource.axd?d=l-AGXOLvzQ3NGkyNEy9ZWHOJMEYo8ZiTV-2y_KXLU_CDxLR8K6vWrVt4O7yA3WCJJEfnSZkIttWgC9vK5YcEd3ljnYwXAOMt1vHIRs2vgN0N1PizunY3_iXy1fWYBkw63lTVUJEt6DhzoZOb089poQ2&amp;t=637378530114055650" type="text/javascript"></script>
-<script src="/EDD.CCR.UserInterface/WebResource.axd?d=7CHKyLjwICsOp3a3ZgTGuwaJYOeqdAR5dA-eFRCtStdC7j1SorTuDRYkODCf4LDBax4iLGca2zRCyW68spH64-dz9MGzTiDe0JpDlCN66m66_6xKnV5L_b-GcPfGzWjOoifCPYteXJDGrrsrD0VnYifhYmYhlUludp0Jih3SKhTlDwbbo12KOCiALWqDTGY20&amp;t=637378530114055650" type="text/javascript"></script>
-<script src="/EDD.CCR.UserInterface/WebResource.axd?d=DEp5RCG8dXo_6tWrFaFftE2KFaaAo6uCEWdQ-kCJ8JgUkTdu_7M4pPdVNbbG_c9vMFsuR2h_rvn0bBNc1_Gq6C0j0wbBq7nP9EonbUR2kOU1&amp;t=637290526998988531" type="text/javascript"></script>
-<div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9ECAA73F">
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA/zX0uTmv+vEkEY3eWsZy5dHOibBqibssBgu6rGuw4UfKhAQVSe+HiHdK4/WZ8L7LODTcp528mvIc6ZIdejgQqJF2S6elwKN4yKgFvF2nU4WzUQ4wiT0H7pMhIaWHkk0HgbaJPa1aXypycF4AudllW9IPRpKDKW31eV6Xd67ZecdIbUCRHbyOp/ER6IPxx38dmtoc6MbMyFUKtPsVyc8COo4tIdLjYwmOD+LxzxZxZAQyOusK/vcLulCB8psOGncVVBK/s5ZdnSRXyLAFYOd/NL/y9FO/0++5QLb3vC3MpaXBn9sFMQ1aS3Vb0fisfx48kZonCIg/0whoHCatfjT+/Tl328h02EN/5szippsG7x1Q==">
-</div>
-<a name="top"></a>
+
+<!-- possible body classes are "primary" and "two-column" -->
+<body class="primary d-flex flex-column">
+
 <header role="banner" id="header" class="global-header fixed">
-<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+	<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
 <!-- Alert Banner -->
-<!-- Location Setting -->
-<div class="location-settings section section-standout collapse collapsed " id="locationSettings">
-<div class="container p-y">
-<button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close" role="tab" aria-selected="false" id="ui-collapse-953">
-<span aria-hidden="true">×</span>
-</button>
-<div class="form-group form-inline">
-<label for="locationZipCode">
-Saving your location allows us to provide you with more relevant information.</label>
-<input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
-<button type="button" class="btn btn-primary">
-Set Location</button>
-</div>
-</div>
-</div>
-<!-- Utility Header -->
-<div class="utility-header">
-<div class="container">
-<div class="group">
-<div class="quarter">
-<ul class="utility-links social-media-links">
-<li>
-<div class="header-cagov-logo">
-<a class="NavigationURL" data-id="http://ca.gov" title="CA.Gov" href="#main-content" data-target="#navigationModal" data-toggle="modal">
-<img src="Images/Ca-Gov-Logo-Gold.svg" alt="CA.Gov logo" title="CA.Gov"></a></div>
-</li>
-</ul>
-</div>
-<div class="three-quarters settings-links">
-<ul id="userBanner" class="utility-links">
-<li>
-<a class="NavigationURL" data-id="http://edd.ca.gov" href="#main-content" data-target="#navigationModal" data-toggle="modal"><span class="ca-gov-icon-home" aria-hidden="true"></span> Home
-</a>
-</li>
-<li>
-<span id="cshPageHelp"><span>
-<a href="#"><span title="Help">Help</span></a>
-</span></span>
-</li>
-<li>
-<div class="user-name">
-<span title="" id="lblLoginUserName">Welcome, Tony</span>
-</div>
-</li>
-<li>
-<a id="cmdLoginLogout" href="javascript:__doPostBack('ctl00$ctl00$cmdLoginLogout','')">Log Out</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- Setting Bar -->
-<div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
-<div class="container  p-y">
-<button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close" role="tab" aria-selected="false" id="ui-collapse-722">
-<span aria-hidden="true">×</span></button>
-<div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
-<div class="btn-group">
-<button type="button" class="btn btn-standout disableHighContrastMode">
-Default</button></div>
-<div class="btn-group">
-<button type="button" class="btn btn-standout enableHighContrastMode">
-High Contrast</button></div>
-</div>
-<div class="btn-group" role="group" aria-label="textSizeMode">
-<div class="btn-group">
-<button type="button" class="btn btn-standout resetTextSize">
-Reset</button></div>
-<div class="btn-group">
-<button type="button" class="btn btn-standout increaseTextSize">
-<span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-plus-line"></small></span>
-</button>
-</div>
-<div class="btn-group">
-<button type="button" class="btn btn-standout decreaseTextSize">
-<span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-minus-line"></small></span>
-</button>
-</div>
-</div>
-<!-- <button type="button" class="btn btn-primary clipboard-activeonhover">Save links on hover</button> -->
-</div>
-</div>
-<!-- header branding -->
-<div class="branding">
-<div class="header-organization-banner">
-<a class="NavigationURL" data-id="http://edd.ca.gov" title="Welcome to the Employment Development Department" href="#main-content" data-target="#navigationModal" data-toggle="modal">
-<img src="Images/edd-logo-2-Color.svg#../../../App_Themes/EDDTheme/images/EDD_Logo_Color.png" id="cmdLogoCA" alt="Employment Development Department">&nbsp;
-</a>
-</div>
-</div>
-<!-- mobile navigation controls -->
-<div class="mobile-controls">
-  <span class="mobile-control-group mobile-header-icons">
-    <!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
-  </span>
-  <div class="mobile-control-group main-nav-icons float-right">
-      <div id="nav-icon3" class="mobile-control toggle-menu" aria-expanded="false" role="button" aria-controls="navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Menu</span>
-      </div>
-  </div>
-</div>
-<div class="navigation-search">
-<div id="head-search" class="search-container in">
-<!-- Include Search -->
-</div>
-<!-- Include Navigation -->
+    <!-- change ssi file to limit banner -->
+    <!--#include virtual="/ssi/alert-banner.html" -->
+<!--
+    <div class="alert alert-severe alert-dismissible alert-banner">
+        <div class="container">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span class="alert-level"><span class="ca-gov-icon-important" aria-hidden="true"></span>SEVERE ALERT!</span><span class="alert-text">2015-12-21, 10:17 AM - Flash Flood in the Northern California, Sacramento and Placer Counties until 12:15 PM.</span>
+              <a href="" class="alert-link btn btn-default btn-xs">More Information</a>
+        </div>
+    </div>
+-->
+    <!-- end "/ssi/alert-banner.html" -->
+
+<!-- Location Bar -->
+    <!--#include virtual="/ssi/location-bar.html" -->
+    <div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+        <div class="container p-y">
+            <button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="form-group form-inline">
+                <label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
+                <input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
+                <button type="button" class="btn btn-primary">Set Location</button>
+            </div>
+        </div>
+    </div>
+    <!-- end "/ssi/location-bar.html" -->
+
+    <!-- Include Utility Header -->
+    <!--#include virtual="/ssi/edd_utility-header.html" -->
+    <div class="utility-header">
+        <div class="container">
+            <div class="group flex-row">
+                <div class="social-media-links">
+                    <div class="header-cagov-logo">
+                        <a href="https://ca.gov" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility CAGov')"><span class="sr-only">CA.gov</span><img src="images/Ca-Gov-Logo-Gold.svg" class="pos-rel" alt="CA.gov logo" aria-hidden="true" /></a>
+                    </div>
+    <!--                <a href="/" class="ca-gov-icon-home"><span class="sr-only">Home</span></a>
+                    <a href="/" class="ca-gov-icon-facebook"><span class="sr-only">Facebook</span></a>
+                    <a href="/" class="ca-gov-icon-twitter"><span class="sr-only">Twitter</span></a>
+                    <a href="/" class="ca-gov-icon-email"><span class="sr-only">Email</span></a> -->
+                </div>
+                <div class="settings-links">
+                    <a href="/" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility Home')">Home</a>
+                    <a href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility Benefits Login')">Benefits Login</a>
+                    <a href="/About_EDD/Employer_Services_Online.htm" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility Employer Login')">Employer Login</a>
+                    <!--<button class="btn btn-xs btn-primary" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" onclick="_gaq.push(['_trackEvent', 'Header', 'Utility Click', 'Utility Settings'])"><span class="ca-gov-icon-gear" aria-hidden="true"></span> Settings</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Utility Header -->
+    <!--#include virtual="/ssi/edd_scripts.html" -->
+    <!DOCTYPE html>
+    <script>
+        /* script for filtering accordions on EDD Actively
+        prosecutes pages*/
+
+        function filter() {
+
+                var type = $('#filter').val();
+
+                if (type == 'none') { $('div.ui, div.dipfl, div.tax').show(); }
+                else {
+                    $('div.ui, div.dipfl, div.tax').hide();
+                    $('div.' + type).show();
+                }
+            }
+
+        /*-----------------------------------------------
+          Custom Toggle switch code for accordions, and
+          possibly other switches.
+        -----------------------------------------------*/
+
+        function handleBtnClick(event) {
+            toggleButton(event.target);
+        }
+
+        function handleBtnKeyDown(event) {
+            // Check to see if space or enter were pressed
+            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+                // Prevent the default action to stop scrolling when space is pressed
+                event.preventDefault();
+                toggleButton(event.target);
+            }
+        }
+
+        function toggleButton(element) {
+            // Check to see if the button is pressed
+            var pressed = (element.getAttribute("aria-pressed") === "true");
+            var stateText = document.getElementById('showHideText');
+            // Change aria-pressed to the opposite state
+            element.setAttribute("aria-pressed", !pressed);
+            // toggle the Expand/Collapse state of the accordions
+            if(pressed) {
+                collapse();
+                stateText.innerHTML = "Show All";
+            } else {
+                expand();
+                stateText.innerHTML = "Hide All";
+            }
+        }
+
+        /*-----------------------------------------------
+          Custom Toggle switch code for spanish accordions
+        -----------------------------------------------*/
+
+        function handleBtnClickSpanish(event) {
+            toggleButtonSpanish(event.target);
+        }
+
+        function handleBtnKeyDownSpanish(event) {
+            // Check to see if space or enter were pressed
+            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+                // Prevent the default action to stop scrolling when space is pressed
+                event.preventDefault();
+                toggleButtonSpanish(event.target);
+            }
+        }
+
+        function toggleButtonSpanish(element) {
+            // Check to see if the button is pressed
+            var pressed = (element.getAttribute("aria-pressed") === "true");
+            var stateText = document.getElementById('showHideText');
+            // Change aria-pressed to the opposite state
+            element.setAttribute("aria-pressed", !pressed);
+            // toggle the Expand/Collapse state of the accordions
+            if(pressed) {
+                collapse();
+                stateText.innerHTML = "Mostrar todo";
+            } else {
+                expand();
+                stateText.innerHTML = "Ocultar todo";
+            }
+        }
+
+        /* This function removes unnecessary aria-roles, while injecting a needed one
+        into accordions. */
+        $(document).ready(function () {
+            // removing role attribute to fix accessibilty error
+            //$("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+            $(".toggleAccordion").removeAttr("role aria-hidden");
+            $(".accordion").removeAttr("role tablist");
+            $(".panel-default").removeAttr("role presentation");
+            $(".panel-heading").removeAttr("role presentation");
+            $(".panel-title a").removeAttr("role tab");
+            $(".panel-title a").removeAttr("role aria-selected");
+            $(".accordion").removeAttr("role aria-multiselectable");
+            $(".collapsed").removeAttr("role aria-selected");
+            $(".panel-collapse").removeAttr("tabindex");
+            $(".toggleAccordion").attr("role", "region");
+
+            $(window).resize(function() {
+                $("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+            });
+        });
+
+        /* This function removes unnecessary aria-roles from tab panels */
+        $(document).ready(function () {
+            $("#tabs li.nav-item").removeAttr("role presentation");
+            $("#collapse-home").removeAttr("role aria-hidden");
+            $("#collapse-profile").removeAttr("role aria-hidden");
+            $("#collapse-messages").removeAttr("role aria-hidden");
+            //$("#tabs li").attr("role", "listitem");
+            //$(".toggleAccordion").attr("role", "region");
+
+            //$(window).resize(function() {
+            //	$("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+            //});
+        });
+
+        /* This function can be used to toggle aria-expanded values */
+
+        function expandedValues() {
+            var x = document.getElementById("searchExpand").getAttribute("aria-expanded");
+
+            if (x=="true")
+                {
+                    x = "false";
+                    document.getElementById("searchExpand").focus();
+                }
+            else {
+                x = "true";
+            }
+            document.getElementById("searchExpand").setAttribute("aria-expanded", x);
+        }
+
+        /*-----------------------------------------
+         Custom code for expanding and collapsing
+         accordions
+         ---------------------------------------*/
+
+        function expand() {
+                    $('.toggleAccordion').collapse('show');
+                }
+        function collapse() {
+                    $('.toggleAccordion').collapse('hide');
+                }
+
+        /*--initialize modal plugin for Bootstrap--*/
+        $('#myModal').modal(options);
+
+        /* This function creates the ability to copy the
+        text from the source code textarea*/
+
+        function copyText(){
+            document.querySelector("textarea").select();
+            document.execCommand('copy');
+        };
+
+    </script>
+    <!-- end "/ssi/edd_scripts.html" -->
+    <!-- end "/ssi/edd_utility-header.html" -->
+
+    <!-- Settings Bar -->
+    <!--#include virtual="/ssi/settings-bar.html" -->
+    <div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
+        <div class="container  p-y">
+
+
+            <div class="btn-group btn-group-justified-sm" role="group" aria-label="Color Contrast Settings">
+                <div class="btn-group"><button type="button" class="btn btn-standout disableHighContrastMode" aria-label="Reset Default Colors">Default Color</button></div>
+                <div class="btn-group"><button type="button" class="btn btn-standout enableHighContrastMode" aria-label="High Contrast (Yellow and Black)">High Contrast<span class="sr-only"> (Yellow and Black)</span></button></div>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Text Size Settings">
+                <div class="btn-group"><button type="button" class="btn btn-standout resetTextSize" aria-label="Reset Font Size"><span class="hidden-xs">Reset Font Size</span><span class="visible-xs">Reset Font</span></button></div>
+                <div class="btn-group"><button type="button" class="btn btn-standout increaseTextSize" aria-label="Increase Font Size"><span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <span class="sr-only">Increase</span><span class="ca-gov-icon-plus-line font-size-sm" aria-hidden="true"></span></span></button></div>
+                <div class="btn-group"><button type="button" class="btn btn-standout decreaseTextSize" aria-label="Decrease Font Size"><span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <span class="sr-only">Decrease</span><span class="ca-gov-icon-minus-line font-size-sm" aria-hidden="true"></span></span></button></div>
+                <!--<div class="btn-group"><button type="button" class="btn btn-standout resetTextSize">Reset Font Size</button></div>-->
+            </div>
+            <button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close Settings"><span aria-hidden="true">&times;</span></button>
+        </div>
+    </div>
+    <!-- end "/ssi/settings-bar.html" -->
+
+    <!-- Include Branding -->
+    <!--#include virtual="/ssi/edd_branding.html" -->
+    <!-- header branding -->
+    <div class="branding">
+        <div class="header-organization-banner"><a href="https://edd.ca.gov"><img src="images/edd-logo-2-Color.svg" alt="EDD Employment Development Department State of California Home" /></a></div>
+    </div>
+    <!-- end "/ssi/edd_branding.html" -->
+
+    <!-- Include Mobile Controls -->
+    <!--#include virtual="/ssi/mobile-controls.html" -->
+    <!-- mobile navigation controls -->
+    <div class="mobile-controls">
+        <span class="mobile-control-group mobile-header-icons">
+            <!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
+        </span>
+        <div class="mobile-control-group main-nav-icons">
+            <button class="mobile-control toggle-search">
+                <span class="ca-gov-icon-search hidden-print" aria-hidden="true"></span><span class="sr-only">Search</span>
+            </button>
+            <button id="nav-icon3" class="mobile-control toggle-menu" aria-expanded="false" aria-controls="navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Menu</span>
+            </button>
+
+        </div>
+    </div>
+    <!-- end "/ssi/mobile-controls.html" -->
+
+    <div class="navigation-search">
+        <!-- Include Navigation -->
+        <!--#include virtual="/ssi/edd_navigation.html" -->
 <!--
 Step 2
 Select Navigation Type:
+
 Options are: megadropdown dropdown singlelevel
 -->
-<nav id="navigation" class="main-navigation dropdown mobile-closed" role="navigation">
 
-<ul class="level1 top-level-nav nav-menu static" id="nav_list" tabindex="0" style="">
-<li class="nav-item" style="">
-  <a title="UI Home" class="first-level-link selected" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/UIOnlineHome.aspx?__NodeID=161')" id="accessible-menu-1602365417494-1">
-    <span class="ca-gov-icon-home" aria-hidden="true"></span>
-    UI Home
-  </a>
-</li>
-<li class="nav-item" style="">
-  <a title="Certify for Benefits" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/Certification/AvailableWeeksNotification.aspx?__NodeID=162')" id="accessible-menu-1602365417495-2">
-    <span class="ca-gov-icon-file-check" aria-hidden="true"></span>
-    Certify
-  </a>
-</li>
-<li class="nav-item" style="">
-  <a title="Payment Activity" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/PaymentActivity.aspx?__NodeID=163')" id="accessible-menu-1602365417496-3">
-    <span class="ca-gov-icon-currency" aria-hidden="true"></span>
-    Payments
-  </a>
-</li>
-<li class="nav-item" style="">
-  <a title="Claim History" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/ClaimHistory.aspx?__NodeID=166')" id="accessible-menu-1602365417496-4">
-    <span class="ca-gov-icon-clock" aria-hidden="true"></span>
-    History
-  </a>
-</li>
-<li class="nav-item" style="">
-  <a title="Personal Profile" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/PersonalProfile.aspx?__NodeID=165')" id="accessible-menu-1602365417497-6">
-    <span class="ca-gov-icon-person" aria-hidden="true"></span>
-    Profile
-  </a>
-</li>
-<li class="nav-item" style="">
-  <a title="Inbox" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/ClaimantAccountManagement/Inbox.aspx?__NodeID=164')" id="accessible-menu-1602365417498-7">
-    <span class="ca-gov-icon-email" aria-hidden="true"></span>
-    Inbox
-  </a>
-</li>
-<li class="nav-item" style="">
-  <a title="Contact Us" class="first-level-link" href="#" onclick="__doPostBack('ctl00$ctl00$menuBar$CustomMainMenu','~/Pages/ExternalUser/WebCorrespondence/ContactUs.aspx?__NodeID=183')" id="accessible-menu-1602365417499-8">
-    <span class="ca-gov-icon-users-dialog" aria-hidden="true"></span>
-    Contact
-  </a>
-</li>
-</ul>
-<div style="clear: left;"></div><a id="menuBar_CustomMainMenu_SkipLink"></a><div id="containerDiv" class="add_padding">
-</div></nav>
-</div>
-<div class="header-decoration"></div>
-</header>
-<div id="main-content" class="main-content" style="padding-top: 136px;">
+<nav id="navigation" class="main-navigation singlelevel auto-highlight">
+    <ul id="nav_list" class="top-level-nav">
+        <li class="nav-item">
+            <a href="/" class="first-level-link"><span class="ca-gov-icon-home" aria-hidden="true"></span>Template Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-download-cloud" aria-hidden="true"></span>Example</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-read-book" aria-hidden="true"></span>Example</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-loud-speaker" aria-hidden="true"></span>Example</a>
+        </li>
+		<li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-state" aria-hidden="true"></span>Example</a>
+        </li>
+		<!--applications will have the option of commenting out the search link and replacing with a different one if needed-->
+        <li class="nav-item" id="nav-item-search">
+            <a href="javascript:;" class="first-level-link"><span class="ca-gov-icon-search" aria-hidden="true"></span>Search</a>
+        </li>
+    </ul>
+</nav>
+        <!-- end "/ssi/edd_navigation.html" -->
+
+        <div id="head-search" class="search-container">
+            <!-- Include Search -->
+            <!--#include virtual="/ssi/search.html" -->
+<!-- Google Custom Search - /ssi/search.html-->
+
+<!--Uncomment if you prefer to use original google search box.
+    (be advided that original custom search box is not meeting WCAG accessibility standards)-->
+<!--<script type="text/javascript">
+    var cx = '001779225245372747843:9s-idxui5pk';// Step 7: Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script');
+    s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
+</script>
+<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
+
+
+<!--Custom Google Search ID Script can be found inside of serp.html file -->
 <div class="container">
-<main role="main" class="main-primary">
-<div id="pnlSkipContent">
-<div class="section section-auto">
-<h1>
-<span title="" id="pageTitle_pageTitle_ucScreen_lblHeader">Datepicker Demo</span>
-</h1>
-<div id="pageTitle_pageTitle_ucScreen_pnlValidationSummary" class="panel panel-error hidden">
-<div class="panel-heading">
-<h2>
-<span class="ca-gov-icon-important"></span>
-<span title="" id="pageTitle_pageTitle_ucScreen_CustomLabel1">&lt;img src='~/App_Themes/Default/Images/error.gif' /&gt; Error(s)  Occurred</span>
-</h2>
+    <form id="Search" class="pos-rel" action="/serp.html">
+        <span class="sr-only" id="SearchInput">Custom Google Search</span>
+        <input type="text" id="q" name="q" aria-labelledby="SearchInput" placeholder="Search this website" class="search-textfield height-50 p-x-sm w-100" />
+        <button type="submit" class="pos-abs gsc-search-button top-0 width-50 height-50 border-0 bg-transparent"><span class="ca-gov-icon-search font-size-30 color-gray" aria-hidden="true"></span><span class="sr-only">Submit</span></button>
+        <div class="width-50 height-50 close-search-btn"><button class="close-search gsc-clear-button width-50 height-50 border-0 bg-transparent pos-rel" type="reset"><span class="sr-only">Close Search</span><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button></div>
+    </form>
 </div>
-<div class="panel-body">
-<span id="pageTitle_pageTitle_ucScreen_validationSummary" htmlencode="false"></span>
-</div>
-</div>
-</div>
-<div id="contentMain_pnlSkipContent" class="pnlSkipContent">
-<span title="" id="contentMain_contentMain_lblPlaceHolder">
-  <p>
-    This is an example of a datepicker following the information provided <a href="https://bootstrap-datepicker.readthedocs.io/en/latest/index.html">here</a>.
-  </p>
-  <p>Pick a date:</p>
+            <!-- end "/ssi/search.html" -->
+        </div>
 
-  <div class="input-group date" data-provide="datepicker">
-    <input type="text" class="form-control">
-    <div class="input-group-addon d-flex justify-content-center">
-      <span class="ca-gov-icon-calendar" aria-hidden="true" style="color:#046B99"></span>
     </div>
-  </div>
+    <div class="header-decoration"></div>
+</header>
 
-  <p class="mt-3">Spanish example:</p>
-  <div class="input-group date es" data-provide="datepicker" data-date-language="es" data-date-format="mm/dd/yyyy">
-    <input type="text" class="form-control">
-    <div class="input-group-addon d-flex justify-content-center">
-      <span class="ca-gov-icon-calendar" aria-hidden="true" style="color:#046B99"></span>
+
+<div id="main-content" class="main-content flex-grow-1">
+  <div class="section">
+    <main class="main-primary">
+      <h1>Datepicker Demo</h1>
+
+    </main>
+  </div>
+</div>
+
+<!--#include virtual="/ssi/edd_section-footer2.html" -->
+<div class="section section-impact p-b-lg">
+    <div class="container">
+        <div class="row group">
+            <div class="quarter">
+                <ul class="list-standout">
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                </ul>
+            </div>
+
+            <div class="quarter">
+                <ul class="list-standout">
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                </ul>
+            </div>
+
+            <div class="quarter">
+                <ul class="list-standout">
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                </ul>
+            </div>
+
+            <div class="quarter p-t-sm">
+                <!--#include virtual="/ssi/google_translate.html" -->
+                <style>
+                .goog-te-gadget {
+                    color: #A6A6A6 !important;
+                }
+                </style>
+                <div id="google_translate_element" style="padding:0"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en', gaTrack: true, gaId: 'UA-3419582-31'}, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!-- end "/ssi/google_translate.html" -->
+
+                <a href="#" data-toggle="modal" data-target="#exampleModalCenter">View Disclaimer</a>
+                <!--#include virtual="/ssi/translate_modal.html" -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="exampleModalLongTitle">Google&#8482; Translate Disclaimer</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close Dialog">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>This Google&#8482; translation feature, provided on the Employment Development Department (EDD) website, is for informational purposes only.</p>
+                <p>The web pages currently in English on the EDD website are the official and accurate source for the program information and services the EDD provides. Any discrepancies or differences created in the translation are not binding and have no legal effect for compliance or enforcement purposes. If any questions arise related to the information contained in the translated website, please refer to the English version.</p>
+                <p>The EDD is unable to guarantee the accuracy of this translation and is therefore not liable for any inaccurate information or changes in the formatting of the pages resulting from the translation application tool.</p>
+                <p>Forms and publications provided on the EDD website cannot be translated using Google&#8482; Translate. Some forms and publications are translated by the department in other languages. For those forms, visit the Online Forms and Publications section.</p>
+                <p><a href="/About_EDD/Google_Translate_Information.htm" style="text-decoration:none; color:#2F77A0;">More Information</a></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--<div class="modal fade" id="gt-disclaimer" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="color:#333333">Google&#8482; Translate Disclaimer</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" style="color:#333333">
+                <p>This Google&#8482; translation feature, provided on the Employment Development Department (EDD) website, is for informational purposes only.</p>
+                <p>The web pages currently in English on the EDD website are the official and accurate source for the program information and services the EDD provides. Any discrepancies or differences created in the translation are not binding and have no legal effect for compliance or enforcement purposes. If any questions arise related to the information contained in the translated website, please refer to the English version.</p>
+                <p>The EDD is unable to guarantee the accuracy of this translation and is therefore not liable for any inaccurate information or changes in the formatting of the pages resulting from the translation application tool.</p>
+                <p>Forms and publications provided on the EDD website cannot be translated using Google&#8482; Translate. Some forms and publications are translated by the department in other languages. For those forms, visit the Online Forms and Publications section.</p>
+                <p><a href="/About_EDD/Google_Translate_Information.htm" style="text-decoration:none; color:#2F77A0;">More Information</a></p>
+            </div>
+            <div class="modal-footer" style="color:#333333">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
     </div>
-  </div>
+</div>-->
+<!-- / End Modal -->
+                <!-- end "/ssi/translate_modal.html" -->
 
-<p class="mt-5">
-    <a href='#' onclick="toggleMenuItems()">Toggle Menu Item Language</a>
-  </p>
-<div class="btn-row">
-<input type="submit" name="ctl00$ctl00$contentMain$contentMain$btnPrevious" value="Previous" onclick="javascript:return DisableMulticlick();" id="contentMain_contentMain_btnPrevious" title="Previous" class="btn btn-secondary">
-<input type="submit" name="ctl00$ctl00$contentMain$contentMain$btnNext" value="Next" onclick="javascript:return DisableMulticlick();" id="contentMain_contentMain_btnNext" title="Next" class="btn btn-primary">
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-</main>
-</div>
-<span class="return-top"></span></div>
+<!-- end "/ssi/edd_section-footer2.html" -->
+
+<!--#include virtual="/ssi/edd_global-footer.html" -->
 <!-- Global Footer -->
 <footer id="footer" class="global-footer">
-<div class="container">
-<div class="footer-links">
-<div id="PageNavigation">
-<ul class="footer-links"><li>
-<a href="#skip-to-content">
-Back to Top
-</a>
-</li>
-<li>
-<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="ContactEDD" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Contact_EDD.htm"><span title="" id="cmdContactEDD">Contact EDD</span>
-</a>
-</li>
-<li>
-<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="ConditionsofUse" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Conditions_Of_Use.htm"><span title="" id="cmdConditionsofUse">Conditions of Use</span>
-</a>
-</li>
-<li>
-<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="PrivacyPolicy" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Privacy_Policy.htm">
-<span title="" id="cmdPrivacyPolicy">Privacy Policy</span>
-</a>
-</li>
-<li>
-<a href="../../../Shared/MasterPages/EDDTemplate/#main-content" id="Accessibility" class="NavigationURL" data-target="#navigationModal" data-toggle="modal" data-id="http://www.edd.ca.gov/About_EDD/Accessibility.htm"><span title="" id="cmdAccessibility">Accessibility</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Copyright Statement -->
-<div id="copyright" class="copyright">
-<div class="container">
-<div class="group">
-<div class="half">
-Copyright ©
-<script>							document.write(new Date().getFullYear())</script>2020
-State of California
-</div>
-<div class="half">
-<p>
-</p>
-</div>
-</div>
-</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="three-quarters">
+                <ul class="footer-links">
+                    <li><a href="#skip-to-content">Back to Top</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/">About EDD</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/contact_edd.htm">Contact EDD</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/conditions_of_use.htm">Conditions of Use</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/privacy_policy.htm">Privacy Policy</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/accessibility.htm">Accessibility</a></li>
+                    <li><a href="/sitemap.htm">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="quarter text-right">
+                <ul class="socialsharer-container">
+                    <li><a href="https://www.facebook.com/californiaedd/"><span class="ca-gov-icon-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+                    <li><a href="https://twitter.com/CA_EDD"><span class="ca-gov-icon-twitter" aria-hidden="true"></span><span class="sr-only">Twitter</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/californiaedd/"><span class="ca-gov-icon-linkedin" aria-hidden="true"></span><span class="sr-only">LinkedIn</span></a></li>
+                    <li><a href="https://www.instagram.com/ca_edd/"><span class="ca-gov-icon-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+                    <li><a href="https://youtube.com/user/CaliforniaEDD"><span class="ca-gov-icon-youtube" aria-hidden="true"></span><span class="sr-only">YouTube</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright Statement -->
+    <div class="copyright">
+        <div class="container">
+            Copyright &copy; <script>document.write(new Date().getFullYear())</script> State of California
+        </div>
+    </div>
 </footer>
-<!--Navigation Modal Popup -->
-<div id="navigationModal" class="modal fade" role="dialog" aria-labelledby="navigationModalLabel" aria-describedby="navigationModalDescription" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="panel panel-overstated">
-<div class="panel-heading">
-<h2 id="navigationModalLabel" class="modal-title" tabindex="0">
-<span class="ca-gov-icon-info"></span>
-Confirm Navigation
-</h2>
-<div class="options">
-<button class="btn-default" data-dismiss="modal" type="button">
-X</button>
-</div>
-</div>
-<div class="modal-body" id="navigationModalDescription">
-You are opening a new tab outside of the application.  Select Continue to open a new tab or select Cancel to return to the application.
-</div>
-<div class="modal-footer">
-<input name="ctl00$ctl00$btnNavigateContinue" type="button" id="btnNavigateContinue" class="button mb20" value="Continue">
-<input name="ctl00$ctl00$btnNavigateCancel" type="button" id="btnNavigateCancel" class="button mb20" data-dismiss="modal" value="Cancel">
-</div>
-</div>
-</div>
-</div>
+
 <!-- Extra Decorative Content -->
 <div class="decoration-last">&nbsp;</div>
-<script type="text/javascript">new Sys.WebForms.Menu({ element: 'menuBar_CustomMainMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
-<script type="text/javascript" src="resources/edd.nav.custom.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
+<!-- end "/ssi/edd_global-footer.html" -->
 
+<!--#include virtual="/ssi/scripts.html" -->
 <!-- Load template core -->
-<script type="text/javascript" src="resources/cagov.core.js"></script>
+<script src="js/cagov.core.js"></script>
 
-<!--Added processBar.js-->
-<script type="text/javascript">
-/*  (function () {//self invoking function so we don't pollute the global name space
-var x = document.getElementsByClassName('groupItem'); //targets elements with the class "groupItem"
-for (var i = 0, max = x.length; i < max; i++) { //runs through all the elements with the class groupItems
-x[i].setAttribute("style", "width:" + 100 / x.length + "%"); //changes the width of the elements so that they fit
-}
-function hasClass(element, cls) {//element = test element, cls = class to test for
-return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-}
-for (var i = 0, max = x.length; i < max; i++) {//this loop is looking for elements that are before active
-if (hasClass(x[i], "active")) {//Does the current element have the class of active? If so, stop, else continue
-break;
-}
-x[i].className += " complete"; //since this element is before active, its complete so add the class complete
-}
-})();
-/*!
-* Clamp.js 0.5.1
-*
-* Copyright 2011-2013, Joseph Schmitt http://joe.sh
-* Released under the WTFPL license
-* http://sam.zoy.org/wtfpl/
-*/
-(function () {
-window.$clamp = function (c, d) {
-function s(a, b) { n.getComputedStyle || (n.getComputedStyle = function (a, b) { this.el = a; this.getPropertyValue = function (b) { var c = /(\-([a-z]){1})/g; "float" == b && (b = "styleFloat"); c.test(b) && (b = b.replace(c, function (a, b, c) { return c.toUpperCase() })); return a.currentStyle && a.currentStyle[b] ? a.currentStyle[b] : null }; return this }); return n.getComputedStyle(a, null).getPropertyValue(b) } function t(a) { a = a || c.clientHeight; var b = u(c); return Math.max(Math.floor(a / b), 0) } function x(a) {
-return u(c) * a
-} function u(a) { var b = s(a, "line-height"); "normal" == b && (b = 1.2 * parseInt(s(a, "font-size"))); return parseInt(b) } function l(a) { if (a.lastChild.children && 0 < a.lastChild.children.length) return l(Array.prototype.slice.call(a.children).pop()); if (a.lastChild && a.lastChild.nodeValue && "" != a.lastChild.nodeValue && a.lastChild.nodeValue != b.truncationChar) return a.lastChild; a.lastChild.parentNode.removeChild(a.lastChild); return l(c) } function p(a, d) {
-if (d) {
-var e = a.nodeValue.replace(b.truncationChar, ""); f || (h = 0 < k.length ? k.shift() : "", f = e.split(h)); 1 < f.length ? (q = f.pop(), r(a, f.join(h))) : f = null; m && (a.nodeValue = a.nodeValue.replace(b.truncationChar, ""), c.innerHTML = a.nodeValue + " " + m.innerHTML + b.truncationChar); if (f) { if (c.clientHeight <= d) if (0 <= k.length && "" != h) r(a, f.join(h) + h + q), f = null; else return c.innerHTML } else "" == h && (r(a, ""), a = l(c), k = b.splitOnChars.slice(0), h = k[0], q = f = null); if (b.animate) setTimeout(function () { p(a, d) }, !0 === b.animate ? 10 : b.animate); else return p(a, d)
-}
-} function r(a, c) { a.nodeValue = c + b.truncationChar } d = d || {};
-var n = window, b = { clamp: d.clamp || 2, useNativeClamp: "undefined" != typeof d.useNativeClamp ? d.useNativeClamp : !0, splitOnChars: d.splitOnChars || [".", "-", "\u2013", "\u2014", " "], animate: d.animate || !1, truncationChar: d.truncationChar || "\u2026", truncationHTML: d.truncationHTML }, e = c.style, y = c.innerHTML, z = "undefined" != typeof c.style.webkitLineClamp, g = b.clamp, v = g.indexOf && (-1 < g.indexOf("px") || -1 < g.indexOf("em")), m; b.truncationHTML && (m = document.createElement("span"), m.innerHTML = b.truncationHTML); var k = b.splitOnChars.slice(0), h = k[0], f, q; "auto" == g ? g = t() : v && (g = t(parseInt(g))); var w; z && b.useNativeClamp ? (e.overflow = "hidden", e.textOverflow = "ellipsis", e.webkitBoxOrient = "vertical", e.display = "-webkit-box", e.webkitLineClamp = g, v && (e.height = b.clamp + "px")) : (e = x(g), e <= c.clientHeight && (w = p(l(c), e))); return { original: y, clamped: w }
-}
-})();
-/**********************
-Everything below is custom code for CA.gov
-***********************/
-(function () {//self invoking function so we don't pollute the global name space
-var x = document.querySelectorAll('.groupItem'); //targets elements with the class "groupItem"
-for (var i = 0, max = x.length; i < max; i++) { //runs through all the elements with the class groupItems
-x[i].setAttribute("style", "width:" + 100 / x.length + "%"); //changes the width of the elements so that they fit
-}
-function hasClass(element, cls) {//element = test element, cls = class to test for
-return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-}
-for (var i = 0, max = x.length; i < max; i++) {//this loop is looking for elements that are before active
-if (hasClass(x[i], "active")) {//Does the current element have the class of active? If so, stop, else continue
-break;
-}
-x[i].className += " complete"; //since this element is before active, its complete so add the class complete
-}
-//This is code to add ellipsis for when the detail span is too long.
-var y = document.getElementsByClassName('detail'); //this finds all the detail spans
-for (var i = 0, max = y.length; i < max; i++) {//loops through all the detail spans to add code to each one
-$clamp(y[i], { clamp: 2 }); //uses clamp.js to add ellipsises to content that is more then 2 lines long.
-}
-})();
+<script>
+$(document).ready(function() {
+    // Backward compatability fix for removing wrapper on new "sections"
+    $('.main-primary > .section').closest('div.wrapper').removeClass('wrapper');
+});
 </script>
-</body></html>
+<!-- end "/ssi/scripts.html" -->
+
+</body>
+</html>
