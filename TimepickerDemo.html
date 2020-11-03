@@ -112,7 +112,7 @@ Select a color scheme:
 </head>
 
 <!-- possible body classes are "primary" and "two-column" -->
-<body class="primary">
+<body class="primary d-flex flex-column">
 
 <header role="banner" id="header" class="global-header fixed">
 	<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
@@ -458,12 +458,60 @@ Options are: megadropdown dropdown singlelevel
 </header>
 
 
-<div id="main-content" class="main-content">
+<div id="main-content" class="main-content flex-grow-1">
     <div class="section">
         <main class="main-primary">
 			<h1>Timepicker Demo</h1>
-			<p>Example:</p>
 
+            <form>
+                <div class="row">
+                    <div class="col">Sunday</div>
+                </div>
+                <div class="form-row timepicker">
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <label for="sun-hhmm-starttime">Start Time</label>
+                        <input type="text" class="form-control" id="sun-hhmm-starttime" maxlength="5">
+                        <small class="form-text text-muted">hh:mm</small>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <fieldset>
+                            <legend class="col-form-label p-0 font-weight-bold" for="sun-ampm-starttime">Period</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sun-ampm-starttime" id="sun-am-starttime" value="am">
+                                <label class="form-check-label" for="sun-am-starttime">a.m.</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sun-ampm-starttime" id="sun-pm-starttime" value="pm">
+                                <label class="form-check-label" for="sun-pm-starttime">p.m.</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">Monday</div>
+                </div>
+                <div class="form-row timepicker">
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <label for="mon-hhmm-starttime">Start Time</label>
+                        <input type="text" class="form-control" id="mon-hhmm-starttime" maxlength="5">
+                        <small class="form-text text-muted">hh:mm</small>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <fieldset>
+                            <legend class="col-form-label p-0 font-weight-bold" for="mon-ampm-starttime">Period</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mon-ampm-starttime" id="mon-am-starttime" value="am">
+                                <label class="form-check-label" for="mon-am-starttime">a.m.</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mon-ampm-starttime" id="mon-pm-starttime" value="pm">
+                                <label class="form-check-label" for="mon-pm-starttime">p.m.</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
         </main>
     </div>
 </div>
