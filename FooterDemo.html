@@ -1,4 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths flexbox flexboxlegacy no-flexboxtweener flexwrap" style="font-size: 1rem;"><head id="head"><title>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths flexbox flexboxlegacy no-flexboxtweener flexwrap" style="font-size: 1rem;">
+<head id="head"><title>
 Footer Demo
 </title>
 
@@ -8,6 +9,7 @@ Footer Demo
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
+<meta charset="UTF-8">
 <!-- for Blackberry, AvantGo -->
 <meta name="MobileOptimized" content="320">
 <!-- for Windows mobile -->
@@ -96,7 +98,7 @@ function toggleMenuItems() {
 </script>
 </head>
 <body>
-<form method="post" action="./UploadDocumentInstructions.aspx" id="frmClaimantMainNoMenu" class="d-flex flex-column h-100 mb-0">
+<form method="post" action="./UploadDocumentInstructions.aspx" id="frmClaimantMainNoMenu" class="d-flex flex-column min-vh-100 mb-0">
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
@@ -324,7 +326,79 @@ Options are: megadropdown dropdown singlelevel
   <p>
     <a href='#' onclick="toggleMenuItems()">Toggle Menu Item Language</a>
   </p>
-<div class="btn-row">
+
+  <div class="panel-group" id="example-accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#example-accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How do I become eligible to renew my registration on the Internet?</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                You have to be eligible for renewal by mail and:
+<ul>
+    <li>Have access to the Internet</li>
+    <li>Register as a certified user with the DMV</li>
+    <li>Not have a change of address or change of personal description</li>
+    <li>Have a verified Social Security Number (SSN) on DMV record (since October 2000, DMV verifies SSNs with the Social Security Administration)</li>
+    <li>Have a valid credit card or a checking account.</li>
+</ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#example-accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Do I need my Renewal Identification Number (RIN) on my renewal notice to renew my drivers license online?</a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                You no longer need the RIN to renew your drivers license online, but you do need to register as a certified user with the DMV to process your renewal
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#example-accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Can I renew my driver license by Internet if I have a change of address at the same time?</a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                No. A change of address is not accepted as part of the driver license renewal by internet process. This is for your security and protection. If you have a change of address, enter your current address on your renewal notice and renew your driver license by mail.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFour">
+          <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#example-accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Filler</a>
+          </h4>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="panel-body">
+              This is a some vertical filler text.
+              <ul>
+                <li>Apples</li>
+                <li>Oranges</li>
+                <li>Pears</li>
+                <li>Peaches</li>
+                <li>Cherries</li>
+                <li>Coconuts</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="btn-row">
 <input type="submit" name="ctl00$ctl00$contentMain$contentMain$btnPrevious" value="Previous" onclick="javascript:return DisableMulticlick();" id="contentMain_contentMain_btnPrevious" title="Previous" class="btn btn-secondary">
 <input type="submit" name="ctl00$ctl00$contentMain$contentMain$btnNext" value="Next" onclick="javascript:return DisableMulticlick();" id="contentMain_contentMain_btnNext" title="Next" class="btn btn-primary">
 </div>
@@ -507,4 +581,164 @@ $clamp(y[i], { clamp: 2 }); //uses clamp.js to add ellipsises to content that is
 }
 })();
 </script>
+<!-- edd_scripts.html -->
+<script>
+	/* script for filtering accordions on EDD Actively
+	prosecutes pages*/
+
+	function filter() {
+
+            var type = $('#filter').val();
+
+            if (type == 'none') { $('div.ui, div.dipfl, div.tax').show(); }
+            else {
+                $('div.ui, div.dipfl, div.tax').hide();
+                $('div.' + type).show();
+            }
+        }
+
+	/*-----------------------------------------------
+	  Custom Toggle switch code for accordions, and
+	  possibly other switches.
+	-----------------------------------------------*/
+
+	function handleBtnClick(event) {
+		toggleButton(event.target);
+	}
+
+	function handleBtnKeyDown(event) {
+		// Check to see if space or enter were pressed
+		if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+			// Prevent the default action to stop scrolling when space is pressed
+			event.preventDefault();
+			toggleButton(event.target);
+		}
+	}
+
+	function toggleButton(element) {
+		// Check to see if the button is pressed
+		var pressed = (element.getAttribute("aria-pressed") === "true");
+		var stateText = document.getElementById('showHideText');
+		// Change aria-pressed to the opposite state
+		element.setAttribute("aria-pressed", !pressed);
+		// toggle the Expand/Collapse state of the accordions
+		if(pressed) {
+			collapse();
+			stateText.innerHTML = "Show All";
+		} else {
+			expand();
+			stateText.innerHTML = "Hide All";
+		}
+	}
+
+	/*-----------------------------------------------
+	  Custom Toggle switch code for spanish accordions
+	-----------------------------------------------*/
+
+	function handleBtnClickSpanish(event) {
+		toggleButtonSpanish(event.target);
+	}
+
+	function handleBtnKeyDownSpanish(event) {
+		// Check to see if space or enter were pressed
+		if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+			// Prevent the default action to stop scrolling when space is pressed
+			event.preventDefault();
+			toggleButtonSpanish(event.target);
+		}
+	}
+
+	function toggleButtonSpanish(element) {
+		// Check to see if the button is pressed
+		var pressed = (element.getAttribute("aria-pressed") === "true");
+		var stateText = document.getElementById('showHideText');
+		// Change aria-pressed to the opposite state
+		element.setAttribute("aria-pressed", !pressed);
+		// toggle the Expand/Collapse state of the accordions
+		if(pressed) {
+			collapse();
+			stateText.innerHTML = "Mostrar todo";
+		} else {
+			expand();
+			stateText.innerHTML = "Ocultar todo";
+		}
+	}
+
+	/* This function removes unnecessary aria-roles, while injecting a needed one
+	into accordions. */
+	$(document).ready(function () {
+		// removing role attribute to fix accessibilty error
+		//$("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+		$(".toggleAccordion").removeAttr("role aria-hidden");
+		$(".accordion").removeAttr("role tablist");
+		$(".panel-default").removeAttr("role presentation");
+		$(".panel-heading").removeAttr("role presentation");
+		$(".panel-title a").removeAttr("role tab");
+		$(".panel-title a").removeAttr("role aria-selected");
+		$(".accordion").removeAttr("role aria-multiselectable");
+		$(".collapsed").removeAttr("role aria-selected");
+		$(".panel-collapse").removeAttr("tabindex");
+		$(".toggleAccordion").attr("role", "region");
+
+		$(window).resize(function() {
+			$("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+		});
+	});
+
+	/* This function removes unnecessary aria-roles from tab panels */
+	$(document).ready(function () {
+		$("#tabs li.nav-item").removeAttr("role presentation");
+		$("#collapse-home").removeAttr("role aria-hidden");
+		$("#collapse-profile").removeAttr("role aria-hidden");
+		$("#collapse-messages").removeAttr("role aria-hidden");
+		//$("#tabs li").attr("role", "listitem");
+		//$(".toggleAccordion").attr("role", "region");
+
+		//$(window).resize(function() {
+		//	$("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+		//});
+	});
+
+	/* This function can be used to toggle aria-expanded values */
+
+	function expandedValues() {
+		var x = document.getElementById("searchExpand").getAttribute("aria-expanded");
+
+		if (x=="true")
+			{
+				x = "false";
+				document.getElementById("searchExpand").focus();
+			}
+		else {
+			x = "true";
+		}
+		document.getElementById("searchExpand").setAttribute("aria-expanded", x);
+	}
+
+	/*-----------------------------------------
+	 Custom code for expanding and collapsing
+	 accordions
+	 ---------------------------------------*/
+
+	function expand() {
+				$('.toggleAccordion').collapse('show');
+			}
+	function collapse() {
+				$('.toggleAccordion').collapse('hide');
+			}
+
+	/*--initialize modal plugin for Bootstrap--*/
+	$('#myModal').modal(options);
+
+	/* This function creates the ability to copy the
+	text from the source code textarea*/
+
+	function copyText(){
+		document.querySelector("textarea").select();
+		document.execCommand('copy');
+	};
+
+</script>
+<!-- end edd_scripts.html-->
+
 </body></html>
