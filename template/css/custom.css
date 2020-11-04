@@ -9,7 +9,7 @@
 }
 
 .new_highlight {
-	color: #FF0000;	
+	color: #FF0000;
 	font-size: 0.8em;
 }
 
@@ -130,7 +130,7 @@
 /*overriding for new template that moved table caption to bottom of table - moving back to top so caption can be used as title for accessibility purposes */
 caption {
   padding-left: 0.75rem;
-  color: #212529;  
+  color: #212529;
   text-align: left;
   font-weight:bold;
   caption-side:top;
@@ -339,24 +339,24 @@ caption {
 		width: 100% !important;
 	}
 	body {
-		font-size: 1rem !important;  
+		font-size: 1rem !important;
 	}
 	#header {
 		display:none;
 		height: 0px;
 	}
-	
+
 	.section section-impact p-b-lg {
 		display: none;
 	}
 	.section.section-impact.p-b-lg div.container{
 		display: none;
 	}
-	
+
 	#footer {
 		display:none;
 	}
-	
+
 }
 
 /*----------------------------------------------*/
@@ -371,21 +371,21 @@ caption {
 /* This allows the link to expand the full width and height of the header */
 /*------------------------------------------------------------------------*/
 /*.card-header {
-	padding: 0px !important;	
+	padding: 0px !important;
 }*/
 .card-header a{
 	padding: 12px 20px !important;
-	display: block;	
+	display: block;
 }
 
 /*-------------------------------*/
-/* This makes the footer and google 
+/* This makes the footer and google
 translate stack better in mobile */
 /*-------------------------------*/
 
 
 @media (max-width: 992px) {
-	
+
 	.section.section-impact.p-b-lg div.container .quarter{
 		float: left;
 		width: 50%;
@@ -393,16 +393,16 @@ translate stack better in mobile */
 	#google_translate_element {
 		margin-left: 20px;
 	}
-	
+
 	.section.section-impact.p-b-lg div.container .quarter a.opener{
 	  margin-left: 20px;
 	}
-	
+
 	/* this section below is for all page footers and manipulates the view disclaimer text for translate*/
 	.section.section-impact.p-b-lg div.container .quarter.p-t-sm a.opener{
 	  margin-left: 20px;
 	}
-  
+
 }
 
 @media (max-width: 768px) {
@@ -414,7 +414,7 @@ translate stack better in mobile */
 
 /*----------------------------------------------*/
 /* Lines 11,591-11,637 of the cagov.core.css file
-have been modified. The new template broke the 
+have been modified. The new template broke the
 .quarter class in mobile. Reverted back to the older
 code to fix this.*/
 /*----------------------------------------------*/
@@ -430,7 +430,7 @@ office locator. See lines 16521-16527 for the fix */
 /* Custom changes were made to the settings-bar.html
 after testing by Level Access. State Template does not
 include aria-label descriptive fields for the buttons,
-and the text is non-descriptive. Aria-Labels for the 
+and the text is non-descriptive. Aria-Labels for the
 for the button groups referred to the ID, not what they
 were. For these reasons, always make sure the settings
 bar ssi is using the EDD one, not the standard CDT one.*/
@@ -445,7 +445,7 @@ bar ssi is using the EDD one, not the standard CDT one.*/
 .utility-header a:focus, .utility-header .btn:focus, #skip-to-content a:focus, #siteSettings .btn:focus, #siteSettings .close:focus, .section-impact a:not(.btn):focus, .card-impact a:not(.btn):focus, .icon.MinMaxChat.ClickableADA:focus, .global-footer a:focus {
 	outline: solid 2px #dce2ff !important;
 }
- 
+
 .branding a:focus, #navigation a:focus, #navigation button:focus, .nav > li > a:focus, .nav > li > button:focus, .mobile-controls .toggle-menu:focus, .main-primary a:focus, .main-primary .accordion-list li:focus, .main-primary div.active:focus, .tabs [role="tabpanel"]:focus, div.gsc-cursor-page:focus, .main-primary button:focus, #chkSameEarning:focus, input#txtClaimDate:focus, input.form-control.money:focus, .tableFocus:focus, .main-primary select:focus, #AstuteBotToggleChatContainer:focus, i.reaction_option:focus, input.button:focus, i.ca-gov-icon-check-mark:focus {
 	outline: solid 2px #9646ff !important;
 }
@@ -562,4 +562,13 @@ div.modal-content {
 
 .breadcrumb li {
 	margin: 10px 0px;
+}
+
+/*add styling for a single field time picker.*/
+.timepicker .form-group {
+	background-color: #f5f5f5;
+	padding: 20px;
+}
+.timepicker .form-group:nth-child(2) {
+	padding-left: 0;
 }
