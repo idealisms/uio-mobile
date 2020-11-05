@@ -464,13 +464,18 @@ Options are: megadropdown dropdown singlelevel
 			<h1>Timepicker Demo</h1>
 
             <form>
-                <div class="row">
-                    <div class="col">Sunday</div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkSunday" onchange="toggle(this)">
+                            <label class="form-check-label" for="checkSunday">Sunday</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-row timepicker">
+                <div class="form-row timepicker hidden" id="rowSundayStart">
                     <div class="form-group col-md-2 col-sm-3 col-6">
                         <label for="sun-hhmm-starttime">Start Time</label>
-                        <input type="text" class="form-control" id="sun-hhmm-starttime" maxlength="5">
+                        <input type="text" class="form-control" id="sun-hhmm-starttime" maxlength="5" title="Start Time (hh:mm)">
                         <small class="form-text text-muted">hh:mm</small>
                     </div>
                     <div class="form-group col-md-2 col-sm-3 col-6">
@@ -487,14 +492,39 @@ Options are: megadropdown dropdown singlelevel
                         </fieldset>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col">Monday</div>
+                <div class="form-row timepicker hidden" id="rowSundayEnd">
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <label for="sun-hhmm-endtime">End Time</label>
+                        <input type="text" class="form-control" id="sun-hhmm-endtime" maxlength="5" title="End Time (hh:mm)">
+                        <small class="form-text text-muted">hh:mm</small>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <fieldset>
+                            <legend class="col-form-label p-0 font-weight-bold" for="sun-ampm-endtime">Period</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sun-ampm-endtime" id="sun-am-endtime" value="am">
+                                <label class="form-check-label" for="sun-am-endtime">a.m.</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sun-ampm-endtime" id="sun-pm-endtime" value="pm">
+                                <label class="form-check-label" for="sun-pm-endtime">p.m.</label>
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="form-row timepicker">
+
+                <div class="form-row">
+                    <div class="col form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkMonday" onchange="toggle(this)">
+                            <label class="form-check-label" for="checkMonday">Monday</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row timepicker hidden" id="rowMondayStart">
                     <div class="form-group col-md-2 col-sm-3 col-6">
                         <label for="mon-hhmm-starttime">Start Time</label>
-                        <input type="text" class="form-control" id="mon-hhmm-starttime" maxlength="5">
+                        <input type="text" class="form-control" id="mon-hhmm-starttime" maxlength="5" title="Start Time (hh:mm)>
                         <small class="form-text text-muted">hh:mm</small>
                     </div>
                     <div class="form-group col-md-2 col-sm-3 col-6">
@@ -507,6 +537,26 @@ Options are: megadropdown dropdown singlelevel
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="mon-ampm-starttime" id="mon-pm-starttime" value="pm">
                                 <label class="form-check-label" for="mon-pm-starttime">p.m.</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-row timepicker hidden" id="rowMondayEnd">
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <label for="mon-hhmm-endtime">End Time</label>
+                        <input type="text" class="form-control" id="mon-hhmm-endtime" maxlength="5" title="End Time (hh:mm)>
+                        <small class="form-text text-muted">hh:mm</small>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-3 col-6">
+                        <fieldset>
+                            <legend class="col-form-label p-0 font-weight-bold" for="mon-ampm-endtime">Period</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mon-ampm-endtime" id="mon-am-endtime" value="am">
+                                <label class="form-check-label" for="mon-am-endtime">a.m.</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mon-ampm-endtime" id="mon-pm-endtime" value="pm">
+                                <label class="form-check-label" for="mon-pm-endtime">p.m.</label>
                             </div>
                         </fieldset>
                     </div>
@@ -663,6 +713,21 @@ $(document).ready(function() {
 });
 </script>
 <!-- end "/ssi/scripts.html" -->
+
+<script>
+function toggle(elt) {
+    console.log(elt.id);
+    var day = elt.id.substring(5);
+    ["row" + day + "Start", "row" + day + "End"].forEach(function(id) {
+        var rowElt = document.getElementById(id);
+        if (elt.checked) {
+            rowElt.classList.remove("hidden");
+        } else {
+            rowElt.classList.add("hidden");
+        }
+    })
+}
+</script>
 
 </body>
 </html>
