@@ -1,0 +1,13 @@
+/* Styling for a single field time picker.
+   To be included in uio.mobile.css. */
+
+.timepicker .form-group {
+	background-color: #f5f5f5;
+	padding: 20px;
+}
+.timepicker .form-group:nth-child(2) {
+	padding-left: 0;
+}
+.timepicker label {
+  font-weight: 400;
+}
