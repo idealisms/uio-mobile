@@ -8,6 +8,6 @@
 .timepicker .form-group:nth-child(2) {
 	padding-left: 0;
 }
-.timepicker label {
+.timepicker .form-check label {
   font-weight: 400;
 }
