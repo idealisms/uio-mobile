@@ -1,0 +1,650 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if (gt IE 9)]><!--> <html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<!--
+California State Template
+Version 5.0.16
+
+Based on Twitter Bootstrap
+-->
+<meta charset="utf-8">
+<title>Card Overstated Demo</title>
+<meta name="Author" content="Employment Development Department" />
+<meta name="Description" content="Employment Development Department" />
+<meta name="Keywords" content="California, government" />
+<!--#include virtual="/ssi/head-css-js.html" -->
+<!-- head content, for all pages -->
+<!-- Use highest compatibility mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<!-- for Blackberry, AvantGo -->
+<meta name="MobileOptimized" content="320">
+<!-- for Windows mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="css/cagov.core.css">
+
+<script src="js/search.js"></script>
+<!--
+Step 3
+Select a color scheme:
+<link rel="stylesheet" href="css/colorscheme-eureka.css">
+<link rel="stylesheet" href="css/colorscheme-mono.css">
+<link rel="stylesheet" href="css/colorscheme-oceanside.css">
+<link rel="stylesheet" href="css/colorscheme-orangecounty.css">
+<link rel="stylesheet" href="css/colorscheme-pasorobles.css">
+<link rel="stylesheet" href="css/colorscheme-santabarbara.css">
+<link rel="stylesheet" href="css/colorscheme-sacramento.css">
+<link rel="stylesheet" href="css/colorscheme-sierra.css">
+<link rel="stylesheet" href="css/colorscheme-trinity.css">
+-->
+
+<link rel="stylesheet" href="css/colorscheme-oceanside.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/EDDBot.css">
+
+<!-- selectivizr.com, emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8 -->
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="js/libs/selectivizr-min.js"></script>
+<![endif]-->
+<!-- Load jQuery from CDN with fallback to local copy -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script>
+    //Fall back to local copy if no jquery found
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='/js/libs/jquery.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+</script>
+<!-- Load jQuery migrate from CDN with fallback to local copy -->
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+<script>
+    //Fall back to local copy if no jQuery migrate found
+    if (typeof jQuery.migrateWarnings == 'undefined') { // or typeof jQuery.fn.live == 'undefined'
+        document.write(unescape("%3Cscript src='/js/libs/jquery-migrate-3.0.1.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+
+</script>
+
+<!-- jQuery for accordion functionality -->
+<script src="js/jq_expand.js"></script>
+
+<!-- apple touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="100x100" href="images/apple-touch-icon-precomposed.png">
+<link rel="icon" sizes="192x192" href="images/apple-touch-icon-192x192.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+<link rel="shortcut icon" href="images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- For everything else -->
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Activate ClearType for Mobile IE -->
+<!--[if IE]>
+<meta http-equiv="cleartype" content="on">
+<![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/libs/html5shiv.min.js"></script>
+  <script src="js/libs/respond.min.js"></script>
+<![endif]-->
+<!-- Include Google Analytics -->
+<!-- #include virtual="/ssi/analytics.html" -->
+<!-- end "/ssi/head-css-js.html" -->
+</head>
+
+<!-- possible body classes are "primary" and "two-column" -->
+<body class="primary d-flex flex-column">
+
+<header role="banner" id="header" class="global-header fixed">
+	<div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+<!-- Alert Banner -->
+    <!-- change ssi file to limit banner -->
+    <!--#include virtual="/ssi/alert-banner.html" -->
+<!--
+    <div class="alert alert-severe alert-dismissible alert-banner">
+        <div class="container">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span class="alert-level"><span class="ca-gov-icon-important" aria-hidden="true"></span>SEVERE ALERT!</span><span class="alert-text">2015-12-21, 10:17 AM - Flash Flood in the Northern California, Sacramento and Placer Counties until 12:15 PM.</span>
+              <a href="" class="alert-link btn btn-default btn-xs">More Information</a>
+        </div>
+    </div>
+-->
+    <!-- end "/ssi/alert-banner.html" -->
+
+<!-- Location Bar -->
+    <!--#include virtual="/ssi/location-bar.html" -->
+    <div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+        <div class="container p-y">
+            <button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="form-group form-inline">
+                <label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
+                <input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
+                <button type="button" class="btn btn-primary">Set Location</button>
+            </div>
+        </div>
+    </div>
+    <!-- end "/ssi/location-bar.html" -->
+
+    <!-- Include Utility Header -->
+    <!--#include virtual="/ssi/edd_utility-header.html" -->
+    <div class="utility-header">
+        <div class="container">
+            <div class="group flex-row">
+                <div class="social-media-links">
+                    <div class="header-cagov-logo">
+                        <a href="https://ca.gov" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility CAGov')"><span class="sr-only">CA.gov</span><img src="images/Ca-Gov-Logo-Gold.svg" class="pos-rel" alt="CA.gov logo" aria-hidden="true" /></a>
+                    </div>
+    <!--                <a href="/" class="ca-gov-icon-home"><span class="sr-only">Home</span></a>
+                    <a href="/" class="ca-gov-icon-facebook"><span class="sr-only">Facebook</span></a>
+                    <a href="/" class="ca-gov-icon-twitter"><span class="sr-only">Twitter</span></a>
+                    <a href="/" class="ca-gov-icon-email"><span class="sr-only">Email</span></a> -->
+                </div>
+                <div class="settings-links">
+                    <a href="/" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility Home')">Home</a>
+                    <a href="https://portal.edd.ca.gov/WebApp/Login?resource_url=https%3A%2F%2Fportal.edd.ca.gov%2FWebApp%2FHome" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility Benefits Login')">Benefits Login</a>
+                    <a href="/About_EDD/Employer_Services_Online.htm" onclick="ga('send', 'event', 'Header', 'Utility Click', 'Utility Employer Login')">Employer Login</a>
+                    <!--<button class="btn btn-xs btn-primary" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" onclick="_gaq.push(['_trackEvent', 'Header', 'Utility Click', 'Utility Settings'])"><span class="ca-gov-icon-gear" aria-hidden="true"></span> Settings</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Utility Header -->
+    <!--#include virtual="/ssi/edd_scripts.html" -->
+    <!DOCTYPE html>
+    <script>
+        /* script for filtering accordions on EDD Actively
+        prosecutes pages*/
+
+        function filter() {
+
+                var type = $('#filter').val();
+
+                if (type == 'none') { $('div.ui, div.dipfl, div.tax').show(); }
+                else {
+                    $('div.ui, div.dipfl, div.tax').hide();
+                    $('div.' + type).show();
+                }
+            }
+
+        /*-----------------------------------------------
+          Custom Toggle switch code for accordions, and
+          possibly other switches.
+        -----------------------------------------------*/
+
+        function handleBtnClick(event) {
+            toggleButton(event.target);
+        }
+
+        function handleBtnKeyDown(event) {
+            // Check to see if space or enter were pressed
+            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+                // Prevent the default action to stop scrolling when space is pressed
+                event.preventDefault();
+                toggleButton(event.target);
+            }
+        }
+
+        function toggleButton(element) {
+            // Check to see if the button is pressed
+            var pressed = (element.getAttribute("aria-pressed") === "true");
+            var stateText = document.getElementById('showHideText');
+            // Change aria-pressed to the opposite state
+            element.setAttribute("aria-pressed", !pressed);
+            // toggle the Expand/Collapse state of the accordions
+            if(pressed) {
+                collapse();
+                stateText.innerHTML = "Show All";
+            } else {
+                expand();
+                stateText.innerHTML = "Hide All";
+            }
+        }
+
+        /*-----------------------------------------------
+          Custom Toggle switch code for spanish accordions
+        -----------------------------------------------*/
+
+        function handleBtnClickSpanish(event) {
+            toggleButtonSpanish(event.target);
+        }
+
+        function handleBtnKeyDownSpanish(event) {
+            // Check to see if space or enter were pressed
+            if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+                // Prevent the default action to stop scrolling when space is pressed
+                event.preventDefault();
+                toggleButtonSpanish(event.target);
+            }
+        }
+
+        function toggleButtonSpanish(element) {
+            // Check to see if the button is pressed
+            var pressed = (element.getAttribute("aria-pressed") === "true");
+            var stateText = document.getElementById('showHideText');
+            // Change aria-pressed to the opposite state
+            element.setAttribute("aria-pressed", !pressed);
+            // toggle the Expand/Collapse state of the accordions
+            if(pressed) {
+                collapse();
+                stateText.innerHTML = "Mostrar todo";
+            } else {
+                expand();
+                stateText.innerHTML = "Ocultar todo";
+            }
+        }
+
+        /* This function removes unnecessary aria-roles, while injecting a needed one
+        into accordions. */
+        $(document).ready(function () {
+            // removing role attribute to fix accessibilty error
+            //$("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+            $(".toggleAccordion").removeAttr("role aria-hidden");
+            $(".accordion").removeAttr("role tablist");
+            $(".panel-default").removeAttr("role presentation");
+            $(".panel-heading").removeAttr("role presentation");
+            $(".panel-title a").removeAttr("role tab");
+            $(".panel-title a").removeAttr("role aria-selected");
+            $(".accordion").removeAttr("role aria-multiselectable");
+            $(".collapsed").removeAttr("role aria-selected");
+            $(".panel-collapse").removeAttr("tabindex");
+            $(".toggleAccordion").attr("role", "region");
+
+            $(window).resize(function() {
+                $("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+            });
+        });
+
+        /* This function removes unnecessary aria-roles from tab panels */
+        $(document).ready(function () {
+            $("#tabs li.nav-item").removeAttr("role presentation");
+            $("#collapse-home").removeAttr("role aria-hidden");
+            $("#collapse-profile").removeAttr("role aria-hidden");
+            $("#collapse-messages").removeAttr("role aria-hidden");
+            //$("#tabs li").attr("role", "listitem");
+            //$(".toggleAccordion").attr("role", "region");
+
+            //$(window).resize(function() {
+            //	$("nav#navigation.singlelevel a").removeAttr("role aria-expanded");
+            //});
+        });
+
+        /* This function can be used to toggle aria-expanded values */
+
+        function expandedValues() {
+            var x = document.getElementById("searchExpand").getAttribute("aria-expanded");
+
+            if (x=="true")
+                {
+                    x = "false";
+                    document.getElementById("searchExpand").focus();
+                }
+            else {
+                x = "true";
+            }
+            document.getElementById("searchExpand").setAttribute("aria-expanded", x);
+        }
+
+        /*-----------------------------------------
+         Custom code for expanding and collapsing
+         accordions
+         ---------------------------------------*/
+
+        function expand() {
+                    $('.toggleAccordion').collapse('show');
+                }
+        function collapse() {
+                    $('.toggleAccordion').collapse('hide');
+                }
+
+        /*--initialize modal plugin for Bootstrap--*/
+        $('#myModal').modal(options);
+
+        /* This function creates the ability to copy the
+        text from the source code textarea*/
+
+        function copyText(){
+            document.querySelector("textarea").select();
+            document.execCommand('copy');
+        };
+
+    </script>
+    <!-- end "/ssi/edd_scripts.html" -->
+    <!-- end "/ssi/edd_utility-header.html" -->
+
+    <!-- Settings Bar -->
+    <!--#include virtual="/ssi/settings-bar.html" -->
+    <div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
+        <div class="container  p-y">
+
+
+            <div class="btn-group btn-group-justified-sm" role="group" aria-label="Color Contrast Settings">
+                <div class="btn-group"><button type="button" class="btn btn-standout disableHighContrastMode" aria-label="Reset Default Colors">Default Color</button></div>
+                <div class="btn-group"><button type="button" class="btn btn-standout enableHighContrastMode" aria-label="High Contrast (Yellow and Black)">High Contrast<span class="sr-only"> (Yellow and Black)</span></button></div>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Text Size Settings">
+                <div class="btn-group"><button type="button" class="btn btn-standout resetTextSize" aria-label="Reset Font Size"><span class="hidden-xs">Reset Font Size</span><span class="visible-xs">Reset Font</span></button></div>
+                <div class="btn-group"><button type="button" class="btn btn-standout increaseTextSize" aria-label="Increase Font Size"><span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <span class="sr-only">Increase</span><span class="ca-gov-icon-plus-line font-size-sm" aria-hidden="true"></span></span></button></div>
+                <div class="btn-group"><button type="button" class="btn btn-standout decreaseTextSize" aria-label="Decrease Font Size"><span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <span class="sr-only">Decrease</span><span class="ca-gov-icon-minus-line font-size-sm" aria-hidden="true"></span></span></button></div>
+                <!--<div class="btn-group"><button type="button" class="btn btn-standout resetTextSize">Reset Font Size</button></div>-->
+            </div>
+            <button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close Settings"><span aria-hidden="true">&times;</span></button>
+        </div>
+    </div>
+    <!-- end "/ssi/settings-bar.html" -->
+
+    <!-- Include Branding -->
+    <!--#include virtual="/ssi/edd_branding.html" -->
+    <!-- header branding -->
+    <div class="branding">
+        <div class="header-organization-banner"><a href="https://edd.ca.gov"><img src="images/edd-logo-2-Color.svg" alt="EDD Employment Development Department State of California Home" /></a></div>
+    </div>
+    <!-- end "/ssi/edd_branding.html" -->
+
+    <!-- Include Mobile Controls -->
+    <!--#include virtual="/ssi/mobile-controls.html" -->
+    <!-- mobile navigation controls -->
+    <div class="mobile-controls">
+        <span class="mobile-control-group mobile-header-icons">
+            <!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
+        </span>
+        <div class="mobile-control-group main-nav-icons">
+            <button class="mobile-control toggle-search">
+                <span class="ca-gov-icon-search hidden-print" aria-hidden="true"></span><span class="sr-only">Search</span>
+            </button>
+            <button id="nav-icon3" class="mobile-control toggle-menu" aria-expanded="false" aria-controls="navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Menu</span>
+            </button>
+
+        </div>
+    </div>
+    <!-- end "/ssi/mobile-controls.html" -->
+
+    <div class="navigation-search">
+        <!-- Include Navigation -->
+        <!--#include virtual="/ssi/edd_navigation.html" -->
+<!--
+Step 2
+Select Navigation Type:
+
+Options are: megadropdown dropdown singlelevel
+-->
+
+<nav id="navigation" class="main-navigation singlelevel auto-highlight">
+    <ul id="nav_list" class="top-level-nav">
+        <li class="nav-item">
+            <a href="/" class="first-level-link"><span class="ca-gov-icon-home" aria-hidden="true"></span>Template Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-download-cloud" aria-hidden="true"></span>Example</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-read-book" aria-hidden="true"></span>Example</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-loud-speaker" aria-hidden="true"></span>Example</a>
+        </li>
+		<li class="nav-item">
+            <a href="#" class="first-level-link"><span class="ca-gov-icon-state" aria-hidden="true"></span>Example</a>
+        </li>
+		<!--applications will have the option of commenting out the search link and replacing with a different one if needed-->
+        <li class="nav-item" id="nav-item-search">
+            <a href="javascript:;" class="first-level-link"><span class="ca-gov-icon-search" aria-hidden="true"></span>Search</a>
+        </li>
+    </ul>
+</nav>
+        <!-- end "/ssi/edd_navigation.html" -->
+
+        <div id="head-search" class="search-container">
+            <!-- Include Search -->
+            <!--#include virtual="/ssi/search.html" -->
+<!-- Google Custom Search - /ssi/search.html-->
+
+<!--Uncomment if you prefer to use original google search box.
+    (be advided that original custom search box is not meeting WCAG accessibility standards)-->
+<!--<script type="text/javascript">
+    var cx = '001779225245372747843:9s-idxui5pk';// Step 7: Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script');
+    s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
+</script>
+<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
+
+
+<!--Custom Google Search ID Script can be found inside of serp.html file -->
+<div class="container">
+    <form id="Search" class="pos-rel" action="/serp.html">
+        <span class="sr-only" id="SearchInput">Custom Google Search</span>
+        <input type="text" id="q" name="q" aria-labelledby="SearchInput" placeholder="Search this website" class="search-textfield height-50 p-x-sm w-100" />
+        <button type="submit" class="pos-abs gsc-search-button top-0 width-50 height-50 border-0 bg-transparent"><span class="ca-gov-icon-search font-size-30 color-gray" aria-hidden="true"></span><span class="sr-only">Submit</span></button>
+        <div class="width-50 height-50 close-search-btn"><button class="close-search gsc-clear-button width-50 height-50 border-0 bg-transparent pos-rel" type="reset"><span class="sr-only">Close Search</span><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button></div>
+    </form>
+</div>
+            <!-- end "/ssi/search.html" -->
+        </div>
+
+    </div>
+    <div class="header-decoration"></div>
+</header>
+
+
+<div id="main-content" class="main-content flex-grow-1">
+    <div class="section">
+        <main class="main-primary">
+            <h1>Card Overstated Demo</h1>
+            <div class="card card-overstated">
+                <div class="card-block">
+                    <h1 class="card-title h4">Card title</h1>
+                    <p>Some example text to build on the card title and make up the bulk of the card's content. <a href="">This is a sample link</a></p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </div>
+
+            <div class="card card-overstated">
+                <div class="card-header">
+                    <span class="h4">Featured</span>
+                </div>
+                <div class="card-block">
+                    <p>Some example text to build on the card title and make up the bulk of the card's content. <a href="">This is a sample link</a></p>
+                    <a href="#" class="btn btn-default">Button</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!--#include virtual="/ssi/edd_section-footer2.html" -->
+<div class="section section-impact p-b-lg">
+    <div class="container">
+        <div class="row group">
+            <div class="quarter">
+                <ul class="list-standout">
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                </ul>
+            </div>
+
+            <div class="quarter">
+                <ul class="list-standout">
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                </ul>
+            </div>
+
+            <div class="quarter">
+                <ul class="list-standout">
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                </ul>
+            </div>
+
+            <div class="quarter p-t-sm">
+                <!--#include virtual="/ssi/google_translate.html" -->
+                <style>
+                .goog-te-gadget {
+                    color: #A6A6A6 !important;
+                }
+                </style>
+                <div id="google_translate_element" style="padding:0"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en', gaTrack: true, gaId: 'UA-3419582-31'}, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!-- end "/ssi/google_translate.html" -->
+
+                <a href="#" data-toggle="modal" data-target="#exampleModalCenter">View Disclaimer</a>
+                <!--#include virtual="/ssi/translate_modal.html" -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="exampleModalLongTitle">Google&#8482; Translate Disclaimer</h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close Dialog">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>This Google&#8482; translation feature, provided on the Employment Development Department (EDD) website, is for informational purposes only.</p>
+                <p>The web pages currently in English on the EDD website are the official and accurate source for the program information and services the EDD provides. Any discrepancies or differences created in the translation are not binding and have no legal effect for compliance or enforcement purposes. If any questions arise related to the information contained in the translated website, please refer to the English version.</p>
+                <p>The EDD is unable to guarantee the accuracy of this translation and is therefore not liable for any inaccurate information or changes in the formatting of the pages resulting from the translation application tool.</p>
+                <p>Forms and publications provided on the EDD website cannot be translated using Google&#8482; Translate. Some forms and publications are translated by the department in other languages. For those forms, visit the Online Forms and Publications section.</p>
+                <p><a href="/About_EDD/Google_Translate_Information.htm" style="text-decoration:none; color:#2F77A0;">More Information</a></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--<div class="modal fade" id="gt-disclaimer" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="color:#333333">Google&#8482; Translate Disclaimer</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" style="color:#333333">
+                <p>This Google&#8482; translation feature, provided on the Employment Development Department (EDD) website, is for informational purposes only.</p>
+                <p>The web pages currently in English on the EDD website are the official and accurate source for the program information and services the EDD provides. Any discrepancies or differences created in the translation are not binding and have no legal effect for compliance or enforcement purposes. If any questions arise related to the information contained in the translated website, please refer to the English version.</p>
+                <p>The EDD is unable to guarantee the accuracy of this translation and is therefore not liable for any inaccurate information or changes in the formatting of the pages resulting from the translation application tool.</p>
+                <p>Forms and publications provided on the EDD website cannot be translated using Google&#8482; Translate. Some forms and publications are translated by the department in other languages. For those forms, visit the Online Forms and Publications section.</p>
+                <p><a href="/About_EDD/Google_Translate_Information.htm" style="text-decoration:none; color:#2F77A0;">More Information</a></p>
+            </div>
+            <div class="modal-footer" style="color:#333333">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- / End Modal -->
+                <!-- end "/ssi/translate_modal.html" -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end "/ssi/edd_section-footer2.html" -->
+
+<!--#include virtual="/ssi/edd_global-footer.html" -->
+<!-- Global Footer -->
+<footer id="footer" class="global-footer">
+    <div class="container">
+        <div class="row">
+            <div class="three-quarters">
+                <ul class="footer-links">
+                    <li><a href="#skip-to-content">Back to Top</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/">About EDD</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/contact_edd.htm">Contact EDD</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/conditions_of_use.htm">Conditions of Use</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/privacy_policy.htm">Privacy Policy</a></li>
+                    <li><a href="https://edd.ca.gov/about_edd/accessibility.htm">Accessibility</a></li>
+                    <li><a href="/sitemap.htm">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="quarter text-right">
+                <ul class="socialsharer-container">
+                    <li><a href="https://www.facebook.com/californiaedd/"><span class="ca-gov-icon-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+                    <li><a href="https://twitter.com/CA_EDD"><span class="ca-gov-icon-twitter" aria-hidden="true"></span><span class="sr-only">Twitter</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/californiaedd/"><span class="ca-gov-icon-linkedin" aria-hidden="true"></span><span class="sr-only">LinkedIn</span></a></li>
+                    <li><a href="https://www.instagram.com/ca_edd/"><span class="ca-gov-icon-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+                    <li><a href="https://youtube.com/user/CaliforniaEDD"><span class="ca-gov-icon-youtube" aria-hidden="true"></span><span class="sr-only">YouTube</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright Statement -->
+    <div class="copyright">
+        <div class="container">
+            Copyright &copy; <script>document.write(new Date().getFullYear())</script> State of California
+        </div>
+    </div>
+</footer>
+
+<!-- Extra Decorative Content -->
+<div class="decoration-last">&nbsp;</div>
+<!-- end "/ssi/edd_global-footer.html" -->
+
+<!--#include virtual="/ssi/scripts.html" -->
+<!-- Load template core -->
+<script src="js/cagov.core.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Backward compatability fix for removing wrapper on new "sections"
+    $('.main-primary > .section').closest('div.wrapper').removeClass('wrapper');
+});
+</script>
+<!-- end "/ssi/scripts.html" -->
+
+<script>
+function toggle(elt) {
+    console.log(elt.id);
+    var day = elt.id.substring(5);
+    ["row" + day + "Start", "row" + day + "End"].forEach(function(id) {
+        var rowElt = document.getElementById(id);
+        if (elt.checked) {
+            rowElt.classList.remove("hidden");
+        } else {
+            rowElt.classList.add("hidden");
+        }
+    })
+}
+</script>
+
+</body>
+</html>
